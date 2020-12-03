@@ -11,7 +11,7 @@ import Login from './components/Login';
 import AuthService from './utils/auth';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-
+import Home from './components/Home';
 
 class App extends React.Component {
 
@@ -50,7 +50,7 @@ class App extends React.Component {
         <ToastContainer />
           <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
-            <Route exact path="/" component={ListProjects} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/projects" component={ListProjects} />
             <Route exact path="/projects/add" render={
               () => {
