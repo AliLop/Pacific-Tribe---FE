@@ -1,0 +1,155 @@
+
+{ 
+    "sentences": [
+        {
+            "id": 1,
+            "sentence": "Everyone smiles in the same language",
+            "mood": "calm",
+            "author": "Proverb"
+        },
+        {
+            "id": 2,
+            "sentence": "Life shrinks or expands in proportion to one's courage",
+            "mood": "positive",
+            "author": "Anais Nin"
+        },
+        {
+            "id": 3,
+            "sentence": "If you don’t like something, change it. If you can’t change it, change your attitude.",
+            "mood": "enthusiastic",
+            "author": "Maya Angelou"
+        },
+        {
+            "id": 4,
+            "sentence": "Trusting our intuition often saves us from disaster.",
+            "mood": "anxious",
+            "author": "Anne Wilson Schae"
+        },
+        {
+            "id": 5,
+            "sentence": "Truth is powerful and it prevails.",
+            "mood": "overwhelmed",
+            "author": "Sojourner Truth"
+        },
+        {
+            "id": 6,
+            "sentence": "Do one thing every day that scares you",
+            "mood": "enthusiastic",
+            "author": "Eleanor Roosevelt"
+        },
+        {
+            "id": 7,
+            "sentence": "Light tomorrow with today!",
+            "mood": "positive",
+            "author": "Elizabeth Browning"
+        },
+        {
+            "id": 8,
+            "sentence": "Society develops wit, but its contemplation alone forms genius.",
+            "mood": "calm",
+            "author": "Madame de Stael"
+        },
+        {
+            "id": 9,
+            "sentence": "Without faith, nothing is possible. With it, nothing is impossible.",
+            "mood": "anxious",
+            "author": "Mary Bethune"
+        },
+        {
+            "id": 10,
+            "sentence": "Rainbows apologize for angry skies. ",
+            "mood": "overwhelmed",
+            "author": "Sylvia Voirol"
+        },
+        {
+            "id": 11,
+            "sentence": "How we spend our days is, of course, how we spend our lives.",
+            "mood": "enthusiastic",
+            "author": "Annie Dillard"
+        },
+        {
+            "id": 12,
+            "sentence": "From little acorns mighty oaks do grow.",
+            "mood": "positive",
+            "author": "American proverb"
+        },
+        {
+            "id": 13,
+            "sentence": "Life is a process. We are a process. The universe is a process.",
+            "mood": "calm",
+            "author": "Anne Schaef"
+        },
+        {
+            "id": 14,
+            "sentence": "Kind words will unlock an iron door.",
+            "mood": "anxious",
+            "author": "Turkish proverb"
+        },
+        {
+            "id": 15,
+            "sentence": "Nothing in life is to be feared. It is only to be understood.",
+            "mood": "overwhelmed",
+            "author": "Marie Curie"
+        },
+        {
+            "id": 16,
+            "sentence": "Keep yourself to the sunshine and you cannot see the shadow.",
+            "mood": "enthusiastic",
+            "author": "Helen Keller"
+        },
+        {
+            "id": 17,
+            "sentence": "I don't believe in failure. It is not failure if you enjoyed the process.",
+            "mood": "positive",
+            "author": "Oprah Winfrey"
+        },
+        {
+            "id": 18,
+            "sentence": "I'm not afraid of storms, for I'm learning how to sail my ship.",
+            "mood": "calm",
+            "author": "Louisa Alcott"
+        },
+        {
+            "id": 19,
+            "sentence": "Your worst enemy cannot harm you as much as your own unguarded thoughts.",
+            "mood": "anxious",
+            "author": "Buddha"
+        },
+        {
+            "id": 20,
+            "sentence": "Nothing in life is to be feared. It is only to be understood.",
+            "mood": "overwhelmed",
+            "author": "Marie Curie"
+        },
+        {
+            "id": 21,
+            "sentence": "Set your life on fire. Seek those who fan your flames.",
+            "mood": "enthusiastic",
+            "author": "Rumi"
+        },
+        {
+            "id": 22,
+            "sentence": "To fly, we have to have resistance.",
+            "mood": "positive",
+            "author": "Maya Lin"
+        },
+        {
+            "id": 23,
+            "sentence": "Never bend your head. Always hold it high. Look the world right in the eye.",
+            "mood": "calm",
+            "author": "Helen Keller"
+        },
+        {
+            "id": 24,
+            "sentence": "I'd rather regret the things that I have done than the things that I have not done.",
+            "mood": "anxious",
+            "author": "Lucille Ball"
+        },
+        {
+            "id": 25,
+            "sentence": "Intuition is the discriminant faculty that enables you to decide which of two lines of reasoning is right.",
+            "mood": "overwhelmed",
+            "author": "Paramahansa Yogananda"
+        }
+    ]
+}

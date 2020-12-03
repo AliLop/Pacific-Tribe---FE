@@ -16,13 +16,14 @@ import Login from './components/Auth/Login';
 import Navbar from './components/Main/Navbar';
 import Signup from './components/Auth/Signup';
 import MusicDaily from './components/Suggestions/MusicDaily';
-
+import Home from './components/Home';
 
 
 class App extends React.Component {
 
   state = {
-    loggedInUser: null
+    loggedInUser: null,
+    mood: ''
   }
 
   // This component did mount will allow our user to stay logged in (because on be side they are).
@@ -56,7 +57,7 @@ class App extends React.Component {
         <ToastContainer />
           <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
-            <Route exact path="/" component={ListProjects} />
+          <Route exact path="/" component={Home} />
             <Route exact path="/music-daily" component={MusicDaily} />
             <Route exact path="/projects" component={ListProjects} />
             <Route exact path="/projects/add" render={
