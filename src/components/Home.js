@@ -3,7 +3,9 @@ import React from 'react';
 function Home() {
     return (
         <div>
-            <h3>Home page</h3>
+            <h3>Welcome to your Mood Assistant</h3>
+
+
         </div>
     )
 }

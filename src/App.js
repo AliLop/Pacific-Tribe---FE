@@ -13,10 +13,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Home from './components/Home';
 
+
 class App extends React.Component {
 
   state = {
-    loggedInUser: null
+    loggedInUser: null,
+    mood: ''
   }
 
   // This component did mount will allow our user to stay logged in (because on be side they are).
@@ -51,7 +53,7 @@ class App extends React.Component {
           <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/projects" component={ListProjects} />
+            <Route exact path="/projects" component={ListProjects}/>
             <Route exact path="/projects/add" render={
               () => {
                 if (localStorage.getItem('loggedInUser')) {

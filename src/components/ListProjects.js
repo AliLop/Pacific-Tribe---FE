@@ -1,37 +1,57 @@
 import React from 'react';
-import ProjectsService from '../utils/api';
-import { Link } from 'react-router-dom';
+import YoutubeService from '../utils/yapi';
+//import { Link } from 'react-router-dom';
+import YouTube from 'react-youtube';
+import Sentence from './Sentence'
 
 class ListProjects extends React.Component {
     state = {
-        projects: []
+        meditation: '',
+        yoga: ''
+        //cooking: '',
+        // opts: {
+        //       height: '390',
+        //       width: '640',
+        //       playerVars: {
+        //         autoplay: 1,
+        //       }
+        //     }
     }
 
     componentDidMount() {
-        const projectsService = new ProjectsService();
-        projectsService.getAll()
+        const youtubeService = new YoutubeService();
+        youtubeService.getMeditation('anxiety')
             .then((response) => {
                 console.log(response);
                 this.setState({
-                    projects: response.data
+                    meditation: response
                 });
             });
+
+        youtubeService.getYoga()
+            .then((response) => {
+                console.log(response);
+                this.setState({
+                    yoga: response
+                });
+            });
+
+            
     }
     
     render() {
         return(
-            <div>
-                {this.state.projects.map((project, index) => {
-                    return (
-                        <div key={index}>
-                            <Link to={`/projects/${project._id}`}>{project.title}</Link>
-                        </div>
-                    )
-                })}
-
-               
-            </div>
-        )
+               <div> 
+                <Sentence />
+                <div>              
+                    <YouTube videoId={this.state.meditation}   /> 
+                    {/* opts={this.state.opts}                 */}
+                </div>
+                <div>              
+                    <YouTube videoId={this.state.yoga}  />                 
+                </div>
+               </div> 
+            )
     }
 }
 
