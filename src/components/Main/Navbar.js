@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import AuthService from '../utils/auth';
+import AuthService from '../../utils/auth';
 
 
 class Navbar extends React.Component {
@@ -23,6 +23,9 @@ class Navbar extends React.Component {
                         <ul>
                             <li>
                                 <NavLink activeStyle={{color: "red"}} exact to="/">Home</NavLink>
+                            </li>
+                            <li>
+                                <NavLink activeStyle={{color: "red"}} exact to="/music-daily">MusicDaily</NavLink>
                             </li>
                             <li>
                                 <NavLink activeStyle={{color: "red"}} exact to="/projects">List Projects</NavLink>

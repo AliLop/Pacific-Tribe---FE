@@ -4,7 +4,7 @@ import axios from 'axios'
 class AuthService {
     constructor() {
         let service = axios.create({
-            baseURL: `${process.env.REACT_APP_PROJECTS_API}/api`,
+            baseURL: `${process.env.REACT_APP_PROJECT_API}/api`,
             // send authenticated encripted info back to the server. Cela permet de garder un message de bienvenue et un 
             // mode user connecté, même si le user rafraichit. 
             // cela grace à un cookie qui est envoyé au serveur et celui peut interpréter que ce user est connecté.
