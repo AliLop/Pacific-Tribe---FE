@@ -6,8 +6,8 @@ import SpotifyPlayer from 'react-spotify-player';
 class MusicDaily extends React.Component {
     state = {
         dailyPlaylist: [],
-        mood: this.props.mood,
-        userId: this.props.loggedUser.id
+        mood: this.props.moodAttributes.name,
+        userId: this.props.moodAttributes.userId
     }
 
     componentDidMount() {
