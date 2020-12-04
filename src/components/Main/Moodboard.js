@@ -9,7 +9,7 @@ class Moodboard extends React.Component {
 
     state = {
         moodAttributes: this.props.data,
-        name: this.props.data.mood
+        //name: this.props.data.mood
     }
     render () {
     return (
@@ -27,7 +27,8 @@ class Moodboard extends React.Component {
           <MeditationVideo meditationUrl={this.state.moodAttributes.meditationURL}/>
             </div>
             <div> 
-          <MusicDaily spotifyUri={this.props.data.spotifyURI}/>
+          <MusicDaily  moodAttributes={this.state.moodAttributes}/>
+          {/* spotifyUri={this.props.data.spotifyURI} */}
             </div>
             <div> 
           <Inspiration inspirationUrl={this.state.moodAttributes.inspirationURL[0]}/>

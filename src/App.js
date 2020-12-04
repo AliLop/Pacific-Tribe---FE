@@ -48,8 +48,8 @@ class App extends React.Component {
        const moodService = new MoodService();
        moodService.getTheMoodOfTheDay()
        .then((mood) => {
-         
-        moodService.getTheMoodAttributes(mood)
+         console.log(mood)
+        return moodService.getTheMoodAttributes(mood)
          .then((response) => {
            console.log(`RESPONSE`, response.data)
             this.setState ({
@@ -60,6 +60,7 @@ class App extends React.Component {
                 yogaURL: response.data.yogaURL,
                 coachingURL: response.data.coachingURL,
                 cookingURL:response.data.cookingURL
+                
             })
          })
        })
@@ -105,11 +106,12 @@ class App extends React.Component {
               }
             }
             }/>
-            <Route exact path={`/moodboard/${this.state.userId}`} render={
+            <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} />
+            {/* <Route path={`/moodboard/${this.state.userId}`} render={
               () => {
-                <Moodboard data={this.state} />
+                <Moodboard data={this.state}/>
               }
-            } />
+            } /> */}
 
             <Route exact path="/music-daily" component={MusicDaily} />
            {/* <Route exact path="/yoga-video" component={YogaVideo} />

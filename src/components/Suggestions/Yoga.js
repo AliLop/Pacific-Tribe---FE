@@ -5,7 +5,8 @@ import YouTube from 'react-youtube';
 
 class YogaVideo extends React.Component {
     state = {
-        yogaUrl: this.props.yogaurl,
+        yogaUrl: this.props.moodAttributes.yogaurl,
+        userId:  this.props.moodAttributes.userId,
         yogaVideo: '',
         //prop
 

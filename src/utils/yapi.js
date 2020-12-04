@@ -1,7 +1,7 @@
 import axios from 'axios';
 const KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const meditationVideoID =  'XGifigan8zQ'
-const yogaVideoID = 'UEEsdXn8oG8'
+//const yogaVideoID = 'UEEsdXn8oG8'
 
 class YoutubeService {
     
