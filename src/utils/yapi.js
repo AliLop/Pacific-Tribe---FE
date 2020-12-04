@@ -1,10 +1,16 @@
 import axios from 'axios';
+const KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 class YoutubeService {  
     constructor() {
         let service = axios.create({
             baseURL: `https://www.googleapis.com/youtube/v3`,
             //withCredentials: true,
+            params: {
+                part: 'snippet',
+                maxResults: 5,
+                key: KEY
+            }
         });
         this.service = service;  
     }
@@ -33,9 +39,9 @@ class YoutubeService {
         // }
     }
 
-    //Yoga
+    //Yoga // &key=${process.env.REACT_APP_GOOGLE_API_KEY}
     getYoga() {
-      return this.service.get(`/search?q=UEEsdXn8oG8&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
+      return this.service.get(`/search?q=UEEsdXn8oG8`)
             .then((results) => {
             const final = results.data.items[0].id.videoId;
             return final;
