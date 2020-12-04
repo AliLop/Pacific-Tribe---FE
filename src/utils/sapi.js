@@ -8,6 +8,10 @@ class SpotifyService {
         this.service = service;
     }
 
+    getDailyPlaylist(userId) {
+        return this.service.get(`/music/${userId}/mood`);
+    }
+/*
     getOverwhelmedPlaylist(URI) {
         return this.service.get(`/music/${URI}`);
         // post
@@ -29,6 +33,8 @@ class SpotifyService {
     getEnthusiasticPlaylist() {
         return this.service.get('/enthusiastic-music');
     }
+
+*/
 }
 
 export default SpotifyService;

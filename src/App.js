@@ -12,7 +12,8 @@ import Homepage from './components/Main/Homepage';
 import MoodService from './utils/mapi'
 import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
-// import MusicDaily from './components/Suggestions/MusicDaily';
+import Footer from './components/Main/Footer';
+import MusicDaily from './components/Suggestions/MusicDaily';
 // import YogaVideo from './components/Suggestions/Yoga';
 // import MeditationVideo from './components/Suggestions/Meditation';
 
@@ -47,8 +48,7 @@ class App extends React.Component {
        const moodService = new MoodService();
        moodService.getTheMoodOfTheDay()
        .then((mood) => {
-         
-        moodService.getTheMoodAttributes()
+         moodService.getTheMoodAttributes()
          .then((response) => {
             this.setState ({
                 mood: response.data.name,
@@ -105,10 +105,11 @@ class App extends React.Component {
             }/>
             <Route exact path="/moodboard" component={Moodboard} />
 
-            {/* <Route exact path="/music-daily" component={MusicDaily} />
-            <Route exact path="/yoga-video" component={YogaVideo} />
+            <Route exact path="/music-daily" component={MusicDaily} />
+           {/* <Route exact path="/yoga-video" component={YogaVideo} />
             <Route exact path="/meditation-video" component={MeditationVideo} />  */}
           </Switch>
+          <Footer />
         </div>
       );
       }

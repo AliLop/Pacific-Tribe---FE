@@ -7,7 +7,7 @@ class Homepage extends React.Component {
         <div>
             <h3>Welcome to your Mood Assistant</h3>
 
-
+       
         </div>
     )
 }

@@ -34,16 +34,13 @@ class DailyMood extends React.Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     const moodService = new MoodService();
- 
     const userId = this.state.userId;
     let moodOfTheDay = this.state.moodOfTheDay
     moodService.updateMood(userId, {moodOfTheDay}).then(() => {
-        this.props.history.push(`/moodboard/${this.state.id}`)
+    this.props.history.push(`/moodboard/${this.state.id}`)
     })
-
   }
   
-
   render() {
       return(
           <div>
