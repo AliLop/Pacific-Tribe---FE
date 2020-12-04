@@ -7,7 +7,7 @@ class DailyMood extends React.Component {
      mood: "",
      userId: ""
   }
-
+{*}
  // Il faut récupérer le user dans les props.
  // Et ensuite comment faire passer le mood dans les props.
   componentDidMount() {

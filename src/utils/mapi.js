@@ -17,6 +17,9 @@ class MoodService {
         return this.service.get(`/user/${userId}/mood`);
     }
 
+    getTheMoodAttributes(mood) {
+        return this.service.get(`/moods/${mood}`)
+    }
 }
 
 
