@@ -47,10 +47,14 @@ class App extends React.Component {
        this.setCurrentUser(response.data);
        localStorage.setItem("loggedInUser", response.data._id)
 
-      
+       //Function to retrieve the mood of the day (the last one from the array)
 
-       //Function to retrieve the mood of the day (the last one from the array
-       // Push this to the date
+       // µµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµ NEED TO CHANGE TIHS AFTER
+       const moodService = new MoodService();
+       moodService.getTheMoodOfTheDay()
+       .then(() => )
+
+      
      } else {
        localStorage.removeItem('loggedInUser')
      }
