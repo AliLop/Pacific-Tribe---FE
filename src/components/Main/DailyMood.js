@@ -1,27 +1,27 @@
 import React from 'react';
-import MoodService from '../utils/api';
+import MoodService from '../../utils/mapi';
 import { withRouter } from 'react-router-dom';
 
 class DailyMood extends React.Component {
   state = {
-     mood: "",
-     userId: ""
+     moodOfTheDay: "",
+     userId: this.props.loggedInUser._id
   }
-{*}
- // Il faut récupérer le user dans les props.
- // Et ensuite comment faire passer le mood dans les props.
-  componentDidMount() {
-    const moodService = new MoodService();
-    // can we do this, or do we need to pass the user in the state? 
-    const userId = this.props.match.params.id;
 
-    moodService.updateMood(userId, moodOfTheDay)
-        .then(() => {
-          this.setState({
-            mood: moodOfTheDay
-          })
-        });
-}
+ //Il faut récupérer le user dans les props.
+ //Et ensuite comment faire passer le mood dans les props.
+//   componentDidMount() {
+//     const moodService = new MoodService();
+//     // can we do this, or do we need to pass the user in the state? 
+//     const userId = this.props.match.params.id;
+
+//     moodService.updateMood(userId, moodOfTheDay)
+//         .then(() => {
+//           this.setState({
+//             mood: moodOfTheDay
+//           })
+//         });
+// }
 
     handleChange = (event) => {
         let { name, value } = event.target;
@@ -34,16 +34,10 @@ class DailyMood extends React.Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     const moodService = new MoodService();
-    /*let newProject = {
-        id: this.props.match.params.id,
-        name: this.state.name,
-        description: this.state.description
-
-        When using this approach, we'll have to use updatedProject(newProject)
-    }*/
-    const userId = this.props.match.params.id;
-    let moodOfTheDay = this.state.mood
-    moodService.updateMood(userId, this.state.moodOfTheDay).then(() => {
+ 
+    const userId = this.state.userId;
+    let moodOfTheDay = this.state.moodOfTheDay
+    moodService.updateMood(userId, {moodOfTheDay}).then(() => {
         this.props.history.push(`/moodboard/${this.state.id}`)
     })
 
