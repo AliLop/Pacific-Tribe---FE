@@ -5,7 +5,9 @@ import YouTube from 'react-youtube';
 
 class YogaVideo extends React.Component {
     state = {
-        yoga: '',
+        yogaUrl: this.props.yogaurl,
+        yogaVideo: '',
+        //prop
 
         opts: {
                height: '390',
@@ -19,11 +21,11 @@ class YogaVideo extends React.Component {
 
     componentDidMount() {
         const youtubeService = new YoutubeService();
-        youtubeService.getYoga()
+        youtubeService.getYoga(this.state.yogaUrl)
             .then((response) => {
                 console.log(response);
                 this.setState({
-                    yoga: response
+                    yogaVideo: response
                 });
             });
   

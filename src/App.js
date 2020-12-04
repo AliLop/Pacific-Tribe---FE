@@ -21,7 +21,7 @@ class App extends React.Component {
 
   state = {
     loggedInUser: null,
-    mood: '',
+    mood: 'calm',
     spotifyURI: '',
     sentences: '',
     meditationURL: '',
@@ -48,8 +48,10 @@ class App extends React.Component {
        const moodService = new MoodService();
        moodService.getTheMoodOfTheDay()
        .then((mood) => {
-         moodService.getTheMoodAttributes()
+         
+        moodService.getTheMoodAttributes(mood)
          .then((response) => {
+           console.log(`RESPONSE`, response.data)
             this.setState ({
                 mood: response.data.name,
                 spotifyURI: response.data.spotifyURI,
@@ -103,7 +105,11 @@ class App extends React.Component {
               }
             }
             }/>
-            <Route exact path="/moodboard" component={Moodboard} />
+            <Route exact path={`/moodboard/${this.state.userId}`} render={
+              () => {
+                <Moodboard data={this.state} />
+              }
+            } />
 
             <Route exact path="/music-daily" component={MusicDaily} />
            {/* <Route exact path="/yoga-video" component={YogaVideo} />
