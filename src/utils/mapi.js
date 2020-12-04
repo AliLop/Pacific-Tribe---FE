@@ -13,6 +13,10 @@ class MoodService {
         return this.service.put(`/user/${userId}/mood`, moodOfTheDay);
     }
 
+    getTheMoodOfTheDay(userId) {
+        return this.service.get(`/user/${userId}/mood`);
+    }
+
 }
 
 

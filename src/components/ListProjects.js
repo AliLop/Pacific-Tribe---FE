@@ -14,13 +14,14 @@ class ListProjects extends React.Component {
         //       width: '640',
         //       playerVars: {
         //         autoplay: 1,
+        //          color: "blue"
         //       }
         //     }
     }
 
     componentDidMount() {
         const youtubeService = new YoutubeService();
-        youtubeService.getMeditation('anxiety')
+        youtubeService.getMeditation()
             .then((response) => {
                 console.log(response);
                 this.setState({
@@ -75,11 +76,4 @@ https://www.npmjs.com/package/react-youtube
   onPlaybackQualityChange={func}    // defaults -> noop
 />
 
-const opts = {
-      height: '390',
-      width: '640',
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 1,
-      }
 */

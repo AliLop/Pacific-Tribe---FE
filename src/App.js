@@ -23,7 +23,14 @@ class App extends React.Component {
 
   state = {
     loggedInUser: null,
-    mood: ''
+    mood: '',
+    spotifyURI: '',
+    sentences: '',
+    meditationURL: '',
+    yogaURL: '',
+    coachingURL: '',
+    cookingURL:'',
+    userId: ''
   }
 
   // This component did mount will allow our user to stay logged in (because on be side they are).
@@ -39,6 +46,7 @@ class App extends React.Component {
        this.setCurrentUser(response.data);
        localStorage.setItem("loggedInUser", response.data._id)
 
+      
 
        //Function to retrieve the mood of the day (the last one from the array
        // Push this to the date

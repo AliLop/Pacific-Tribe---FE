@@ -1,5 +1,7 @@
 import axios from 'axios';
 const KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+const meditationVideoID =  'XGifigan8zQ'
+const yogaVideoID = 'UEEsdXn8oG8'
 
 class YoutubeService {  
     constructor() {
@@ -18,7 +20,7 @@ class YoutubeService {
     //Meditation
     getMeditation() {
         // if (mood === 'positive')  {
-            return this.service.get(`/search?q=XGifigan8zQ&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
+            return this.service.get(`/search?q=${meditationVideoID}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
                   .then((results) => {
                   const final = results.data.items[0].id.videoId;
                   return final;
@@ -39,9 +41,9 @@ class YoutubeService {
         // }
     }
 
-    //Yoga // &key=${process.env.REACT_APP_GOOGLE_API_KEY}
+    //Yoga // 
     getYoga() {
-      return this.service.get(`/search?q=UEEsdXn8oG8`)
+      return this.service.get(`/search?q=${yogaVideoID}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
             .then((results) => {
             const final = results.data.items[0].id.videoId;
             return final;
