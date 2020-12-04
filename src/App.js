@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import React from 'react';
 
 // See what to remove, this comes from the previous project.
-import ListProjects from './components/ListProjects'
+
 import AddProject from './components/AddProject';
 import ProjectDetail from './components/ProjectDetail';
 import EditProject from './components/EditProject';
@@ -15,9 +15,10 @@ import { ToastContainer } from 'react-toastify';
 import Login from './components/Auth/Login';
 import Navbar from './components/Main/Navbar';
 import Signup from './components/Auth/Signup';
-import MusicDaily from './components/Suggestions/MusicDaily';
 import Home from './components/Home';
-
+import MusicDaily from './components/Suggestions/MusicDaily';
+import YogaVideo from './components/Suggestions/Yoga';
+import MeditationVideo from './components/Suggestions/Meditation';
 
 class App extends React.Component {
 
@@ -75,7 +76,8 @@ class App extends React.Component {
           <Switch>
           <Route exact path="/" component={Home} />
             <Route exact path="/music-daily" component={MusicDaily} />
-            <Route exact path="/projects" component={ListProjects} />
+            <Route exact path="/yoga-video" component={YogaVideo} />
+            <Route exact path="/meditation-video" component={MeditationVideo} />
             <Route exact path="/projects/add" render={
               () => {
                 if (localStorage.getItem('loggedInUser')) {

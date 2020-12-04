@@ -1,5 +1,5 @@
 import React from 'react';
-import allSentences from '../sentences.json';
+import allSentences from '../../sentences.json';
 
 class Sentence extends React.Component {
     state = {

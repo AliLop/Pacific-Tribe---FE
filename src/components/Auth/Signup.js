@@ -30,6 +30,8 @@ class Signup extends React.Component {
     render(){
         return(
             <div>
+             <button> <Link to={"/social-login"}>Sign up with Google</Link></button>
+                <p>Sign up with your credentials!</p> 
                 <form onSubmit={this.handleFormSubmit}>
                     <label>Username:</label>
                     <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
