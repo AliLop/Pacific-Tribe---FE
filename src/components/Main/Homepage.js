@@ -1,6 +1,8 @@
 import React from 'react';
 
-function Home() {
+class Homepage extends React.Component {
+
+    render () {
     return (
         <div>
             <h3>Welcome to your Mood Assistant</h3>
@@ -9,5 +11,6 @@ function Home() {
         </div>
     )
 }
+}
 
-export default Home; 
+export default Homepage; 

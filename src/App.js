@@ -15,7 +15,7 @@ import { ToastContainer } from 'react-toastify';
 import Login from './components/Auth/Login';
 import Navbar from './components/Main/Navbar';
 import Signup from './components/Auth/Signup';
-import Home from './components/Main/Homepage';
+import Homepage from './components/Main/Homepage';
 import MusicDaily from './components/Suggestions/MusicDaily';
 import YogaVideo from './components/Suggestions/Yoga';
 import MeditationVideo from './components/Suggestions/Meditation';
@@ -36,7 +36,7 @@ class App extends React.Component {
     userId: ''
   }
 
-  // This component did mount will allow our user to stay logged in (because on be side they are).
+
   componentDidMount () {
     if (this.state.loggedInUser === null);
     const authService = new AuthService();
@@ -87,7 +87,7 @@ class App extends React.Component {
         <ToastContainer />
           <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Homepage} />
             {/* <Route exact path="/music-daily" component={MusicDaily} />
             <Route exact path="/yoga-video" component={YogaVideo} />
             <Route exact path="/meditation-video" component={MeditationVideo} /> */}
