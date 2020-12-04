@@ -26,7 +26,7 @@ class Login extends React.Component {
             this.props.setCurrentUser(response.data)
             // save user id browser to local storage.
             localStorage.setItem('loggedInUser', response.data._id)
-            this.props.history.push('projects');
+            this.props.history.push('/dailymood');
         }).catch(() => {
             toast.error('invalid Login')
         })

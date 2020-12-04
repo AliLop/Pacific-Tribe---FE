@@ -7,6 +7,7 @@ import { Link, withRouter } from 'react-router-dom';
 class Signup extends React.Component {
     state = {
         username: '',
+        email: '',
         password: ''
     }
 
@@ -21,7 +22,7 @@ class Signup extends React.Component {
         const authService = new AuthService();
         authService.signup(this.state.username, this.state.password)
         .then(() => {
-            this.props.history.push('/projects')
+            this.props.history.push('/dailymood')
         }) // We could add a catch here.
     }
 
@@ -32,6 +33,8 @@ class Signup extends React.Component {
                 <form onSubmit={this.handleFormSubmit}>
                     <label>Username:</label>
                     <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+                    <label>Email:</label>
+                    <input type='email' name="email" value={this.state.email} onChange={this.handleChange} />
                     <label>Password:</label>
                     <input type='password' name="password" value={this.state.password} onChange={this.handleChange} />
                     <button>Signup </button>
