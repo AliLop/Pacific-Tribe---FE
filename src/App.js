@@ -4,9 +4,9 @@ import React from 'react';
 
 // See what to remove, this comes from the previous project.
 
-import AddProject from './components/AddProject';
-import ProjectDetail from './components/ProjectDetail';
-import EditProject from './components/EditProject';
+// import AddProject from './components/AddProject';
+// import ProjectDetail from './components/ProjectDetail';
+// import EditProject from './components/EditProject';
 
 // Project 3 imports
 import AuthService from './utils/auth';
@@ -15,10 +15,12 @@ import { ToastContainer } from 'react-toastify';
 import Login from './components/Auth/Login';
 import Navbar from './components/Main/Navbar';
 import Signup from './components/Auth/Signup';
-import Home from './components/Suggestions/Homepage';
+import Home from './components/Main/Homepage';
 import MusicDaily from './components/Suggestions/MusicDaily';
 import YogaVideo from './components/Suggestions/Yoga';
 import MeditationVideo from './components/Suggestions/Meditation';
+import MoodService from './utils/mapi'
+import DailyMood from './components/Main/DailyMood';
 
 class App extends React.Component {
 
@@ -48,12 +50,23 @@ class App extends React.Component {
        localStorage.setItem("loggedInUser", response.data._id)
 
        //Function to retrieve the mood of the day (the last one from the array)
-
-       // µµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµ NEED TO CHANGE TIHS AFTER
        const moodService = new MoodService();
        moodService.getTheMoodOfTheDay()
-       .then(() => )
-
+       .then((mood) => {
+         
+        moodService.getTheMoodAttributes()
+         .then((response) => {
+            this.setState ({
+                mood: response.data.name,
+                spotifyURI: response.data.spotifyURI,
+                sentences: response.data.sentences,
+                meditationURL: response.data.meditationURL,
+                yogaURL: response.data.yogaURL,
+                coachingURL: response.data.coachingURL,
+                cookingURL:response.data.cookingURL
+            })
+         })
+       })
       
      } else {
        localStorage.removeItem('loggedInUser')
@@ -75,9 +88,22 @@ class App extends React.Component {
           <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/music-daily" component={MusicDaily} />
+            {/* <Route exact path="/music-daily" component={MusicDaily} />
             <Route exact path="/yoga-video" component={YogaVideo} />
-            <Route exact path="/meditation-video" component={MeditationVideo} />
+            <Route exact path="/meditation-video" component={MeditationVideo} /> */}
+            {/* <Route exact path="/daily-mood" component={DailyMood} /> */}
+            
+            <Route exact path="/daily-mood" render={
+              () => {
+                if (localStorage.getItem('loggedInUser')) {
+                  return <DailyMood loggedInUser={this.state.loggedInUser} />
+                } else {
+                  return <Redirect to='/login' />
+              }
+            }
+            }/>
+
+{/* 
             <Route exact path="/projects/add" render={
               () => {
                 if (localStorage.getItem('loggedInUser')) {
@@ -88,7 +114,7 @@ class App extends React.Component {
             }
             }/>
             <Route exact path="/projects/:id" component={ProjectDetail} />
-            <Route exact path="/projects/:id/edit" component={EditProject} />
+            <Route exact path="/projects/:id/edit" component={EditProject} /> */}
             <Route path='/signup' component={Signup} />
             <Route path='/login' render={
               () => {
@@ -97,7 +123,7 @@ class App extends React.Component {
             } />
             <Route path="/login-google" render={
               () => {
-                window.location.href = `${process.env.REACT_APP_PROJECTS_API}/api/auth/google`
+                window.location.href = `${process.env.REACT_APP_PROJECT_API}/api/auth/google`
               }
             } />
           </Switch>

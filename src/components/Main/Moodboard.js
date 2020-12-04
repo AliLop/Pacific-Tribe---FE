@@ -1,6 +1,6 @@
-import Sentence from './Sentence';
+//import Sentence from './Sentence';
 
 
-                <div> 
-                <Sentence />
-                <div></div>
+                // <div> 
+                // <Sentence />
+                // <div></div>
