@@ -38,6 +38,10 @@ class App extends React.Component {
        // with the current user.
        this.setCurrentUser(response.data);
        localStorage.setItem("loggedInUser", response.data._id)
+
+
+       //Function to retrieve the mood of the day (the last one from the array
+       // Push this to the date
      } else {
        localStorage.removeItem('loggedInUser')
      }
