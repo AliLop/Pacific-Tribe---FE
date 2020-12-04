@@ -20,7 +20,7 @@ class App extends React.Component {
 
   state = {
     loggedInUser: null,
-    mood: '',
+    mood: 'calm',
     spotifyURI: '',
     sentences: '',
     meditationURL: '',
@@ -48,8 +48,9 @@ class App extends React.Component {
        moodService.getTheMoodOfTheDay()
        .then((mood) => {
          
-        moodService.getTheMoodAttributes()
+        moodService.getTheMoodAttributes(mood)
          .then((response) => {
+           console.log(`RESPONSE`, response.data)
             this.setState ({
                 mood: response.data.name,
                 spotifyURI: response.data.spotifyURI,
@@ -82,36 +83,6 @@ class App extends React.Component {
           <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
             <Route exact path="/" component={Homepage} />
-<<<<<<< HEAD
-            {/* <Route exact path="/music-daily" component={MusicDaily} />
-            <Route exact path="/yoga-video" component={YogaVideo} />
-            <Route exact path="/meditation-video" component={MeditationVideo} /> */}
-            {/* <Route exact path="/daily-mood" component={DailyMood} /> */}
-            
-            <Route exact path="/daily-mood" render={
-              () => {
-                if (localStorage.getItem('loggedInUser')) {
-                  return <DailyMood loggedInUser={this.state.loggedInUser} />
-                } else {
-                  return <Redirect to='/login' />
-              }
-            }
-            }/>
-
-{/* 
-            <Route exact path="/projects/add" render={
-              () => {
-                if (localStorage.getItem('loggedInUser')) {
-                  return <AddProject />
-                } else {
-                  return <Redirect to='/login' />
-              }
-            }
-            }/>
-            <Route exact path="/projects/:id" component={ProjectDetail} />
-            <Route exact path="/projects/:id/edit" component={EditProject} /> */}
-=======
->>>>>>> bf33d6cda868a97888b7e37a4cfe21db175ace74
             <Route path='/signup' component={Signup} />
             <Route path='/login' render={
               () => {
@@ -133,7 +104,11 @@ class App extends React.Component {
               }
             }
             }/>
-            <Route exact path="/moodboard" component={Moodboard} />
+            <Route exact path={`/moodboard/${this.state.userId}`} render={
+              () => {
+                <Moodboard data={this.state} />
+              }
+            } />
 
             {/* <Route exact path="/music-daily" component={MusicDaily} />
             <Route exact path="/yoga-video" component={YogaVideo} />

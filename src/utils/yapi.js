@@ -3,7 +3,8 @@ const KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const meditationVideoID =  'XGifigan8zQ'
 const yogaVideoID = 'UEEsdXn8oG8'
 
-class YoutubeService {  
+class YoutubeService {
+    
     constructor() {
         let service = axios.create({
             baseURL: `https://www.googleapis.com/youtube/v3`,
@@ -42,8 +43,8 @@ class YoutubeService {
     }
 
     //Yoga // 
-    getYoga() {
-      return this.service.get(`/search?q=${yogaVideoID}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
+    getYoga(yogaUrl) {
+      return this.service.get(`/search?q=${yogaUrl}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
             .then((results) => {
             const final = results.data.items[0].id.videoId;
             return final;
