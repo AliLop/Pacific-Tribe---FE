@@ -15,7 +15,7 @@ class Moodboard extends React.Component {
     return (
         <div>
             <h3>Welcome to your Moodboard</h3>
-            <p>{this.state.moodAttributes.name}</p>
+            {/* <p>{this.state.moodAttributes.name}</p> 
             <div> 
             Here goes the sentence component.
           <Sentence />
@@ -28,14 +28,14 @@ class Moodboard extends React.Component {
             </div>
             <div> 
           <MusicDaily  moodAttributes={this.state.moodAttributes}/>
-          {/* spotifyUri={this.props.data.spotifyURI} */}
+          spotifyUri={this.props.data.spotifyURI}
             </div>
             <div> 
           <Inspiration inspirationUrl={this.state.moodAttributes.inspirationURL[0]}/>
             </div>
                <div> 
           <Inspiration coachingUrl={this.state.moodAttributes.coachingURL[0]}/>
-            </div>
+            </div> */}
         </div>
     )
 }

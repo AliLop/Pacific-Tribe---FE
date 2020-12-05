@@ -21,13 +21,13 @@ class App extends React.Component {
 
   state = {
     loggedInUser: null,
-    mood: 'calm',
+    mood: '',
     spotifyURI: '',
     sentences: '',
     meditationURL: '',
     yogaURL: '',
     coachingURL: '',
-    cookingURL:'',
+    inspirationURL:'',
     userId: ''
   }
 
@@ -41,15 +41,18 @@ class App extends React.Component {
      if (response.data._id) {
        // there's a user session active then set the state
        // with the current user.
+       console.log("this is the value of response data id", response.data._id)
        this.setCurrentUser(response.data);
        localStorage.setItem("loggedInUser", response.data._id)
 
        //Function to retrieve the mood of the day (the last one from the array)
+       
        const moodService = new MoodService();
-       moodService.getTheMoodOfTheDay()
+       const userId = response.data._id  
+       moodService.getTheMoodOfTheDay(userId)
        .then((mood) => {
-         console.log(mood)
-        return moodService.getTheMoodAttributes(mood)
+         console.log('Here is the last mood updated by one user:', mood)
+        /* return moodService.getTheMoodAttributes(mood)
          .then((response) => {
            console.log(`RESPONSE`, response.data)
             this.setState ({
@@ -59,12 +62,10 @@ class App extends React.Component {
                 meditationURL: response.data.meditationURL,
                 yogaURL: response.data.yogaURL,
                 coachingURL: response.data.coachingURL,
-                cookingURL:response.data.cookingURL
-                
+                inspirationURL:response.data.cookingURL
             })
-         })
-       })
-      
+         })*/
+       }).catch((err) => console.log("An error occured while trying to retrieve the mood of the day", err))
      } else {
        localStorage.removeItem('loggedInUser')
      }

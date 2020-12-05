@@ -4,6 +4,8 @@ import SpotifyPlayer from 'react-spotify-player';
 
 
 class MusicDaily extends React.Component {
+
+    /*
     state = {
         dailyPlaylist: [],
         mood: this.props.moodAttributes.name,
@@ -30,11 +32,13 @@ class MusicDaily extends React.Component {
             });
     }
 
-
+*/
     render() {
 
         return(
             <div>
+            This is the music component.
+            {/*
             <h3>Based on your mood, we thought you might like:</h3>
                 {this.state.dailyPlaylist.map((track, index) => {
         
@@ -61,10 +65,10 @@ class MusicDaily extends React.Component {
                                 <source src={track.track.href} type="audio/mp3" />
                         </audio>
                         */}
-                        </div>
+                   {/*    </div>
                     )
-                })}  
-            </div>
+                })}   */}
+            </div> 
         )
     }
 }
