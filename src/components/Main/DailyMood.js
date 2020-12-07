@@ -8,21 +8,6 @@ class DailyMood extends React.Component {
      userId: this.props.userId
   }
 
- //Il faut récupérer le user dans les props.
- //Et ensuite comment faire passer le mood dans les props.
-//   componentDidMount() {
-//     const moodService = new MoodService();
-//     // can we do this, or do we need to pass the user in the state? 
-//     const userId = this.props.match.params.id;
-
-//     moodService.updateMood(userId, moodOfTheDay)
-//         .then(() => {
-//           this.setState({
-//             mood: moodOfTheDay
-//           })
-//         });
-// }
-
     handleChange = (event) => {
         let { name, value } = event.target;
 

@@ -1,16 +1,15 @@
-//import MusicDaily from '../Suggestions/MusicDaily';
-//import YogaVideo from '../Suggestions/Yoga';
-//import MeditationVideo from '../Suggestions/Meditation';
-//import Inspiration from '../Suggestions/Inspiration'
+import MusicDaily from '../Suggestions/MusicDaily';
+import YogaVideo from '../Suggestions/Yoga';
+import MeditationVideo from '../Suggestions/Meditation';
+import Inspiration from '../Suggestions/Inspiration'
 import MoodService from '../../utils/mapi'
-//import Sentence from '../Suggestions/Sentence';
-//import Graph from '../Main/Graph';
-//import EvasionRoom from '../Suggestions/EvasionRoom';
+import Sentence from '../Suggestions/Sentence';
+import Graph from '../Main/Graph';
+import EvasionRoom from '../Suggestions/EvasionRoom';
 import React from 'react';
 class Moodboard extends React.Component {
 
     state = {
-
           mood: '',
           spotifyURI: '',
           sentences: [],
@@ -18,15 +17,14 @@ class Moodboard extends React.Component {
           yogaURL:[],
           coachingURL: [],
           inspirationURL: []
+          //userName: this.props.userName
     }
-
 
   
      componentDidMount () {
          //Function to retrieve the mood of the day (the last one from the array)
          const moodService = new MoodService();
          const userId = localStorage.getItem('loggedInUser'); 
-         debugger;
         moodService.getTheMoodOfTheDay(userId)
          .then((mood) => {
            console.log('Here is the last mood updated by one user:', mood)
@@ -41,7 +39,8 @@ class Moodboard extends React.Component {
                   meditationURL: moodAttributes.meditationURL,
                   yogaURL: moodAttributes.yogaURL,
                   coachingURL: moodAttributes.coachingURL,
-                  inspirationURL: moodAttributes.cookingURL
+                  inspirationURL: moodAttributes.inspirationURL,
+                  userId: userId
               })
            })
          }).catch((err) => console.log("An error occured while trying to retrieve the mood of the day", err))
@@ -50,50 +49,46 @@ class Moodboard extends React.Component {
     render () {
     return this.state.mood ? (
         <div>
-            <h3>Welcome to your Moodboard {/* {this.props.loggedInUser.username} */}</h3>
-            <p>Welcome </p>
+            <h3>Welcome to your Moodboard </h3>
             <p>{this.state.mood}</p>
-
-            {/* <p>{this.state.moodAttributes.name}</p> 
             
-            <div>
+             <div>
               <div> 
-              <MusicDaily  moodAttributes={this.state.moodAttributes}/>
-                spotifyUri={this.props.data.spotifyURI}
+              <p> MUSIC </p>
+              {/* <MusicDaily  mood={this.state.mood} spotifyUri={this.state.spotifyURI} userId={this.state.userId}/> */}
               </div>
               <div>
-              <Graph moodAttributes={this.state.moodAttributes}/>
+              {/* <Graph userId={this.state.userId}/> */}
               </div>
               <div> 
-              <Sentence />
+              <Sentence mood={this.state.mood} spotifyUri={this.state.sentences[0]}/>
               </div>
+            </div> 
+
+             <div>
+              <img className='image-hr-transition' src="images/Aloha-orange.png" alt="Aloha"/>
             </div>
 
+            {/* <div>
+              <EvasionRoom mood={this.state.mood} />
+            </div> */}
 
             <div>
-              <img className='image-hr-transition' src="images/Aloha-orange.png"/>
+              <img className='image-hr-transition' src="images/Relax-orange.png" alt="Aloha"/>
             </div>
 
-            <div>
-              <EvasionRoom  moodAttributes={this.state.moodAttributes} />
-            </div>
-
-            <div>
-              <img className='image-hr-transition' src="images/Relax-orange.png"/>
-            </div>
-
-            <div> 
-          <YogaVideo yogaUrl={this.state.moodAttributes.yogaURL[0]}/>
+            {/* <div> 
+          <YogaVideo yogaUrl={this.state.yogaURL}  mood={this.state.mood} />
             </div>
             <div> 
-          <MeditationVideo meditationUrl={this.state.moodAttributes.meditationURL}/>
+          <MeditationVideo meditationUrl={this.state.meditationURL} mood={this.state.mood} />
             </div>
             <div> 
-          <Inspiration inspirationUrl={this.state.moodAttributes.inspirationURL[0]}/>
+          <Inspiration inspirationUrl={this.state.inspirationURL} mood={this.state.mood} />
             </div>
                <div> 
-          <Inspiration coachingUrl={this.state.moodAttributes.coachingURL[0]}/>
-            </div> */}
+          <Inspiration coachingUrl={this.state.coachingURL} mood={this.state.mood} />
+            </div>  */}
         </div>
     ) : null
 }

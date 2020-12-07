@@ -9,7 +9,6 @@ import Login from './components/Auth/Login';
 import Navbar from './components/Main/Navbar';
 import Signup from './components/Auth/Signup';
 import Homepage from './components/Main/Homepage';
-
 import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
@@ -21,14 +20,8 @@ class App extends React.Component {
 
   state = {
     loggedInUser: null,
-    mood: '',
-    spotifyURI: '',
-    sentences: [],
-    meditationURL: [],
-    yogaURL: [],
-    coachingURL: [],
-    inspirationURL: [ ],
-    userId: ''
+    userId: '',
+    userName: ''
   }
 
   componentDidMount () {
@@ -51,12 +44,11 @@ class App extends React.Component {
    })
  }  
 
-
-
   setCurrentUser = (user) => {
     this.setState({
       loggedInUser: user,
-      userId: user._id
+      userId: user._id,
+      userName: user.username
     })
   }
 
@@ -89,11 +81,9 @@ class App extends React.Component {
               }
             }
             }/>
-            <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} />
-            <Route exact path={`/moodboard/${this.state.userId}`} render={props => 
-                <Moodboard  userId={this.state.userId}/>}
-            />
-            <Route exact path="/music-daily" component={MusicDaily} />
+            <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
+        
+            {/* <Route exact path="/music-daily" component={MusicDaily} /> */}
            {/* <Route exact path="/yoga-video" component={YogaVideo} />
             <Route exact path="/meditation-video" component={MeditationVideo} />  */}
           </Switch>
