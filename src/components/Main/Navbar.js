@@ -11,7 +11,8 @@ class Navbar extends React.Component {
         authService.logout()
             .then(() => {
             this.props.setCurrentUser(null);
-            localStorage.removeItem("loggedInUser")
+            localStorage.removeItem("loggedInUser");
+            localStorage.removeItem("loggedInUsername");
             })
     }
 
