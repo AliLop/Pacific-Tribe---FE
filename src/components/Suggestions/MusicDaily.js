@@ -1,73 +1,89 @@
 import React from 'react';
 import SpotifyService from '../../utils/sapi';
 import SpotifyPlayer from 'react-spotify-player';
-
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import './MusicDaily.css';
 
 class MusicDaily extends React.Component {
 
-    /*
+    
     state = {
         dailyPlaylist: [],
-        mood: this.props.moodAttributes.name,
-        userId: this.props.moodAttributes.userId
+        mood: this.props.mood,
+        spotifyURI: this.props.spotifyURI,
+        userId: this.props.userId,
     }
 
     componentDidMount() {
         const spotifyService = new SpotifyService();
-        let userId = this.state.userId;
-        console.log(userId)
-        spotifyService.getDailyPlaylist(userId)
+ 
+        let spotifyURI = this.state.spotifyURI;
+      
+        spotifyService.getDailyPlaylist(spotifyURI)
             .then((response) => {
-                console.log("The response from API call is: ", response.data.tracks.items);
-                let copy = [...response.data.tracks.items];
-                let result = [];
+                console.log("The response from API call is: ", response.data);
+                
+                let previews = response.data.tracks.items.map((item) => {
+                    return item.track.preview_url;
+                });
+                console.log("this is the copy array", previews)
+                let resultMusic = [];
+              
                 for (let i = 0; i < 3; i++) {
-                  let randomNumber = Math.floor(Math.random * this.state.dailyPlaylist.length)
-                  result.push(copy[randomNumber])
-                  copy.splice(randomNumber, 1)
+                  let randomNumber = Math.floor(Math.random() * previews.length)
+                  resultMusic.push(previews[randomNumber])
+                  previews.splice(randomNumber, 1)
                 }
                 this.setState({
-                  dailyPlaylist: result
+                  dailyPlaylist: resultMusic
                 })
             });
     }
 
-*/
+
     render() {
 
         return(
             <div>
-            This is the music component.
-            {/*
-            <h3>Based on your mood, we thought you might like:</h3>
-                {this.state.dailyPlaylist.map((track, index) => {
+   
+            <h6>Based on your mood, we thought you might like:</h6>
+                {this.state.dailyPlaylist.map((preview_url, index) => {
         
                     return (
                         <div className='track-bloc' key={index}>
+
+                        <AudioPlayer className="audio-compo"
+                            // autoPlay
+                            src={preview_url}
+                            onPlay={e => console.log("onPlay")}
+                            // other props here
+                        />
+
+                          {/*
                         <audio controls>
                                 <h5>Track title</h5>
                                 <h6>Artist</h6>
-                                <source src={track.track.preview_url} type="audio/mpeg" />
+                                <source src={preview_url} type="audio/mpeg" />
                         </audio>
-
+                      
                         <SpotifyPlayer
-                            uri={track.track.uri}
+                            uri={preview_url}
                             size= "compact"
                             view='list'
                             theme='white'
                             className='spotify-player'
                         />
-
-
-
-                       {/* Other approach: use the audio
+                            
+                       Other approach: use the audio
                         <audio controls>
-                                <source src={track.track.href} type="audio/mp3" />
+                                <source src={preview_url} type="audio/mp3" />
                         </audio>
                         */}
-                   {/*    </div>
+
+                      </div> 
                     )
-                })}   */}
+               })}   
             </div> 
         )
     }

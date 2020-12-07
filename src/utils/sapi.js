@@ -8,33 +8,10 @@ class SpotifyService {
         this.service = service;
     }
 
-    getDailyPlaylist(userId) {
-        return this.service.get(`/music/${userId}/mood`);
-    }
-/*
-    getOverwhelmedPlaylist(URI) {
-        return this.service.get(`/music/${URI}`);
-        // post
-
+    getDailyPlaylist(spotifyURI) {
+        return this.service.get(`/music/${spotifyURI}`);
     }
 
-    getAnxiousPlaylist() {
-        return this.service.get('/anxious-music');
-    }
-
-    getCalmPlaylist() {
-        return this.service.get('/calm-music');
-    }
-
-    getPositivePlaylist() {
-        return this.service.get('/positive-music');
-    }
-
-    getEnthusiasticPlaylist() {
-        return this.service.get('/enthusiastic-music');
-    }
-
-*/
 }
 
 export default SpotifyService;

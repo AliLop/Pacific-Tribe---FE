@@ -55,7 +55,7 @@ class Moodboard extends React.Component {
              <div>
               <div> 
               <p> MUSIC </p>
-              {/* <MusicDaily  mood={this.state.mood} spotifyUri={this.state.spotifyURI} userId={this.state.userId}/> */}
+              <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
               </div>
               <div>
               {/* <Graph userId={this.state.userId}/> */}
