@@ -1,39 +1,37 @@
 import React from 'react';
-import YoutubeService from '../../utils/yapi';
-//import { Link } from 'react-router-dom';
-import YouTube from 'react-youtube';
+import Iframe from 'react-iframe'
 
 
 class MeditationVideo extends React.Component {
     state = {
-        meditation: '',
-        opts: {
-              height: '390',
-               width: '640',
-               playerVars: {
-                 autoplay: 1,
-                  color: "blue"
-               }
-             }
+        meditationUrl: this.props.meditationUrl,
+        meditationVideoUrl: ''
     }
 
     componentDidMount() {
-        const youtubeService = new YoutubeService();
-        youtubeService.getMeditation()
-            .then((response) => {
-                console.log(response);
-                this.setState({
-                    meditation: response
-                });
-            });            
+       this.getMeditationVideo();
+    }
+
+     getMeditationVideo = () => {
+        const index = Math.floor(Math.random() * this.state.meditationUrl.length)
+        this.setState({
+            meditationVideoUrl: this.state.meditationUrl[index]
+        })
     }
     
     render() {
         return(
                <div> 
-                <div>              
-                    <YouTube videoId={this.state.meditation} opts={this.state.opts}  /> 
-                </div>
+                <Iframe url={`http://www.youtube.com/embed/${this.state.meditationVideoUrl}`}
+                    width="400px"
+                    height="400px"
+                    id="myId"
+                    className="myClassname"
+                    display="initial"
+                    position="relative"
+                    allow="fullscreen"
+                    allowFullScreen="true"
+                    />
                </div> 
             )
     }

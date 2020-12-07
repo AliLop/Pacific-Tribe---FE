@@ -1,13 +1,13 @@
 import React from 'react';
-import allSentences from '../../sentences.json';
+//import allSentences from '../../sentences.json';
 
 class Sentence extends React.Component {
     state = {
-        sentencesArray: allSentences.sentences,
-        dailySentence: {}
+        sentencesArray: this.props.sentences,
+        //allSentences.sentences
+        dailySentence: ''
     }
 
-    //MOOD 
      componentDidMount() {
          this.getSentence();
      }
@@ -21,8 +21,9 @@ class Sentence extends React.Component {
 
     render() {
     return (
-      <div className="Sentence">
-          {this.state.dailySentence.sentence}
+      <div className="sentence">
+          {this.state.dailySentence}
+          {/* .sentence */}
       </div>
     );
   }

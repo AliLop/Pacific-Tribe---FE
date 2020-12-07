@@ -4,7 +4,9 @@ import MeditationVideo from '../Suggestions/Meditation';
 import Inspiration from '../Suggestions/Inspiration'
 import MoodService from '../../utils/mapi'
 import Sentence from '../Suggestions/Sentence';
-import Graph from '../Main/Graph';
+import Coaching from '../Suggestions/Coaching'
+//import WeeklyChart from './DayChart';
+import DayChart from './DayChart';
 import EvasionRoom from '../Suggestions/EvasionRoom';
 import React from 'react';
 class Moodboard extends React.Component {
@@ -58,10 +60,11 @@ class Moodboard extends React.Component {
               {/* <MusicDaily  mood={this.state.mood} spotifyUri={this.state.spotifyURI} userId={this.state.userId}/> */}
               </div>
               <div>
-              {/* <Graph userId={this.state.userId}/> */}
+               <DayChart mood={this.state.mood} />
               </div>
+              
               <div> 
-              <Sentence mood={this.state.mood} spotifyUri={this.state.sentences[0]}/>
+              <Sentence mood={this.state.mood} sentences={this.state.sentences}/>
               </div>
             </div> 
 
@@ -77,18 +80,22 @@ class Moodboard extends React.Component {
               <img className='image-hr-transition' src="images/Relax-orange.png" alt="Aloha"/>
             </div>
 
-            {/* <div> 
+            <div>
+              {/* <WeeklyChart userId={this.state.userId}/> mood={this.state.mood} */}
+              </div>
+
+         <div> 
           <YogaVideo yogaUrl={this.state.yogaURL}  mood={this.state.mood} />
             </div>
-            <div> 
+         <div> 
           <MeditationVideo meditationUrl={this.state.meditationURL} mood={this.state.mood} />
             </div>
-            <div> 
+             <div> 
           <Inspiration inspirationUrl={this.state.inspirationURL} mood={this.state.mood} />
             </div>
-               <div> 
-          <Inspiration coachingUrl={this.state.coachingURL} mood={this.state.mood} />
-            </div>  */}
+             <div> 
+          <Coaching coachingUrl={this.state.coachingURL} mood={this.state.mood} />
+            </div>  
         </div>
     ) : null
 }
