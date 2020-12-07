@@ -42,9 +42,11 @@ class App extends React.Component {
        // with the current user.
        console.log("this is the value of response data id", response.data._id)
        this.setCurrentUser(response.data);
-       localStorage.setItem("loggedInUser", response.data._id)
+       localStorage.setItem("loggedInUser", response.data._id);
+       localStorage.setItem("loggedInUsername", response.data.username);
      } else {
        localStorage.removeItem('loggedInUser')
+       localStorage.removeItem('loggedInUsername')
      }
    })
  }  

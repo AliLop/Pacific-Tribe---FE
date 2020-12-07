@@ -11,7 +11,8 @@ class Navbar extends React.Component {
         authService.logout()
             .then(() => {
             this.props.setCurrentUser(null);
-            localStorage.removeItem("loggedInUser")
+            localStorage.removeItem("loggedInUser");
+            localStorage.removeItem("loggedInUsername");
             })
     }
 
@@ -19,21 +20,16 @@ class Navbar extends React.Component {
         if (this.props.loggedInUser) {
             return (
                 <div>
+              
                     <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
                         <Nav.Item>
                                 <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-1" exact to="/">Home</NavLink>
-                        </Nav.Item>
-                        <Nav.Item>
-                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-2" exact to="/music-daily">MusicDaily</NavLink>
-                        </Nav.Item>
-                        <Nav.Item>
-                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-3" exact to="/projects">List Projects</NavLink>
-                        </Nav.Item>
-                        <Nav.Item>
-                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-4" exact to="/projects/add">Add Project</NavLink>
-                        </Nav.Item>
+                        </Nav.Item>                       
                         <Nav.Item>
                             <NavLink className="nav-bar-link" to='/'> <button onClick={this.logoutUser}> Logout </button></NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
                         </Nav.Item>
                     
                     </Nav>
