@@ -25,7 +25,11 @@ class MusicDaily extends React.Component {
                 console.log("The response from API call is: ", response.data);
                 
                 let previews = response.data.tracks.items.map((item) => {
-                    return item.track.preview_url;
+                    return {
+                        preview_url: item.track.preview_url,
+                        artist: item.track.album.artists.name,
+                        track: item.track.album.name,
+                    };
                 });
                 console.log("this is the copy array", previews)
                 let resultMusic = [];
@@ -48,18 +52,20 @@ class MusicDaily extends React.Component {
             <div>
    
             <h6>Based on your mood, we thought you might like:</h6>
-                {this.state.dailyPlaylist.map((preview_url, index) => {
+                {this.state.dailyPlaylist.map((music, index) => {
         
                     return (
                         <div className='track-bloc' key={index}>
-
+                        <h6>{music.track}</h6>
+                        <h5>{music.artist}</h5>
                         <AudioPlayer className="audio-compo"
                             // autoPlay
-                            src={preview_url}
+                            src={music.preview_url}
                             onPlay={e => console.log("onPlay")}
+                            showSkipControls="true"
                             // other props here
                         />
-
+                     
                           {/*
                         <audio controls>
                                 <h5>Track title</h5>
