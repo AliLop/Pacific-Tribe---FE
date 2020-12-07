@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 class DailyMood extends React.Component {
   state = {
      moodOfTheDay: "",
-     //userId: this.props.loggedInUser._id
+     userId: this.props.userId
   }
 
  //Il faut récupérer le user dans les props.
