@@ -2,7 +2,7 @@
 //import YogaVideo from '../Suggestions/Yoga';
 //import MeditationVideo from '../Suggestions/Meditation';
 //import Inspiration from '../Suggestions/Inspiration'
-//import MoodService from '../../utils/mapi'
+import MoodService from '../../utils/mapi'
 //import Sentence from '../Suggestions/Sentence';
 //import Graph from '../Main/Graph';
 //import EvasionRoom from '../Suggestions/EvasionRoom';
@@ -10,51 +10,50 @@ import React from 'react';
 class Moodboard extends React.Component {
 
     state = {
-        moodAttributes: this.props.data,
-        //mood: this.props.data.mood
-    
-          loggedInUser: '',
+
+          mood: '',
           spotifyURI: '',
           sentences: [],
           meditationURL: [],
           yogaURL:[],
           coachingURL: [],
-          inspirationURL: [],
-          userId: this.props.userId  
+          inspirationURL: []
     }
 
-    /* componentDidMount () {
+
+  
+     componentDidMount () {
          //Function to retrieve the mood of the day (the last one from the array)
          const moodService = new MoodService();
-         const userId = this.props.userId  
-         
-         return moodService.getTheMoodOfTheDay(userId)
+         const userId = localStorage.getItem('loggedInUser'); 
+         debugger;
+        moodService.getTheMoodOfTheDay(userId)
          .then((mood) => {
            console.log('Here is the last mood updated by one user:', mood)
-           return moodService.getTheMoodAttributes(mood)
+         moodService.getTheMoodAttributes(mood.data)
            .then((response) => {
              console.log(`RESPONSE`, response.data)
+             const moodAttributes = response.data[0];
               this.setState ({
-                  mood: response.data.name,
-                  spotifyURI: response.data.spotifyURI,
-                  sentences: response.data.sentences,
-                  meditationURL: response.data.meditationURL,
-                  yogaURL: response.data.yogaURL,
-                  coachingURL: response.data.coachingURL,
-                  inspirationURL:response.data.cookingURL
+                  mood: moodAttributes.name,
+                  spotifyURI: moodAttributes.spotifyURI,
+                  sentences: moodAttributes.sentences,
+                  meditationURL: moodAttributes.meditationURL,
+                  yogaURL: moodAttributes.yogaURL,
+                  coachingURL: moodAttributes.coachingURL,
+                  inspirationURL: moodAttributes.cookingURL
               })
            })
          }).catch((err) => console.log("An error occured while trying to retrieve the mood of the day", err))
-        } */
+        } 
 
     render () {
-      console.log("props", this.props);
-      console.log("state", this.state.mood);
-      console.log("moodattributes", this.state.moodAttributes);
-    return (
+    return this.state.mood ? (
         <div>
             <h3>Welcome to your Moodboard {/* {this.props.loggedInUser.username} */}</h3>
             <p>Welcome </p>
+            <p>{this.state.mood}</p>
+
             {/* <p>{this.state.moodAttributes.name}</p> 
             
             <div>
@@ -96,7 +95,7 @@ class Moodboard extends React.Component {
           <Inspiration coachingUrl={this.state.moodAttributes.coachingURL[0]}/>
             </div> */}
         </div>
-    )
+    ) : null
 }
 }
 export default Moodboard;
