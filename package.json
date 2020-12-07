@@ -14,11 +14,7 @@
     "react-bootstrap": "^1.4.0",
     "react-chartjs-2": "^2.11.1",
     "react-dom": "^17.0.1",
-<<<<<<< HEAD
-    "react-h5-audio-player": "^3.5.0",
-=======
     "react-iframe": "^1.8.0",
->>>>>>> 783249f58e0e397ad959e9fe4a3cb381481cabe9
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-spotify-player": "^1.0.4",

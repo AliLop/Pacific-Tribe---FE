@@ -5,8 +5,8 @@ import Inspiration from '../Suggestions/Inspiration'
 import MoodService from '../../utils/mapi'
 import Sentence from '../Suggestions/Sentence';
 import Coaching from '../Suggestions/Coaching'
-//import WeeklyChart from './DayChart';
-import DayChart from './DayChart';
+//import DayChart from './DayChart';
+import WeeklyChart from './WeeklyChart';
 import EvasionRoom from '../Suggestions/EvasionRoom';
 import React from 'react';
 class Moodboard extends React.Component {
@@ -60,7 +60,7 @@ class Moodboard extends React.Component {
               <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
               </div>
               <div>
-               <DayChart mood={this.state.mood} />
+               <WeeklyChart mood={this.state.mood} />
               </div>
               
               <div> 

@@ -12,9 +12,8 @@ import Homepage from './components/Main/Homepage';
 import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
-import MusicDaily from './components/Suggestions/MusicDaily';
-// import YogaVideo from './components/Suggestions/Yoga';
-// import MeditationVideo from './components/Suggestions/Meditation';
+
+
 
 class App extends React.Component {
 
