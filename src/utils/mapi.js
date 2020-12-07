@@ -22,8 +22,8 @@ class MoodService {
         return this.service.get(`/moods/${mood}`)
     }
 
-    getMoodHistory(userId) {
-        return this.service.get(`/graph/${userId}`)
+     getMoodHistory(userId) {
+        return this.service.get(`/chart/${userId}`)
     }
 }
 
