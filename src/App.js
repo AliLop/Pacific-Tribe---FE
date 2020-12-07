@@ -56,7 +56,8 @@ class App extends React.Component {
 
   setCurrentUser = (user) => {
     this.setState({
-      loggedInUser: user
+      loggedInUser: user,
+      userId: user._id
     })
   }
 
@@ -83,7 +84,7 @@ class App extends React.Component {
             <Route exact path="/daily-mood" render={
               () => {
                 if (localStorage.getItem('loggedInUser')) {
-                  return <DailyMood loggedInUser={this.state.loggedInUser} />
+                  return <DailyMood loggedInUser={this.state.loggedInUser} userId={this.state.userId} />
                 } else {
                   return <Redirect to='/login' />
               }
