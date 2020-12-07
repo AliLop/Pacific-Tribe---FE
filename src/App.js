@@ -9,7 +9,7 @@ import Login from './components/Auth/Login';
 import Navbar from './components/Main/Navbar';
 import Signup from './components/Auth/Signup';
 import Homepage from './components/Main/Homepage';
-import MoodService from './utils/mapi'
+
 import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
@@ -47,7 +47,6 @@ class App extends React.Component {
      } else {
        localStorage.removeItem('loggedInUser');
        localStorage.removeItem("loggedInUsername");
-
      }
    })
  }  
