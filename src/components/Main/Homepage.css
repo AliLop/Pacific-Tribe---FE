@@ -1,0 +1,106 @@
+.main-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+.header-visual {
+    /*background-image: url("crea1.png");*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-size: contains;
+  }
+
+  .snippet-homepage {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.type-snippet {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: rgb(192, 108, 69);
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 30%;
+    bottom: 40%;
+    left: 17%;
+    right: 20%;
+    height: 40%;
+  width: 80%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.snippet-homepage {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.type-legend{
+  font-size: 12px;
+  text-align: center;
+  color: grey;
+}
+
+.tribal-pitch {
+  width: 800px;
+}
+.baseline-container{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.concept-pitch {
+  color: grey;
+  font-size: 14px;
+  text-align: center;
+  font-family:'Roboto', sans-serif;
+  margin-bottom: 90px;
+}
+
+h1 {
+  color:#EB596E;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family:'Roboto', sans-serif;
+}
+
+
+.portrait{
+  width: 220px;
+}
+
+.h3-homepage {
+  color:#EB596E;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family:'Roboto', sans-serif;
+}

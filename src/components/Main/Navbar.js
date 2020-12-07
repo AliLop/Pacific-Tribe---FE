@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import AuthService from '../../utils/auth';
-
+import {Nav} from 'react-bootstrap';
+import './Navbar.css';
 
 class Navbar extends React.Component {
 
@@ -18,47 +19,40 @@ class Navbar extends React.Component {
         if (this.props.loggedInUser) {
             return (
                 <div>
-                    <p>Welcome {this.props.loggedInUser.username}</p>
-                    <nav>
-                        <ul>
-                            <li>
-                                <NavLink activeStyle={{color: "red"}} exact to="/">Home</NavLink>
-                            </li>
-                            <li>
-                                <NavLink activeStyle={{color: "red"}} exact to="/music-daily">MusicDaily</NavLink>
-                            </li>
-                            <li>
-                                <NavLink activeStyle={{color: "red"}} exact to="/projects">List Projects</NavLink>
-                            </li>
-                            <li>
-                                <NavLink activeStyle={{color: "red"}} exact to="/projects/add">Add Project</NavLink>
-                            </li>
-                            <li>
-                            <NavLink to='/'>
-                                <button onClick={this.logoutUser}> Logout </button>
-                            </NavLink>
-                            </li>
-                        </ul>
-                    </nav>
+                    <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                        <Nav.Item>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-1" exact to="/">Home</NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-2" exact to="/music-daily">MusicDaily</NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-3" exact to="/projects">List Projects</NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-4" exact to="/projects/add">Add Project</NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <NavLink className="nav-bar-link" to='/'> <button onClick={this.logoutUser}> Logout </button></NavLink>
+                        </Nav.Item>
+                    
+                    </Nav>
                 </div>
             )
         } else {
             return (
-                <nav>
-                    <ul>
-                        <li>
-                            <NavLink activeStyle={{color: "red"}} exact to="/login">Login</NavLink>
-                        </li>
-                        <li>
-                            <NavLink activeStyle={{color: "red"}} exact to="/signup">Signup</NavLink>
-                        </li>
-                        <li>
-                            <NavLink activeStyle={{color: "red"}} exact to="/login-google">Login with Google</NavLink>
-                        </li>
-                    </ul>
-                </nav>
+                <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                    <Nav.Item>
+                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} exact to="/login">Login</NavLink>
+                    </Nav.Item>
+                    <Nav.Item>
+                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} exact to="/signup">Signup</NavLink>
+                    </Nav.Item>
+                </Nav>
             )
         }
     }
 }
 export default Navbar;
+
+

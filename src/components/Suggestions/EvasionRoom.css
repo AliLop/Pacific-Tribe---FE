@@ -1,0 +1,11 @@
+.evasion-room-pictures {
+    width: 250px;
+    margin: 10px;
+}
+
+.evasion-room-title-pictures {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

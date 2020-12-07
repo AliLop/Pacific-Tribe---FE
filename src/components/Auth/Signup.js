@@ -30,7 +30,7 @@ class Signup extends React.Component {
     render(){
         return(
             <div>
-             <button> <Link to={"/social-login"}>Sign up with Google</Link></button>
+            <button> <Link to="/login-google">Log in with Google</Link></button>
                 <p>Sign up with your credentials!</p> 
                 <form onSubmit={this.handleFormSubmit}>
                     <label>Username:</label>

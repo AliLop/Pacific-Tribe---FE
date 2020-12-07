@@ -38,7 +38,7 @@ class DailyMood extends React.Component {
 
     let moodOfTheDay = this.state.moodOfTheDay
     moodService.updateMood(userId, {moodOfTheDay})
-        this.props.history.push(`/moodboard/${userId}`)
+    this.props.history.push(`/moodboard/${userId}`)
   }
   
   render() {

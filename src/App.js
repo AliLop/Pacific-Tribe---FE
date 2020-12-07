@@ -21,16 +21,16 @@ class App extends React.Component {
 
   state = {
     loggedInUser: null,
-    mood: '',
-    spotifyURI: '',
-    sentences: '',
-    meditationURL: '',
-    yogaURL: '',
-    coachingURL: '',
-    inspirationURL:'',
+    mood: 'calm',
+    spotifyURI: '4SlG7b0D95WD4DHqF672fx',
+    sentences: ["Everyone smiles in the same language.", "The ideal of calm exists in a sitting cat.", "Society develops wit, but its contemplation alone forms genius",
+    "Life is a process. We are a process. The universe is a process.", "I'm not afraid of storms, for I'm learning how to sail my ship."],
+    meditationURL: ["j5v6-V0x90A", "Yjh_sDNL1Ac"],
+    yogaURL: ["j5v6-V0x90A", "Yjh_sDNL1Ac"],
+    coachingURL: ["LI9upn4t9n8", "xLS9uQQQyB0"],
+    inspirationURL: ["oKtALHe3Y9Q", "h9o5Zx7m4Fs"],
     userId: ''
   }
-
 
   componentDidMount () {
     if (this.state.loggedInUser === null);
@@ -44,33 +44,36 @@ class App extends React.Component {
        console.log("this is the value of response data id", response.data._id)
        this.setCurrentUser(response.data);
        localStorage.setItem("loggedInUser", response.data._id)
-
-       //Function to retrieve the mood of the day (the last one from the array)
-       
-       const moodService = new MoodService();
-       const userId = response.data._id  
-       moodService.getTheMoodOfTheDay(userId)
-       .then((mood) => {
-         console.log('Here is the last mood updated by one user:', mood)
-        /* return moodService.getTheMoodAttributes(mood)
-         .then((response) => {
-           console.log(`RESPONSE`, response.data)
-            this.setState ({
-                mood: response.data.name,
-                spotifyURI: response.data.spotifyURI,
-                sentences: response.data.sentences,
-                meditationURL: response.data.meditationURL,
-                yogaURL: response.data.yogaURL,
-                coachingURL: response.data.coachingURL,
-                inspirationURL:response.data.cookingURL
-            })
-         })*/
-       }).catch((err) => console.log("An error occured while trying to retrieve the mood of the day", err))
+      this.setCurrentMood()
      } else {
        localStorage.removeItem('loggedInUser')
      }
    })
  }  
+
+ setCurrentMood = () => {
+  const moodService = new MoodService();
+  const userId = this.props.userId  
+  
+  return moodService.getTheMoodOfTheDay(userId)
+  .then((mood) => {
+    console.log('Here is the last mood updated by one user:', mood)
+    return moodService.getTheMoodAttributes(mood)
+    .then((response) => {
+      console.log(`RESPONSE`, response.data)
+       this.setState ({
+           mood: response.data.name,
+           spotifyURI: response.data.spotifyURI,
+           sentences: response.data.sentences,
+           meditationURL: response.data.meditationURL,
+           yogaURL: response.data.yogaURL,
+           coachingURL: response.data.coachingURL,
+           inspirationURL:response.data.cookingURL
+       })
+      })
+    })
+  }
+
 
   setCurrentUser = (user) => {
     this.setState({
@@ -108,12 +111,9 @@ class App extends React.Component {
             }
             }/>
             <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} />
-            {/* <Route path={`/moodboard/${this.state.userId}`} render={
-              () => {
-                <Moodboard data={this.state}/>
-              }
-            } /> */}
-
+            <Route exact path={`/moodboard/${this.state.userId}`} render={props => 
+                <Moodboard {...props} mood={this.state.mood} data={this.state} userId={this.state.userId}/>}
+            />
             <Route exact path="/music-daily" component={MusicDaily} />
            {/* <Route exact path="/yoga-video" component={YogaVideo} />
             <Route exact path="/meditation-video" component={MeditationVideo} />  */}

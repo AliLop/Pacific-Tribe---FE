@@ -37,8 +37,8 @@ class Login extends React.Component {
     render() {
         return(
             <div>
-                <button> <Link to={"/social-login"}>Log in with Google</Link></button>
-                <p>Log in with your credentials!</p> 
+                <button> <Link to="/login-google">Log in with Google</Link></button>
+                <p>Log in with your credentials</p> 
             <form onSubmit={this.handleFormSubmit}>
                 <label>Username:</label>
                 <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
