@@ -45,8 +45,9 @@ class App extends React.Component {
        localStorage.setItem("loggedInUser", response.data._id);
        localStorage.setItem("loggedInUsername", response.data.username);
      } else {
-       localStorage.removeItem('loggedInUser')
-       localStorage.removeItem('loggedInUsername')
+       localStorage.removeItem('loggedInUser');
+       localStorage.removeItem("loggedInUsername");
+
      }
    })
  }  
