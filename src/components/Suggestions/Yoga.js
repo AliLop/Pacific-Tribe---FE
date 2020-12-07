@@ -1,42 +1,65 @@
 import React from 'react';
-import YoutubeService from '../../utils/yapi';
+//import YoutubeService from '../../utils/yapi';
 //import { Link } from 'react-router-dom';
-import YouTube from 'react-youtube';
+//import YouTube from 'react-youtube';
+import Iframe from 'react-iframe'
 
 class YogaVideo extends React.Component {
     state = {
-        yogaUrl: this.props.moodAttributes.yogaurl,
-        userId:  this.props.moodAttributes.userId,
-        yogaVideo: '',
-        //prop
+        yogaUrl: this.props.yogaUrl,
+        yogaVideoUrl: ''
+        //yogaVideoId: '',
 
-        opts: {
-               height: '390',
-               width: '640',
-               playerVars: {
-                 autoplay: 1,
-                  color: "blue"
-               }
-             }
+        // opts: {
+        //        height: '390',
+        //        width: '640',
+        //        playerVars: {
+        //          autoplay: 1,
+        //           color: "blue"
+        //        }
+        //      }
     }
 
     componentDidMount() {
-        const youtubeService = new YoutubeService();
-        youtubeService.getYoga(this.state.yogaUrl)
-            .then((response) => {
-                console.log(response);
-                this.setState({
-                    yogaVideo: response
-                });
-            });
-  
+       this.getYogaVideo();
     }
+
+     getYogaVideo = () => {
+        const index = Math.floor(Math.random() * this.state.yogaUrl.length)
+        this.setState({
+            yogaVideoUrl: this.state.yogaUrl[index]
+        })
+    }
+
+    // componentDidUpdate() {
+    //         if (this.state.yogaVideoUrl)  {
+    //         const youtubeService = new YoutubeService();
+    //         youtubeService.getYoga(this.state.yogaVideoUrl)
+    //             .then((response) => {
+    //                 console.log(response);
+    //                 this.setState({
+    //                     yogaVideoId: response
+    //                 });
+    //             });
+    //     } else {
+    //         return null
+    //     }
+    // }
     
     render() {
         return(
                <div> 
                 <div>              
-                    <YouTube videoId={this.state.yoga}  />                 
+                     {/* <YouTube videoId={this.state.yogaVideoId}  />                 */}
+                <Iframe url={`http://www.youtube.com/embed/${this.state.yogaVideoUrl}`}
+                    width="400px"
+                    height="400px"
+                    id="myId"
+                    className="myClassname"
+                    display="initial"
+                    position="relative"
+                    allow="fullscreen"
+                    />
                 </div>
                </div> 
             )
