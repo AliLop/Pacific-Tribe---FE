@@ -6,6 +6,7 @@ class DailyMood extends React.Component {
   state = {
      moodOfTheDay: "",
      //userId: this.props.loggedInUser._id
+     userId = {`${localStorage.getItem('loggedInUser')}`}
   }
 
  //Il faut récupérer le user dans les props.
