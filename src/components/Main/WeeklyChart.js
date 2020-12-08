@@ -11,14 +11,13 @@ class WeeklyChart extends React.Component {
         data:  {
                     labels: ['Overwhelmed', 'Anxious', 'Calm', 'Positive', 'Enthusiastic'],
                     datasets: [{
-                        label: 'How have you been feeling lately...',
                         data: [0, 0, 0, 0, 0],
                         backgroundColor: ['rgba(197,148,136, 0.6)'],
                         borderColor: ['rgba(197,148,136, 0.7)'],
                         borderWidth: 1
                     }]
                 },
-        options: {
+        options: { 
             scales: {
                 yAxes: [{
                     display: false,
@@ -26,7 +25,16 @@ class WeeklyChart extends React.Component {
                         beginAtZero: true
                     }
                 }]
-            }
+            },            
+                legend: {
+                    display: false
+                
+             }           
+            //     title: {
+            //         display: true,
+            //         text: 'A little bit of perspective'
+                
+            // }
         }
     }
 
@@ -73,7 +81,6 @@ class WeeklyChart extends React.Component {
             data:  {
                 labels: ['Overwhelmed', 'Anxious', 'Calm', 'Positive', 'Enthusiastic'],
                 datasets: [{
-                    // label: 'How have you been feeling lately...',
                     data: [overwhelmed, anxious, calm, positive, enthusiastic],
                     backgroundColor: ['rgb(197,148,136)'],
                     borderColor: ['rgba(197,148,136, 0.7)'],
@@ -85,9 +92,9 @@ class WeeklyChart extends React.Component {
     
     render() {
         return(
-               <div style={{width: "650px"}}> 
+               <div style={{width: "650px", margin: "auto"}}> 
+               <h5 className="evasion-room-title">A little bit of perspective</h5>
                 <Radar data={this.state.data} options={this.state.options} />
-                
                </div> 
             )
     }

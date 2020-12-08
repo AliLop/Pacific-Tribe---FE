@@ -23,13 +23,13 @@ class Navbar extends React.Component {
               
                     <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
                         <Nav.Item>
-                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-1" exact to="/">Home</NavLink>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventkey="link-1" exact to="/">Home</NavLink>
                         </Nav.Item>                       
                         <Nav.Item>
                             <NavLink className="nav-bar-link" to='/'> <button onClick={this.logoutUser}> Logout </button></NavLink>
                         </Nav.Item>
                         <Nav.Item>
-                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventKey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
                         </Nav.Item>
                     
                     </Nav>

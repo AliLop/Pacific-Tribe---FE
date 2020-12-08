@@ -22,7 +22,8 @@ class DailyMood extends React.Component {
                 position: "bottom-right", 
                 autoClose: 3000, 
                 hideProgressBar: true,
-                transition: Zoom
+                transition: Zoom,
+                limit: 1
             });
     event.preventDefault();
     const moodService = new MoodService();

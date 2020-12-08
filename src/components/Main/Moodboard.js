@@ -11,7 +11,7 @@ import React from 'react';
 import { toast, Zoom } from 'react-toastify';
 //import AudioPlayer from 'react-h5-audio-player';
 import './Moodboard.css';
-//import NotificationAudio from './waves.mp3';
+import NotificationAudio from './waves.mp3';
 
 class Moodboard extends React.Component {
 
@@ -32,10 +32,10 @@ class Moodboard extends React.Component {
     const userId = localStorage.getItem('loggedInUser'); 
     moodService.getTheMoodOfTheDay(userId)
       .then((mood) => {
-        console.log('Here is the last mood updated by one user:', mood)
+        //console.log('Here is the last mood updated by one user:', mood)
         moodService.getTheMoodAttributes(mood.data)
           .then((response) => {
-            console.log(`RESPONSE`, response.data)
+            //console.log(`RESPONSE`, response.data)
             const moodAttributes = response.data[0];
             this.setState ({
               mood: moodAttributes.name,
@@ -58,7 +58,7 @@ class Moodboard extends React.Component {
         <h6>Drink something and <br/>
         get Pacific <br/>
         <br/>   🤎🧘‍♀️🤎  </h6>
-       {/* <audio autoPlay type="music" src={NotificationAudio}></audio>  */}
+       <audio autoPlay controls type="music" src={NotificationAudio}></audio> 
         <br/> 
         </div>
         <div className="toaster-column">
@@ -67,63 +67,70 @@ class Moodboard extends React.Component {
       </div>
 
     )
-    setTimeout(() => {
-      // let notificationAudio = new Audio('C:/users/alici/desktop/labs/Moduel3-FINAL-PROJECT-FE/public/audio/waves.mp3');
-      //   notificationAudio.autoplay();
-       
+    setInterval(() => {      
       toast(Msg, { 
           position: "bottom-right", 
           autoClose: 8000, 
           hideProgressBar: true,
-          transition: Zoom
+          transition: Zoom,
+          // not working => limit: 1
       });
-    }, 4500);
+    }, 360000000);
   } 
 
   render () {
   return this.state.mood ? (
     <div>
-       <h3>Welcome to your {this.state.mood} Moodboard </h3>
-
-        <h6>Based on your mood, we thought you might like some...</h6>
-        
-        <div> 
-          <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
-        </div>
-        <div>
-          <WeeklyChart mood={this.state.mood} />
-        </div>
-        <div> 
-          <Sentence mood={this.state.mood} sentences={this.state.sentences}/>
-        </div>
-  
-        <div>
-          <img className='image-hr-transition' src="images/Aloha-orange.png" alt="Aloha"/>
-        </div>
-
-        <div>
-        <EvasionRoom mood={this.state.mood} />
-        </div> 
- 
-    <br />
-    <div>
       <div>
-        <img className='image-hr-transition' src="images/Relax-orange.png" alt="Aloha"/>
+        <h3>Welcome to your Moodboard</h3>
+          <h6>Based on your mood, we thought you might like some...</h6>
+        <div>
+          {this.state.mood}
+        </div> 
       </div>
+        <container className="scroll-container">
+        <section className="section  bg1 y mandatory-scroll-snapping"> 
+          <div> 
+            <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
+          </div>
+          <div>
+            <WeeklyChart mood={this.state.mood} />
+          </div>
+          <div> 
+            <Sentence mood={this.state.mood} sentences={this.state.sentences}/>
+          </div>
+        </section>
+          <div>
+            <img className='image-hr-transition' src="/images/Aloha-orange.png" alt="Aloha"/>
+          </div>
+        <section className="section  bg2  y mandatory-scroll-snapping">
+          <div className="evasion-section">
+            <EvasionRoom mood={this.state.mood} />
+          </div> 
+        </section> 
+          <div>
+            <img className='image-hr-transition' src="/images/Relax-orange.png" alt="Aloha"/>
+          </div>
+  
+          <section class="section bg3"> 
+            <div> 
+              <YogaVideo yogaUrl={this.state.yogaURL}  mood={this.state.mood} />
+            </div>
+            <div> 
+              <MeditationVideo meditationUrl={this.state.meditationURL} mood={this.state.mood} />
+            </div>
+          </section>
 
-      <div> 
-        <YogaVideo yogaUrl={this.state.yogaURL}  mood={this.state.mood} />
-      </div>
-      <div> 
-        <MeditationVideo meditationUrl={this.state.meditationURL} mood={this.state.mood} />
-      </div>
-      <div> 
-        <Inspiration inspirationUrl={this.state.inspirationURL} mood={this.state.mood} />
-      </div>
-      <div> 
-        <Coaching coachingUrl={this.state.coachingURL} mood={this.state.mood} />
-      </div>  
-      </div>  
+          <section class="section bg4">
+            <div> 
+              <Inspiration inspirationUrl={this.state.inspirationURL} mood={this.state.mood} />
+            </div>
+            <div> 
+              <Coaching coachingUrl={this.state.coachingURL} mood={this.state.mood} />
+            </div>  
+          </section>
+          </container> 
+        
     </div>
   ) : null
 }
