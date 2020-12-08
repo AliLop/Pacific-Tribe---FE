@@ -105,7 +105,7 @@ class Moodboard extends React.Component {
           </div>
         <section className="section  bg2  y mandatory-scroll-snapping">
           <div className="evasion-section">
-            <EvasionRoom mood={this.state.mood} />
+            <EvasionRoomEntry mood={this.state.mood} />
           </div> 
         </section> 
           <div>
