@@ -1,3 +1,23 @@
+/* HEADER */
+
+.header-video {
+  width: 100vw;
+  height: 80%;
+  object-fit: cover;
+  z-index: -1 ;
+}
+
+.logo-homepage {
+  width: 150px;
+  position: absolute;
+  left: 45%;
+}
+
+.logo-home {
+  width: 150px;
+
+}
+
 .main-content {
     width: 100%;
     margin: 0;

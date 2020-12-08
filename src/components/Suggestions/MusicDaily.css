@@ -7,15 +7,57 @@
 }
 
 .audio-compo {
-    width: 200px;
+    width: 300px;
 }
 
 .track-bloc {
-    width: 200px;
+    width: 300px;
 }
 
 
 .rhap_main-controls svg {
 width: 50%;
-color: black;
+color: #C5A388;
+}
+
+.rhap_volume-controls svg {
+    width: 50%;
+    color: #C5A388;
+}
+
+.rhap_volume-indicator {
+    width: 40%;
+    color: #C5A388;
+}
+
+.rhap_current-time svg {
+    width: 40%;
+    color: #C5A388;
+}
+
+.rhap_progress-filled {
+    width: 40%;
+    color: #C5A388;
+}
+
+.track-title {
+    font-size: 10px;
+    color: #C5A388;
+}
+
+.rhap_time  {
+    font-size: 10px;
+    color: #C5A388;
+}
+
+.rhap_volume-controls{
+    color: #C5A388;
+}
+
+.rhap_progress-indicator{
+    background-color: #C5A388;
+}
+
+.rhap_container {
+    box-shadow: none;
 }

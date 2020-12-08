@@ -1,0 +1,27 @@
+/* SIGNUP FORM*/
+
+.signup-visual {
+    width: auto;
+    height: 100vh;
+    margin-left: 0;
+  }
+  
+  .image-signup-container{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .alignment-items {
+    display: flex;
+    flex-direction: row;
+  }
+  .signup-col {
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .signup-form-container {
+    margin: 0;
+    padding: 0;
+  }

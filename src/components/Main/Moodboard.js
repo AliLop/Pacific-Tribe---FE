@@ -72,9 +72,9 @@ class Moodboard extends React.Component {
               <img className='image-hr-transition' src="images/Aloha-orange.png" alt="Aloha"/>
             </div>
 
-            {/* <div>
+             <div>
               <EvasionRoom mood={this.state.mood} />
-            </div> */}
+            </div> 
 
             <div>
               <img className='image-hr-transition' src="images/Relax-orange.png" alt="Aloha"/>

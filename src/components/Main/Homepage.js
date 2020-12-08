@@ -1,12 +1,25 @@
 import React from 'react';
 import './Homepage.css';
-
+import HomepageVideo from './Video3.mp4'
 
 class Homepage extends React.Component {
 
     render () {
     return (
     <div>
+       <div className="logo-homepage">
+            <div>
+                <img className="logo-home" src="images/LogoV11.png" alt="Homepage-visual" />
+            </div>
+        </div>
+
+
+        <div className="video-header">
+            <div>
+                <video autoPlay loop muted className="header-video" src={HomepageVideo} type="video/mp4" alt="Homepage-visual" />
+            </div>
+        </div>
+
 
         <div className="main-content">
             <div>
