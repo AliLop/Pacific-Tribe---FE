@@ -23,6 +23,7 @@ class EvasionRoom extends React.Component {
         return(
             <div>
             <h5 className="evasion-room-title">Evasion Spirit: Open the door, the Serenity is waiting for you</h5>
+            <br/>
             <div className="evasion-section">
            <section className="roww evasion-rooms">
            <div className="evasion-room-title-pictures">

@@ -17,6 +17,9 @@ import EvasionRoom2 from './components/Suggestions/EvasionRoom2';
 import EvasionRoom3 from './components/Suggestions/EvasionRoom3';
 import EvasionRoom4 from './components/Suggestions/EvasionRoom4';
 
+//import PopUp from './components/Main/PopUp';
+
+
 class App extends React.Component {
 
   state = {
@@ -91,6 +94,9 @@ class App extends React.Component {
               }
             }
             }/>
+            {/* POPUP */}
+            {/* <Route exact path="/popup" component={PopUp} /> */}
+
             <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
         
             <Route exact path="/evasion-room/room-pachamama" component={EvasionRoom1} />

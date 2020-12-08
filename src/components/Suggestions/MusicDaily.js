@@ -1,6 +1,6 @@
 import React from 'react';
 import SpotifyService from '../../utils/sapi';
-// import SpotifyPlayer from 'react-spotify-player';
+
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import './MusicDaily.css';
@@ -50,43 +50,22 @@ class MusicDaily extends React.Component {
 
         return(
             <div>
-
-            
+                <p> MUSIC </p>
                 {this.state.dailyPlaylist.map((music, index) => {
-        
                     return (
                         <div> 
                         <div className='track-bloc' key={index}>
                         <h6 className="track-title">{music.track}</h6>
                         <AudioPlayer className="audio-compo"
-                            // autoPlay
+
                             src={music.preview_url}
                             onPlay={e => console.log("onPlay")}
                             showSkipControls="true"
                             customAdditionalControls={[]}
-                            // other props here
+
                         />
                      
-                          {/*
-                        <audio controls>
-                                <h5>Track title</h5>
-                                <h6>Artist</h6>
-                                <source src={preview_url} type="audio/mpeg" />
-                        </audio>
-                      
-                        <SpotifyPlayer
-                            uri={preview_url}
-                            size= "compact"
-                            view='list'
-                            theme='white'
-                            className='spotify-player'
-                        />
-                            
-                       Other approach: use the audio
-                        <audio controls>
-                                <source src={preview_url} type="audio/mp3" />
-                        </audio>
-                        */}
+                        
 
                       </div> 
                       </div>

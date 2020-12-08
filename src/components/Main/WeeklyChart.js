@@ -27,14 +27,8 @@ class WeeklyChart extends React.Component {
                 }]
             },            
                 legend: {
-                    display: false
-                
+                    display: false               
              }           
-            //     title: {
-            //         display: true,
-            //         text: 'A little bit of perspective'
-                
-            // }
         }
     }
 
@@ -92,8 +86,7 @@ class WeeklyChart extends React.Component {
     
     render() {
         return(
-               <div style={{width: "500px", margin: "auto"}}> 
-               <h5 className="evasion-room-title">A little perspective</h5>
+               <div style={{width: "700px"}}> 
                 <Radar data={this.state.data} options={this.state.options} />
                </div> 
             )
