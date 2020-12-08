@@ -1,0 +1,61 @@
+/* .wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+    
+} */
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.section {
+    scroll-snap-align: center;
+    scroll-snap-type: mandatory;
+    /* position: relative; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000; 
+}
+
+/* .parallax::after {
+    content: " ";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+} */
+
+.bg1 {
+    background-color: #EFEFEF;
+}
+
+
+
+.evasion-section {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.toaster {
+    color:#C5A388;
+}
+.inline {
+    display: flex;
+    flex-direction: row,
+
+}
+.toaster-column {
+    align-items: center;
+    margin: 8px auto;
+    padding-top: 10px;
+}

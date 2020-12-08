@@ -68,6 +68,7 @@ class App extends React.Component {
         <ToastContainer />
           <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
+
             <Route exact path="/" component={Homepage} />
             <Route path='/signup' component={Signup} />
             <Route path='/login' render={

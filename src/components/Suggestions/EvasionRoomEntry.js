@@ -23,7 +23,8 @@ class EvasionRoom extends React.Component {
         return(
             <div>
             <h5 className="evasion-room-title">Evasion Spirit: Open the door, the Serenity is waiting for you</h5>
-           <section className="row wrap evasion-rooms">
+            <div className="evasion-section">
+           <section className="roww evasion-rooms">
            <div className="evasion-room-title-pictures">
                 <h6> Pachamama Celebration</h6>
                 <NavLink to={`/evasion-room/room-pachamama`}> 
@@ -52,6 +53,7 @@ class EvasionRoom extends React.Component {
            </div>
            </section>
             </div> 
+            </div>
         )
     }
 }

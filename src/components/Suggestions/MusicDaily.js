@@ -51,10 +51,12 @@ class MusicDaily extends React.Component {
         return(
             <div>
 
-            <p> MUSIC </p>
+            
                 {this.state.dailyPlaylist.map((music, index) => {
         
                     return (
+                        <div> 
+                        <p> MUSIC </p>
                         <div className='track-bloc' key={index}>
                         <h6 className="track-title">{music.track}</h6>
                         <AudioPlayer className="audio-compo"
@@ -88,6 +90,7 @@ class MusicDaily extends React.Component {
                         */}
 
                       </div> 
+                      </div>
                     )
                })}   
             </div> 
