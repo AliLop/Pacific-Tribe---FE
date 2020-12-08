@@ -17,40 +17,47 @@ class Navbar extends React.Component {
     }
 
     render() {
+    
         if (this.props.loggedInUser) {
             return (
-                <div>
-              
-                    <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
-                        <Nav.Item>
-                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventkey="link-1" exact to="/">Home</NavLink>
-                        </Nav.Item> 
-                        <Nav.Item>
-                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventkey="link-4"  to='/moodboard'> Moodboard</NavLink>
-                        </Nav.Item>   
-                        <Nav.Item>
-                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
-                        </Nav.Item>                      
-                        <Nav.Item>
-                            <NavLink className="nav-bar-link" to='/'> <button onClick={this.logoutUser}> Logout </button></NavLink>
-                        </Nav.Item>
-                    </Nav>
-                </div>
+                <Navbar bg="transparent" className="navbar">
+                    <div className="nav-container container">
+                        <div className='left-items-navbar'>
+                            <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                            <NavLink className="nav-bar-link" activeStyle={{fontWeight: 600}} eventkey="link-1" exact to="/">Home</NavLink>
+                            <NavLink className="nav-bar-link" activeStyle={{fontWeight: 600}} eventkey="link-4"  to='/moodboard'> Moodboard</NavLink>
+                            </Nav>
+                        </div>
+                         <div className='right-items-navbar'>
+                            <NavLink className="nav-bar-link"  activeStyle={{fontWeight: 600}} eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                            <NavLink className="auth-button" to='/'> <button onClick={this.logoutUser}> Logout </button></NavLink>
+                        </div>
+                   
+                    </div>
+                </Navbar>
             )
         } else {
-            return (
-                <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
-                    <Nav.Item>
-                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} exact to="/login">Login</NavLink>
-                    </Nav.Item>
-                    <Nav.Item>
-                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} exact to="/signup">Signup</NavLink>
-                    </Nav.Item>
-                </Nav>
+            return (     
+                <Navbar bg="transparent" className="navbar"> 
+                <div className="nav-container container">
+                    <div className='left-items-navbar'>
+                        <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                        <NavLink className="nav-bar-link" activeStyle={{fontWeight: 600}} eventkey="link-1" exact to="/">Home</NavLink>
+                        </Nav>
+                    </div>  
+                    <div className='right-items-navbar'>  
+                        <NavLink className="auth-button" exact to="/login">Login</NavLink>
+                        <NavLink className="auth-button" exact to="/signup">Signup</NavLink>
+                    </div>  
+                </div>
+                </Navbar> 
             )
-        }
+        } 
+     
     }
 }
+
 export default Navbar;
+
 
 

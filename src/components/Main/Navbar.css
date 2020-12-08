@@ -1,4 +1,4 @@
-Nav {
+Navbar {
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -7,8 +7,26 @@ Nav {
 }
 
 
-nav-bar-link{
+.nav-bar-link{
     display: inline-flex;
     margin-left: 30px;
     margin-right: 30px;
+    color: red;
+}
+
+.auth-button {
+    padding: 4px 10px;
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-top: 14px;
+}
+
+.nav-container {
+    display: inline-flex;
+    justify-content: space-between;
 }

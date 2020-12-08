@@ -18,6 +18,19 @@
 
 }
 
+.homepage-baseline {
+  font: Roboto;
+  font-size: 80px;
+  color: rgba(255,255,255, 0.5);
+}
+
+.homepage-baseline-container{
+  position: absolute;
+  z-index: 50;
+  top: 58%;
+  left: 28%;
+}
+
 .main-content {
     width: 100%;
     margin: 0;
