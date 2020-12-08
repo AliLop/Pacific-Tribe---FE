@@ -77,13 +77,8 @@ class Moodboard extends React.Component {
   render () {
   return this.state.mood ? (
     <div>
+       <h3>Welcome to your {this.state.mood} Moodboard </h3>
 
-             <div>
-              <EvasionRoom mood={this.state.mood} />
-            </div> 
-      <h3>Welcome to your {this.state.mood} Moodboard </h3>
-      <br />
-      <div>
         <h6>Based on your mood, we thought you might like some...</h6>
         
         <div> 
@@ -95,31 +90,34 @@ class Moodboard extends React.Component {
         <div> 
           <Sentence mood={this.state.mood} sentences={this.state.sentences}/>
         </div>
-      </div> 
-      <div>
-        <img className='image-hr-transition' src="images/Aloha-orange.png" alt="Aloha"/>
-      </div>
+  
+        <div>
+          <img className='image-hr-transition' src="images/Aloha-orange.png" alt="Aloha"/>
+        </div>
 
-      {/* <div>
+        <div>
         <EvasionRoom mood={this.state.mood} />
-      </div> */}
-
+        </div> 
+ 
+    <br />
+    <div>
       <div>
         <img className='image-hr-transition' src="images/Relax-orange.png" alt="Aloha"/>
       </div>
 
-    <div> 
-      <YogaVideo yogaUrl={this.state.yogaURL}  mood={this.state.mood} />
-        </div>
-    <div> 
-      <MeditationVideo meditationUrl={this.state.meditationURL} mood={this.state.mood} />
-    </div>
-    <div> 
-      <Inspiration inspirationUrl={this.state.inspirationURL} mood={this.state.mood} />
-    </div>
-    <div> 
-      <Coaching coachingUrl={this.state.coachingURL} mood={this.state.mood} />
-    </div>  
+      <div> 
+        <YogaVideo yogaUrl={this.state.yogaURL}  mood={this.state.mood} />
+      </div>
+      <div> 
+        <MeditationVideo meditationUrl={this.state.meditationURL} mood={this.state.mood} />
+      </div>
+      <div> 
+        <Inspiration inspirationUrl={this.state.inspirationURL} mood={this.state.mood} />
+      </div>
+      <div> 
+        <Coaching coachingUrl={this.state.coachingURL} mood={this.state.mood} />
+      </div>  
+      </div>  
     </div>
   ) : null
 }
