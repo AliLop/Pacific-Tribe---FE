@@ -1,10 +1,10 @@
 import React from 'react';
-//import allSentences from '../../sentences.json';
+import './sentence.css'
 
 class Sentence extends React.Component {
     state = {
         sentencesArray: this.props.sentences,
-        //allSentences.sentences
+
         dailySentence: ''
     }
 
@@ -22,8 +22,7 @@ class Sentence extends React.Component {
     render() {
     return (
       <div className="sentence">
-          {this.state.dailySentence}
-          {/* .sentence */}
+          {this.state.dailySentence.toUpperCase()}
       </div>
     );
   }

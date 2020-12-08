@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+.sentence {
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    width: 270px;
+    height: 300px;
+    background-color: #ED6D73;
+    padding: 25% 15%;
+    align-content: center;
+    text-align: center;
+    color: black;
+    text-shadow: none;
+    border-radius: 2px;
+}

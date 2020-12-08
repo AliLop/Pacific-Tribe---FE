@@ -1,49 +1,39 @@
-/* .wrapper {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 2px;
-    
+/* .scroll-container {
+    /* scroll-snap-type: y mandatory;
+    overflow: auto;
+    outline: 1px dashed lightgray;
+    flex: none;
+    flex-flow: column nowrap;
+    height: 100vh; 
 } */
-.scroll-container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
 .section {
-    scroll-snap-align: center;
-    scroll-snap-type: mandatory;
-    /* position: relative; */
-    height: 100vh;
+    /* scroll-snap-align: start; */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
     color: white;
     text-shadow: 0 0 5px #000; 
 }
-
-/* .parallax::after {
-    content: " ";
-    position: absolute;
-    top: -20px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateZ(-1px) scale(1.5);
-    background-size: 100%;
-    z-index: -1;
-} */
-
 .bg1 {
-    background-color: #EFEFEF;
+    /* height: 90vh; */
+    justify-content: center;
 }
-
-
-
+.bg2 {
+    height: 70vh;
+    justify-content: space-between;
+}
 .evasion-section {
     display: flex;
     flex-direction: row;
+    margin: auto;
 }
+
+.videos {
+    /* display: flex;
+    align-items: center; */
+    justify-content: space-around;
+    margin: 15px auto 50px ;
+}
+
 
 
 .toaster {

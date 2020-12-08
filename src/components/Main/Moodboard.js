@@ -62,7 +62,7 @@ class Moodboard extends React.Component {
         <br/> 
         </div>
         <div className="toaster-column">
-        <img src="images/homepage-thumb6.jpg" className="portrait" alt='portrait'/>
+        <img src="/images/homepage-thumb6.jpg" className="portrait" alt='portrait'/>
         </div>
       </div>
 
@@ -89,13 +89,13 @@ class Moodboard extends React.Component {
         </div> 
       </div>
         <container className="scroll-container">
-        <section className="section  bg1 y mandatory-scroll-snapping"> 
+        <section className="section  bg1"> 
           <div> 
             <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
           </div>
-          <div>
-            <WeeklyChart mood={this.state.mood} />
-          </div>
+            <div className="chart">
+              <WeeklyChart mood={this.state.mood} />
+            </div>
           <div> 
             <Sentence mood={this.state.mood} sentences={this.state.sentences}/>
           </div>
@@ -103,7 +103,7 @@ class Moodboard extends React.Component {
           <div>
             <img className='image-hr-transition' src="/images/Aloha-orange.png" alt="Aloha"/>
           </div>
-        <section className="section  bg2  y mandatory-scroll-snapping">
+        <section className="section  bg2 ">
           <div className="evasion-section">
             <EvasionRoom mood={this.state.mood} />
           </div> 
@@ -111,21 +111,19 @@ class Moodboard extends React.Component {
           <div>
             <img className='image-hr-transition' src="/images/Relax-orange.png" alt="Aloha"/>
           </div>
-  
-          <section class="section bg3"> 
+          <section class="section bg3 videos"> 
             <div> 
               <YogaVideo yogaUrl={this.state.yogaURL}  mood={this.state.mood} />
             </div>
-            <div> 
+            <div > 
               <MeditationVideo meditationUrl={this.state.meditationURL} mood={this.state.mood} />
             </div>
-          </section>
-
-          <section class="section bg4">
-            <div> 
+            </section>
+            <section class="section bg3 videos">
+            <div > 
               <Inspiration inspirationUrl={this.state.inspirationURL} mood={this.state.mood} />
             </div>
-            <div> 
+            <div > 
               <Coaching coachingUrl={this.state.coachingURL} mood={this.state.mood} />
             </div>  
           </section>
