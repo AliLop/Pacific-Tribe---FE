@@ -73,9 +73,9 @@ class WeeklyChart extends React.Component {
             data:  {
                 labels: ['Overwhelmed', 'Anxious', 'Calm', 'Positive', 'Enthusiastic'],
                 datasets: [{
-                    label: 'How have you been feeling lately...',
+                    // label: 'How have you been feeling lately...',
                     data: [overwhelmed, anxious, calm, positive, enthusiastic],
-                    backgroundColor: ['rgba(197,148,136, 0.6)'],
+                    backgroundColor: ['rgb(197,148,136)'],
                     borderColor: ['rgba(197,148,136, 0.7)'],
                     borderWidth: 1
                 }]

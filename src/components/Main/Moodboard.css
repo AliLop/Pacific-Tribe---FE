@@ -1,0 +1,15 @@
+
+.toaster {
+    color:rgb(197, 148, 136)
+}
+
+.inline {
+    display: flex;
+    flex-direction: row,
+
+}
+
+.toaster-column {
+    align-items: center;
+    margin: 8px auto;
+}

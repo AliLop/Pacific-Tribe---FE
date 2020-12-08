@@ -10,6 +10,9 @@ import EvasionRoom from '../Suggestions/EvasionRoom';
 import React from 'react';
 import { toast, Zoom } from 'react-toastify';
 //import AudioPlayer from 'react-h5-audio-player';
+import './Moodboard.css';
+//import NotificationAudio from './waves.mp3';
+
 class Moodboard extends React.Component {
 
   state = {
@@ -49,22 +52,25 @@ class Moodboard extends React.Component {
     
 
     const Msg = ({ closeToast }) => (
-      <div><br/> 
-        <h5>It is <small>☕</small> break time!</h5><br/>
+      <div className="toaster inline"><br/> 
+      <div className="toaster-column">
+        <h6>It is <small>☕</small> break time!</h6><br/>
         <h6>Drink something and <br/>
         get Pacific <br/>
-        <br/>    🤎🧘‍♀️🤎 </h6>
+        <br/>   🤎🧘‍♀️🤎  </h6>
+       {/* <audio autoPlay type="music" src={NotificationAudio}></audio>  */}
         <br/> 
+        </div>
+        <div className="toaster-column">
+        <img src="images/homepage-thumb6.jpg" className="portrait" alt='portrait'/>
+        </div>
       </div>
+
     )
     setTimeout(() => {
       // let notificationAudio = new Audio('C:/users/alici/desktop/labs/Moduel3-FINAL-PROJECT-FE/public/audio/waves.mp3');
-      //   notificationAudio.play();
-        // <AudioPlayer className="audio-compo"
-        //                     src={'audio/waves.mp3'}
-        //                     onPlay={e => console.log("onPlay")}
-        //                     showSkipControls="false"
-        //                 />
+      //   notificationAudio.autoplay();
+       
       toast(Msg, { 
           position: "bottom-right", 
           autoClose: 8000, 
