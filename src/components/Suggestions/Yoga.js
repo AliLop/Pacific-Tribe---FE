@@ -53,7 +53,7 @@ class YogaVideo extends React.Component {
                      {/* <YouTube videoId={this.state.yogaVideoId}  />                 */}
                 <Iframe url={`http://www.youtube.com/embed/${this.state.yogaVideoUrl}`}
                     width="400px"
-                    height="400px"
+                    height="350px"
                     id="myId"
                     className="myClassname"
                     display="initial"

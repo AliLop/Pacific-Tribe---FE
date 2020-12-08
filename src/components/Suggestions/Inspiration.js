@@ -23,7 +23,7 @@ class InspirationVideo extends React.Component {
                <div> 
                 <Iframe url={`http://www.youtube.com/embed/${this.state.inspirationVideoUrl}`}
                     width="400px"
-                    height="400px"
+                    height="350px"
                     id="myId"
                     className="myClassname"
                     display="initial"
