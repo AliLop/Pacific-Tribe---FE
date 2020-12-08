@@ -90,9 +90,9 @@ class Moodboard extends React.Component {
       </div>
         <container className="scroll-container">
         <section className="section  bg1"> 
-          <div> 
+          {/* <div> 
             <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
-          </div>
+          </div> */}
             <div className="chart">
               <WeeklyChart mood={this.state.mood} />
             </div>

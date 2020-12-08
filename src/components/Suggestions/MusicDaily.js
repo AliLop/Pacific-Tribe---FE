@@ -56,7 +56,6 @@ class MusicDaily extends React.Component {
         
                     return (
                         <div> 
-                        <p> MUSIC </p>
                         <div className='track-bloc' key={index}>
                         <h6 className="track-title">{music.track}</h6>
                         <AudioPlayer className="audio-compo"
