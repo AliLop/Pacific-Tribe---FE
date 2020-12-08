@@ -13,6 +13,7 @@ import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
 
+//import PopUp from './components/Main/PopUp';
 
 
 class App extends React.Component {
@@ -81,6 +82,9 @@ class App extends React.Component {
               }
             }
             }/>
+            {/* POPUP */}
+            {/* <Route exact path="/popup" component={PopUp} /> */}
+
             <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
         
             {/* <Route exact path="/music-daily" component={MusicDaily} /> */}

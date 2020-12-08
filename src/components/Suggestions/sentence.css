@@ -3,13 +3,16 @@
 .sentence {
     font-family: 'Amatic SC', cursive;
     font-size: 25px;
-    width: 270px;
-    height: 300px;
-    background-color: #ED6D73;
-    padding: 25% 15%;
-    align-content: center;
-    text-align: center;
     color: black;
-    text-shadow: none;
-    border-radius: 2px;
+    height: 344px;
+    width: 280px;
+    background-color: #C5A388;
+    padding: 25% 10%;
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    margin-top: 3%;
 }

@@ -23,6 +23,9 @@ class Sentence extends React.Component {
     return (
       <div className="sentence">
           {this.state.dailySentence.toUpperCase()}
+         <br/> 
+         <br/>
+         <small className="small">Believe.</small> 
       </div>
     );
   }

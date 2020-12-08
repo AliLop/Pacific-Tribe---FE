@@ -44,17 +44,17 @@ class DailyMood extends React.Component {
           <form onSubmit={this.handleFormSubmit}>
       
             <h4>What's your mood today?</h4>
-     
+              <br/> 
             <label> Overwhelmed </label> <input type="radio" onChange={this.handleChange} value="overwhelmed"  name="moodOfTheDay"  required/>
-             
+              <br/> 
             <label> Anxious </label> <input type="radio" onChange={this.handleChange} value="anxious" name="moodOfTheDay"/>
-           
+              <br/> 
             <label> Calm </label> <input type="radio" onChange={this.handleChange} value="calm" name="moodOfTheDay" />
-       
+              <br/> 
             <label> Positive </label> <input type="radio" onChange={this.handleChange} value="positive" name="moodOfTheDay" />
-                    
+              <br/>   
             <label> Enthusiastic </label> <input type="radio" onChange={this.handleChange} value="enthusiastic" name="moodOfTheDay" />      
-    
+              <br/> 
             <button> Enter your Bubble of Peace </button>
           </form>
           </div>
