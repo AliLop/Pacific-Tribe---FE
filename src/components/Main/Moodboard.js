@@ -92,7 +92,7 @@ class Moodboard extends React.Component {
         </div>
   
         <div>
-          <img className='image-hr-transition' src="images/Aloha-orange.png" alt="Aloha"/>
+          <img className='image-hr-transition' src="/images/Aloha-orange.png" alt="Aloha"/>
         </div>
 
         <div>
@@ -102,7 +102,7 @@ class Moodboard extends React.Component {
     <br />
     <div>
       <div>
-        <img className='image-hr-transition' src="images/Relax-orange.png" alt="Aloha"/>
+        <img className='image-hr-transition' src="/images/Relax-orange.png" alt="Aloha"/>
       </div>
 
       <div> 
