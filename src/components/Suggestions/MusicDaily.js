@@ -50,8 +50,8 @@ class MusicDaily extends React.Component {
 
         return(
             <div>
-   
-            <h6>Based on your mood, we thought you might like:</h6>
+
+            <p> MUSIC </p>
                 {this.state.dailyPlaylist.map((music, index) => {
         
                     return (

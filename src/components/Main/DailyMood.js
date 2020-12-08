@@ -1,6 +1,7 @@
 import React from 'react';
 import MoodService from '../../utils/mapi';
 import { withRouter } from 'react-router-dom';
+import { toast, Zoom } from 'react-toastify';
 
 class DailyMood extends React.Component {
   state = {
@@ -17,13 +18,22 @@ class DailyMood extends React.Component {
     }
 
   handleFormSubmit = (event) => {
+    toast('Thanks for sharing', { 
+                position: "bottom-right", 
+                autoClose: 3000, 
+                hideProgressBar: true,
+                transition: Zoom
+            });
     event.preventDefault();
     const moodService = new MoodService();
     const userId = this.state.userId;
 
     let moodOfTheDay = this.state.moodOfTheDay
     moodService.updateMood(userId, {moodOfTheDay}).then(() => {
-      this.props.history.push(`/moodboard/${userId}`)
+      setTimeout(() => {
+            this.props.history.push(`/moodboard/${userId}`)
+            }, 1500);
+      
     });
   }
   

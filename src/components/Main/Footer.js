@@ -29,7 +29,7 @@ class Footer extends React.Component {
       </div>
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="#" className="footer-link">Login</a>
+          <a href="http://localhost:3000/login" className="footer-link">Login</a>
         </p>
       </div>
       <div className="col-md-2 mb-3">
