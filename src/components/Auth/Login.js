@@ -1,7 +1,7 @@
 import React from 'react';
 import AuthService from '../../utils/auth';
 import { Link, withRouter} from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { toast, Zoom } from 'react-toastify';
 
 class Login extends React.Component {
     state = {
@@ -28,12 +28,14 @@ class Login extends React.Component {
             localStorage.setItem('loggedInUser', response.data._id)
             this.props.history.push('/daily-mood');
         }).catch(() => {
-            toast.error('invalid Login')
-        })
-
+            toast.warn('invalid Login', { 
+                transition: Zoom,
+                autoClose: 3500, 
+                hideProgressBar: true
+            });
+        }
+        )
     }
-
-
     render() {
         return(
             <div>

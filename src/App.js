@@ -47,7 +47,7 @@ class App extends React.Component {
     this.setState({
       loggedInUser: user,
       userId: user._id,
-      userName: user.username
+      // userName: user.username
     })
   }
 
@@ -62,7 +62,7 @@ class App extends React.Component {
             <Route path='/signup' component={Signup} />
             <Route path='/login' render={
               () => {
-                return < Login setCurrentUser={this.setCurrentUser}/>
+                return <Login setCurrentUser={this.setCurrentUser}/>
               }
             } />
             <Route path="/login-google" render={
