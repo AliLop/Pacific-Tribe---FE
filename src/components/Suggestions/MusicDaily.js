@@ -1,6 +1,6 @@
 import React from 'react';
 import SpotifyService from '../../utils/sapi';
-import SpotifyPlayer from 'react-spotify-player';
+// import SpotifyPlayer from 'react-spotify-player';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import './MusicDaily.css';
@@ -56,13 +56,13 @@ class MusicDaily extends React.Component {
         
                     return (
                         <div className='track-bloc' key={index}>
-                        <h6>{music.track}</h6>
-                        <h5>{music.artist}</h5>
+                        <h6 className="track-title">{music.track}</h6>
                         <AudioPlayer className="audio-compo"
                             // autoPlay
                             src={music.preview_url}
                             onPlay={e => console.log("onPlay")}
                             showSkipControls="true"
+                            customAdditionalControls={[]}
                             // other props here
                         />
                      
