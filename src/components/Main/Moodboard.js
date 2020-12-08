@@ -6,7 +6,7 @@ import MoodService from '../../utils/mapi'
 import Sentence from '../Suggestions/Sentence';
 import Coaching from '../Suggestions/Coaching'
 import WeeklyChart from './WeeklyChart';
-import EvasionRoom from '../Suggestions/EvasionRoom';
+import EvasionRoomEntry from '../Suggestions/EvasionRoomEntry';
 import React from 'react';
 import { toast, Zoom } from 'react-toastify';
 //import AudioPlayer from 'react-h5-audio-player';
@@ -96,7 +96,7 @@ class Moodboard extends React.Component {
         </div>
 
         <div>
-        <EvasionRoom mood={this.state.mood} />
+        <EvasionRoomEntry mood={this.state.mood} />
         </div> 
  
     <br />

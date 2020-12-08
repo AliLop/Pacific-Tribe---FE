@@ -1,6 +1,6 @@
 import React from 'react';
 import './Homepage.css';
-import HomepageVideo from './Video3.mp4'
+
 
 class Homepage extends React.Component {
 
@@ -16,7 +16,7 @@ class Homepage extends React.Component {
 
         <div className="video-header">
             <div>
-                <video autoPlay loop muted className="header-video" src={HomepageVideo} type="video/mp4" alt="Homepage-visual" />
+                <video autoPlay loop muted className="header-video" src="videos/Homepage-video.mp4" type="video/mp4" alt="Homepage-visual" />
             </div>
         </div>
 

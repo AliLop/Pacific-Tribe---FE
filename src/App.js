@@ -12,8 +12,10 @@ import Homepage from './components/Main/Homepage';
 import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
-
-
+import EvasionRoom1 from './components/Suggestions/EvasionRoom1';
+import EvasionRoom2 from './components/Suggestions/EvasionRoom2';
+import EvasionRoom3 from './components/Suggestions/EvasionRoom3';
+import EvasionRoom4 from './components/Suggestions/EvasionRoom4';
 
 class App extends React.Component {
 
@@ -44,11 +46,19 @@ class App extends React.Component {
  }  
 
   setCurrentUser = (user) => {
+    if (user === null) {
+    this.setState({
+      loggedInUser: null,
+      userId: user,
+      // userName: user.username
+    })
+  } else {
     this.setState({
       loggedInUser: user,
       userId: user._id,
       // userName: user.username
     })
+  }
   }
 
 
@@ -82,9 +92,11 @@ class App extends React.Component {
             }/>
             <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
         
-            {/* <Route exact path="/music-daily" component={MusicDaily} /> */}
-           {/* <Route exact path="/yoga-video" component={YogaVideo} />
-            <Route exact path="/meditation-video" component={MeditationVideo} />  */}
+            <Route exact path="/evasion-room/room-pachamama" component={EvasionRoom1} />
+            <Route exact path="/evasion-room/room-bohemian" component={EvasionRoom2} />
+            <Route exact path="/evasion-room/room-jungle" component={EvasionRoom3} />
+            <Route exact path="/evasion-room/room-sea" component={EvasionRoom4} />
+         
           </Switch>
           <Footer />
         </div>
