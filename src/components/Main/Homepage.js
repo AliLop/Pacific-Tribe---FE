@@ -1,6 +1,6 @@
 import React from 'react';
 import './Homepage.css';
-import HomepageVideo from './Video3.mp4'
+
 
 class Homepage extends React.Component {
 
@@ -13,21 +13,18 @@ class Homepage extends React.Component {
             </div>
         </div>
 
-
+        <div className="header-container">
+        <div className="homepage-baseline-container">
+                <h2 className="homepage-baseline"> Peaceful Inside. </h2>
+        </div>
         <div className="video-header">
             <div>
-                <video autoPlay loop muted className="header-video" src={HomepageVideo} type="video/mp4" alt="Homepage-visual" />
+            <video autoPlay loop muted className="header-video" src="https://res.cloudinary.com/dtu8rcnmp/video/upload/v1607468610/project3/Pexels_Videos_2335977_ucxvqp.mp4" type="video/mp4" alt="Homepage-visual" />
             </div>
         </div>
+       </div>
 
-
-        <div className="main-content">
-            <div>
-                <img className="header-visual" src="images/Test-crea9.png" alt="Homepage-visual" />
-            </div>
-        </div>
-
-
+      
         <div className="baseline-container container">
             <div className="tribal-pitch">
        

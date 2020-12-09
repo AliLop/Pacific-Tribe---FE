@@ -1,7 +1,6 @@
 import './App.css';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import React from 'react';
-
 import AuthService from './utils/auth';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -13,16 +12,17 @@ import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
 import Video from  './components/Suggestions/Video';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4291cfd24133433cad0f8081e842bcdcde5913bb
 class App extends React.Component {
-
   state = {
     loggedInUser: null,
     userId: '',
     userName: ''
   }
-
   componentDidMount () {
     if (this.state.loggedInUser === null);
     const authService = new AuthService();
@@ -42,7 +42,6 @@ class App extends React.Component {
      }
    })
  }  
-
   setCurrentUser = (user) => {
     if (user === null) {
     this.setState({
@@ -58,13 +57,11 @@ class App extends React.Component {
     })
   }
   }
-
-
   render () {
       return (
         <div className="App">
         <ToastContainer />
-          <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
+        <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path='/signup' component={Signup} />
@@ -78,7 +75,6 @@ class App extends React.Component {
                 window.location.href = `${process.env.REACT_APP_PROJECT_API}/api/auth/google`
               }
             } />
-
             <Route exact path="/daily-mood" render={
               () => {
                 if (localStorage.getItem('loggedInUser')) {
@@ -88,8 +84,6 @@ class App extends React.Component {
               }
             }
             }/>
-
-
              <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
              <Route exact path="/video/:videoId" component={Video} />
           </Switch>
@@ -98,5 +92,4 @@ class App extends React.Component {
       );
       }
     }
-
 export default App;

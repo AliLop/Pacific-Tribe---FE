@@ -1,6 +1,5 @@
 import React from 'react';
 import Iframe from 'react-iframe'
-
 class Video extends React.Component {
     state = {
         videoUrl: ''
