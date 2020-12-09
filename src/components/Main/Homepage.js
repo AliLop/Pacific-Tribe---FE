@@ -26,8 +26,10 @@ class Homepage extends React.Component {
 
       
         <div className="baseline-container container">
+            <div>
+                
+            </div>
             <div className="tribal-pitch">
-       
                 <h1> A tribe called Pacific... </h1>
                 <h5>Restore ancestral widsom in modern daily lives</h5>
                     <p className="concept-pitch">
@@ -40,7 +42,6 @@ class Homepage extends React.Component {
                         Made by Women, for Women.    <br/>
                         Love & Light    <br/>
                         <i className="fas fa-heart"></i><i className="fas fa-heart"></i><i className="fas fa-heart"></i>
-
                     </p>
             </div>
         </div>

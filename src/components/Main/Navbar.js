@@ -17,28 +17,49 @@ class Navbar extends React.Component {
         if (this.props.loggedInUser) {
             return (
                 <div>
-                    <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                    <Nav className="full-navbar container-fluid" activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                        <div className="container-full-nav">
+                            <div className="navbar-items-left">
                         <Nav.Item>
-                                <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventkey="link-1" exact to="/">Home</NavLink>
-                        </Nav.Item>                       
+                                <NavLink className="nav-bar-link"  eventkey="link-1" exact to="/">Home</NavLink>
+                        </Nav.Item> 
                         <Nav.Item>
-                            <NavLink className="nav-bar-link" to='/'> <button onClick={this.logoutUser}> Logout </button></NavLink>
+                            <NavLink className="nav-bar-link"  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                        </Nav.Item>   
+                            </div>      
+                            <div className="navbar-items-right">  
+                        <Nav.Item>
+                            <NavLink className="nav-bar-link"  eventkey="link-4"  to='/moodboard'> Moodboard</NavLink>
+                        </Nav.Item>          
+                        <Nav.Item>
+                            <NavLink className="auth-button-navbar" to='/'> <button onClick={this.logoutUser}> Logout </button></NavLink>
                         </Nav.Item>
-                        <Nav.Item>
-                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
-                        </Nav.Item>
+                            </div>   
+                        </div>
                     </Nav>
                 </div>
             )
         } else {
             return (
-                <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
-                    <Nav.Item>
-                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} exact to="/login">Login</NavLink>
-                    </Nav.Item>
-                    <Nav.Item>
-                            <NavLink className="nav-bar-link" activeStyle={{color: "red"}} exact to="/signup">Signup</NavLink>
-                    </Nav.Item>
+                <Nav className="full-navbar" activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                         <div className="container-full-nav">
+                            <div className="navbar-items-left">
+                        <Nav.Item>
+                                <NavLink className="nav-bar-link"  eventkey="link-1" exact to="/">Home</NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <NavLink className="nav-bar-link"  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                        </Nav.Item>
+                            </div>
+                            <div className="navbar-items-right">         
+                        <Nav.Item>
+                                <NavLink className="auth-button-navbar" exact to="/login">Login</NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                                <NavLink className="auth-button-navbar"  exact to="/signup">Signup</NavLink>
+                        </Nav.Item>
+                        </div> 
+                        </div> 
                 </Nav>
             )
         }
