@@ -3,12 +3,10 @@ import AuthService from '../../utils/auth';
 import { Link, withRouter} from 'react-router-dom';
 import { toast, Zoom } from 'react-toastify';
 
-//import Popup from '../Main/PopUp';
 class Login extends React.Component {
     state = {
         username: '',
         password: ''
-                       // showPopup: false
     }
 
     handleChange = (event) => {  
@@ -29,8 +27,6 @@ class Login extends React.Component {
             // save user id browser to local storage.
             localStorage.setItem('loggedInUser', response.data._id)
             this.props.history.push('/daily-mood');
-            // this.togglePopup.bind(this)
-            //             this.togglePopup()
                         
         }).catch(() => {
             toast.warn('invalid Login', { 
@@ -40,12 +36,6 @@ class Login extends React.Component {
             });
         }
         )
-
-        // this.togglePopup = () => {
-        //                     this.setState({
-        //                     showPopup: !this.state.showPopup
-        //                     });
-        //                 }
     }
     render() {
         return(
@@ -62,16 +52,6 @@ class Login extends React.Component {
             <p>Don't have account? 
                 <Link to={"/signup"}> Signup</Link>
             </p>
-
-            {/* {this.state.showPopup ? 
-                <Popup
-                    text='Close Me'
-                    closePopup={this.togglePopup.bind(this)}
-                />
-                : null
-                } */}
-
-
         </div>   
         )
     }

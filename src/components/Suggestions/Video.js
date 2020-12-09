@@ -4,9 +4,11 @@ class Video extends React.Component {
     state = {
         videoUrl: ''
     }
+
     componentDidMount() {
        this.getVideo();
     }
+
      getVideo = () => {
         const videosParam = this.props.match.params.videoId;
         const videosList = videosParam.split(",");
@@ -15,6 +17,8 @@ class Video extends React.Component {
             videoUrl: videosList[index]
         })
     }
+
+  
     render() {
         return(
                <div> 
@@ -33,4 +37,5 @@ class Video extends React.Component {
             )
     }
 }
+
 export default Video;

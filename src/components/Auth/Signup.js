@@ -37,36 +37,34 @@ class Signup extends React.Component {
         </div>
 
         <div class="col signup-col" id="signup-form-container">
-        <br/>
             <br/>
-            <button> <Link to="/login-google">Log in with Google</Link></button>
-            <br/>
-            <br/>
-            <p>Or</p>
+                    <p>New to Pacific Tribe?</p>
                     <p>Sign up with your credentials!</p> 
                 
                     <form onSubmit={this.handleFormSubmit}>
-                            <label>Username:</label>
-                            <br/>
-                            <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-                            <br/>
-                            <label>Email:</label>
-                            <br/>
-                            <input type='email' name="email" value={this.state.email} onChange={this.handleChange} />
-                            <br/>
-                            <label>Password:</label>
-                            <br/>
-                            <input type='password' name="password" value={this.state.password} onChange={this.handleChange} />
+                            <input placeholder="Username" type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
                             <br/>
                             <br/>
-                            <button>Signup <i class="fas fa-yin-yang"></i> </button>
+                            <input placeholder="Email"  type='email' name="email" value={this.state.email} onChange={this.handleChange} />
+                            <br/>
+                            <br/>
+                            <input placeholder="Password" type='password' name="password" value={this.state.password} onChange={this.handleChange} />
+                            <br/>
+                            <br/>
+                            <button>Signup </button>
                     </form>
+
                     <br/>
+                    <br/>
+                    <button> <Link to="/login-google">Log in with Google</Link></button>
+                    <br/>
+                    <br/>
+                    <p>Together you will show the World your best version!</p> 
+                    
                     <p>Already have account? 
                     <br/>
                             <Link to={"/login"}> Login</Link>
                     </p>
-                    <p>Together you will show the World the best version of yourself!</p> 
         </div>
     </div>
   

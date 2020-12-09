@@ -2,7 +2,7 @@ import React from 'react';
 import MoodService from '../../utils/mapi';
 import { withRouter } from 'react-router-dom';
 import { toast, Zoom } from 'react-toastify';
-
+import './DailyMood.css';
 class DailyMood extends React.Component {
   state = {
      moodOfTheDay: "",
@@ -45,16 +45,49 @@ class DailyMood extends React.Component {
       
             <h4>What's your mood today?</h4>
               <br/> 
-            <label> Overwhelmed </label> <input type="radio" onChange={this.handleChange} value="overwhelmed"  name="moodOfTheDay"  required/>
-              <br/> 
-            <label> Anxious </label> <input type="radio" onChange={this.handleChange} value="anxious" name="moodOfTheDay"/>
-              <br/> 
-            <label> Calm </label> <input type="radio" onChange={this.handleChange} value="calm" name="moodOfTheDay" />
-              <br/> 
-            <label> Positive </label> <input type="radio" onChange={this.handleChange} value="positive" name="moodOfTheDay" />
-              <br/>   
-            <label> Enthusiastic </label> <input type="radio" onChange={this.handleChange} value="enthusiastic" name="moodOfTheDay" />      
-              <br/> 
+            <div className="daily-mood-form container">
+              <div className="inline">
+                <div>
+                  <label> Enthusiastic </label>
+                </div> 
+                <div >
+                  <input type="radio" onChange={this.handleChange} value="enthusiastic" name="moodOfTheDay" />      
+                </div>
+              </div>
+              <div className="inline">
+                <div>
+                <label> Positive </label>
+                </div>
+                <div>  
+                  <input type="radio" onChange={this.handleChange} value="positive" name="moodOfTheDay" />
+                </div>
+              </div>
+              <div className="inline">
+                <div>
+                  <label> Calm </label>
+                </div>
+                <div> 
+                  <input type="radio" onChange={this.handleChange} value="calm" name="moodOfTheDay" />
+                </div>
+              </div>
+              <div className="inline">
+                <div>
+                  <label> Anxious </label> 
+                </div>
+                <div>
+                  <input type="radio" onChange={this.handleChange} value="anxious" name="moodOfTheDay"/>
+                </div>
+              </div>
+              <div className="inline"> 
+                <div>
+                  <label> Overwhelmed </label>
+                </div>
+                <div>
+                  <input type="radio" onChange={this.handleChange} value="overwhelmed"  name="moodOfTheDay"  required/>
+                </div> 
+              </div>
+                <br/>
+            </div>
             <button> Enter your Bubble of Peace </button>
           </form>
           </div>

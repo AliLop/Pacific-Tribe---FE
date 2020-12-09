@@ -1,0 +1,11 @@
+
+.daily-mood-form {
+    display: flex;
+    flex-direction: column;
+
+}
+.inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
