@@ -12,8 +12,7 @@ import Homepage from './components/Main/Homepage';
 import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
-
-//import PopUp from './components/Main/PopUp';
+import Video from  './components/Suggestions/Video';
 
 
 class App extends React.Component {
@@ -45,11 +44,19 @@ class App extends React.Component {
  }  
 
   setCurrentUser = (user) => {
+    if (user === null) {
+    this.setState({
+      loggedInUser: null,
+      userId: user,
+      // userName: user.username
+    })
+  } else {
     this.setState({
       loggedInUser: user,
       userId: user._id,
       // userName: user.username
     })
+  }
   }
 
 
@@ -59,7 +66,6 @@ class App extends React.Component {
         <ToastContainer />
           <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
-
             <Route exact path="/" component={Homepage} />
             <Route path='/signup' component={Signup} />
             <Route path='/login' render={
@@ -82,14 +88,10 @@ class App extends React.Component {
               }
             }
             }/>
-            {/* POPUP */}
-            {/* <Route exact path="/popup" component={PopUp} /> */}
 
-            <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
-        
-            {/* <Route exact path="/music-daily" component={MusicDaily} /> */}
-           {/* <Route exact path="/yoga-video" component={YogaVideo} />
-            <Route exact path="/meditation-video" component={MeditationVideo} />  */}
+
+             <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
+             <Route exact path="/video/:videoId" component={Video} />
           </Switch>
           <Footer />
         </div>

@@ -1,17 +1,13 @@
 import MusicDaily from '../Suggestions/MusicDaily';
-import YogaVideo from '../Suggestions/Yoga';
-import MeditationVideo from '../Suggestions/Meditation';
-import Inspiration from '../Suggestions/Inspiration'
 import MoodService from '../../utils/mapi'
 import Sentence from '../Suggestions/Sentence';
-import Coaching from '../Suggestions/Coaching'
 import WeeklyChart from './WeeklyChart';
 import EvasionRoomEntry from '../Suggestions/EvasionRoom';
 import React from 'react';
 import { toast, Zoom } from 'react-toastify';
 import AudioPlayer from 'react-h5-audio-player';
 import './Moodboard.css';
-
+import { Link } from 'react-router-dom';
 class Moodboard extends React.Component {
 
   state = {
@@ -58,8 +54,6 @@ class Moodboard extends React.Component {
       //    src= 'singup-namaste.png';
       //  }
 
-
-
     const Msg = ({ closeToast }) => (
       <div className="toaster inline"><br/> 
       <div className="toaster-column">
@@ -88,7 +82,7 @@ class Moodboard extends React.Component {
           transition: Zoom,
           // not working => limit: 1
       });
-    }, 800000);
+    }, 8000000);
   } 
 
   render () {
@@ -125,7 +119,7 @@ class Moodboard extends React.Component {
             <section className="section bg3 chart"> 
               <div className="chart-info">
                 <br/>
-                <h5>A little perspective...</h5>
+                <h4>A little perspective...</h4>
                 <br/>
                 <p><small>Because seeing the big picture is important, we we have tailored a visual image 
                 for you to  see how you have been feeling lately</small>
@@ -140,22 +134,59 @@ class Moodboard extends React.Component {
                 <img className='chart-pic' src={`/images/chart-pic.jpg`} alt="Aloha"/>
               </div>
             </section>
-          <section className="section bg4 videos"> 
             <div> 
-              <YogaVideo yogaUrl={this.state.yogaURL}  mood={this.state.mood} />
+            <h4> The tailored recipe... </h4> 
+            </div> 
+          <section className="section bg4 videos"> 
+            <div>  
+              <Link to={`/video/${this.state.yogaURL}`}>
+                <img className='yoga-pic' src={`/images/Yoga.png`} alt="Aloha"/>
+                <button className="start-video"> Enter Yoga room </button>
+              </Link>
+            </div>
+            <div>
+            <h5> Conquer inner peace </h5>
+            <p>Believe in the power of regularly <br/>
+             practising yoga and meditation <br/>
+             to calm your thoughts, find focus and improve <br/>
+             your overall wellbeing and health on your daily life.</p>
+             <br/>
+             <h6>Breathe in, strecht your body, widen your mind.</h6>
             </div>
             <div > 
-              <MeditationVideo meditationUrl={this.state.meditationURL} mood={this.state.mood} />
+             <Link to={`/video/${this.state.meditationURL}`}>
+                <img className='meditation-pic' src={`/images/Meditation.png`} alt="Aloha"/>
+                <button className="start-video"> Enter Meditation room </button>
+             </Link>
             </div>
             </section>
             <section className="section bg4 videos">
-            <div > 
-              <Inspiration inspirationUrl={this.state.inspirationURL} mood={this.state.mood} />
+           <div> 
+              <Link to={`/video/${this.state.inspirationURL}`}>
+                <img className='inspiration-pic' src={`/images/Inspiration.png`} alt="Aloha"/>
+                <button className="start-video"> Enter Inspiration room </button>
+             </Link>
+            </div> 
+            <div>
+            <h5> Nourish your mind </h5>
+            <p>Discover real and recognised <br/>
+             life coaches and inspirational humans <br/>
+             to empower your Self-consciousness<br/>
+             and help you persue your dreams.</p>
+             <br/>
+             <h6>Elevate the soul and achive your better self.</h6>
             </div>
             <div > 
-              <Coaching coachingUrl={this.state.coachingURL} mood={this.state.mood} />
+             <Link to={`/video/${this.state.coachingURL}`}>
+                <img className='coaching-pic' src={`/images/Coaching.png`} alt="Aloha"/>
+                <button className="start-video"> Enter Coaching room </button>
+             </Link>
             </div>  
+
           </section>
+            <div> 
+            <h4> ...for holistic wellbeing </h4> 
+            </div> 
           </container> 
         
     </div>
