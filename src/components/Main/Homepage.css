@@ -17,16 +17,15 @@
 
 .logo-home {
   width: 150px;
-
 }
 
 .homepage-baseline {
   font: Roboto;
   font-size: 80px;
-  color: rgba(255,255,255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.homepage-baseline-container{
+.homepage-baseline-container {
   position: absolute;
   z-index: 50;
   top: 58%;
@@ -34,24 +33,24 @@
 }
 
 .main-content {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-.header-visual {
-    /*background-image: url("crea1.png");*/
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 600px;
-    width: 100vw; 
-    margin: 0;
-    padding: 0;
-    display: flex;
-    background-size: contains;
-  }
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-  .snippet-homepage {
+.header-visual {
+  /*background-image: url("crea1.png");*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-size: contains;
+}
+
+.snippet-homepage {
   margin: 0;
   display: flex;
   justify-content: space-around;
@@ -61,7 +60,7 @@
 }
 
 .type-snippet {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: rgb(192, 108, 69);
   font-size: 14px;
@@ -75,16 +74,16 @@
 }
 
 .overlay {
-    position: absolute;
-    top: 30%;
-    bottom: 40%;
-    left: 17%;
-    right: 20%;
-    height: 40%;
-  width: 80%;
+  position: absolute;
+  top: 30%;
+  bottom: 40%;
+  left: 17%;
+  right: 20%;
+  height: 40%;
+  width: 70%;
   opacity: 0;
-  transition: .5s ease;
-  background-color: white;;
+  transition: 0.5s ease;
+  background-color: white;
 }
 
 .container:hover .overlay {
@@ -96,7 +95,7 @@
   margin-bottom: 60px;
 }
 
-.type-legend{
+.type-legend {
   font-size: 12px;
   text-align: center;
   color: grey;
@@ -104,8 +103,11 @@
 
 .tribal-pitch {
   width: 800px;
+  text-align: left;
+  margin-top: ;
 }
-.baseline-container{
+
+.baseline-container {
   flex-direction: column;
   display: flex;
   justify-content: space-around;
@@ -114,28 +116,53 @@
 .concept-pitch {
   color: grey;
   font-size: 14px;
-  text-align: center;
-  font-family:'Roboto', sans-serif;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 90px;
 }
 
 h1 {
-  color:#EB596E;
-  font-size: 34px;
-  text-align: center;
-  margin-bottom: 40px;
-  font-family:'Roboto', sans-serif;
+  color: #c5a388;
+  font-size: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
 }
 
-
-.portrait{
-  width: 220px;
+.portrait {
+  width: 190px;
 }
 
 .h3-homepage {
-  color:#EB596E;
+  color: #eb596e;
   font-size: 18px;
   text-align: center;
   margin-bottom: 40px;
-  font-family:'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* SECTIONS */
+.wrapping-all-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.left-picture-homepage {
+  width: 500px;
+}
+
+.right-text-homepage {
+  width: 600px;
+}
+
+.right-text-homepage {
+  margin-top: 50px;
+}
+
+.homepage-subtitles {
+  color: #353f3c;
+  font-size: 18px;
 }

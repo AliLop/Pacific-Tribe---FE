@@ -22,6 +22,7 @@ class Video extends React.Component {
     render() {
         return(
                <div> 
+                   <div className="div-to-fix-navbar"> </div>
                 <div>              
                 <Iframe url={`http://www.youtube.com/embed/${this.state.videoUrl}`}
                     width="100%"

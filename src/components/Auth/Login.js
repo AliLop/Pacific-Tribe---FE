@@ -41,6 +41,7 @@ class Login extends React.Component {
         return(
             <div>
             <div className="container image-signup-container">
+            <div className="div-to-fix-navbar"> </div>
             <div className="row">
                 <div className="col signup-col">
                     <div> <img className="login-visual" src="images/Signup-v3.png" alt="signup visual" /></div>

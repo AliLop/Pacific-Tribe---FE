@@ -12,7 +12,7 @@ import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
 import Video from  './components/Suggestions/Video';
-
+import EvasionRoom1 from './components/Suggestions/EvasionRoom1'
 
 class App extends React.Component {
   state = {
@@ -83,6 +83,7 @@ class App extends React.Component {
             }/>
              <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
              <Route exact path="/video/:videoId" component={Video} />
+             <Route exact path="/evasion-room/room-pachamama" component={EvasionRoom1} />
           </Switch>
           <Footer />
         </div>
