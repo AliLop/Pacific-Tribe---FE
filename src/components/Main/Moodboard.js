@@ -88,6 +88,7 @@ class Moodboard extends React.Component {
   render () {
   return this.state.mood ? (
     <div>
+      <div className="div-to-fix-navbar"> </div>
       <div>
         <h3>Welcome to your Moodboard</h3>
           <h6>Based on your mood, we thought you might like some Pacific inspiration...</h6>
