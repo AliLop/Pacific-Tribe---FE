@@ -3,8 +3,10 @@
 .header-video {
   width: 100vw;
   height: 80%;
-  object-fit: cover;
-  z-index: -1 ;
+}
+
+.video-header {
+  width: 100vw;
 }
 
 .logo-homepage {
