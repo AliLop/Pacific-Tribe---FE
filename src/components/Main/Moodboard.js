@@ -2,7 +2,7 @@ import MusicDaily from '../Suggestions/MusicDaily';
 import MoodService from '../../utils/mapi'
 import Sentence from '../Suggestions/Sentence';
 import WeeklyChart from './WeeklyChart';
-import EvasionRoomEntry from '../Suggestions/EvasionRoom';
+import EvasionRoomEntry from '../Suggestions/EvasionRoomEntry';
 import React from 'react';
 import { toast, Zoom } from 'react-toastify';
 import AudioPlayer from 'react-h5-audio-player';

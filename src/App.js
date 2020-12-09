@@ -12,11 +12,8 @@ import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
 import Video from  './components/Suggestions/Video';
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 4291cfd24133433cad0f8081e842bcdcde5913bb
 class App extends React.Component {
   state = {
     loggedInUser: null,
