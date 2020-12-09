@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import AuthService from '../../utils/auth';
 import {Nav} from 'react-bootstrap';
 import './Navbar.css';
+import { withRouter} from 'react-router-dom'
+
 class Navbar extends React.Component {
     logoutUser = () => {
         const authService = new AuthService();
@@ -14,6 +16,7 @@ class Navbar extends React.Component {
             })
     }
     render() {
+        if (this.props.location.pathname === '/') {
         if (this.props.loggedInUser) {
             return (
                 <div>
@@ -32,7 +35,7 @@ class Navbar extends React.Component {
                             <NavLink className="nav-bar-link"  eventkey="link-4"  to='/moodboard'> Moodboard</NavLink>
                         </Nav.Item>          
                         <Nav.Item>
-                            <NavLink className="auth-button-navbar" to='/'> <button onClick={this.logoutUser}> Logout </button></NavLink>
+                            <NavLink to='/'> <button className="auth-button-navbar" onClick={this.logoutUser}> Logout </button></NavLink>
                         </Nav.Item>
                             </div>   
                         </div>
@@ -62,7 +65,57 @@ class Navbar extends React.Component {
                         </div> 
                 </Nav>
             )
+        } } else {
+            if (this.props.loggedInUser) {
+                return (
+                    <div>
+                        <Nav className={this.props.location.pathname === "/" ? "full-navbar container-fluid" : "full-navbar-grey container-fluid" } activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                            <div className="container-full-nav">
+                                <div className="navbar-items-left">
+                            <Nav.Item>
+                                    <NavLink className="nav-bar-link"  eventkey="link-1" exact to="/">Home</NavLink>
+                            </Nav.Item> 
+                            <Nav.Item>
+                                <NavLink className="nav-bar-link"  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                            </Nav.Item>   
+                                </div>      
+                                <div className="navbar-items-right">  
+                            <Nav.Item>
+                                <NavLink className="nav-bar-link"  eventkey="link-4"  to='/moodboard'> Moodboard</NavLink>
+                            </Nav.Item>          
+                            <Nav.Item>
+                                <NavLink to='/'> <button className="auth-button-navbar" onClick={this.logoutUser}> Logout </button></NavLink>
+                            </Nav.Item>
+                                </div>   
+                            </div>
+                        </Nav>
+                    </div>
+                )
+            } else {
+                return (
+                    <Nav className="full-navbar-grey" activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                             <div className="container-full-nav">
+                                <div className="navbar-items-left">
+                            <Nav.Item>
+                                    <NavLink className="nav-bar-link"  eventkey="link-1" exact to="/">Home</NavLink>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <NavLink className="nav-bar-link"  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                            </Nav.Item>
+                                </div>
+                                <div className="navbar-items-right">         
+                            <Nav.Item>
+                                    <NavLink className="auth-button-navbar" exact to="/login">Login</NavLink>
+                            </Nav.Item>
+                            <Nav.Item>
+                                    <NavLink className="auth-button-navbar"  exact to="/signup">Signup</NavLink>
+                            </Nav.Item>
+                            </div> 
+                            </div> 
+                    </Nav>
+                )
+            } 
         }
     }
 }
-export default Navbar;
+export default withRouter(Navbar);
