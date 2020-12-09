@@ -1,7 +1,6 @@
 import './App.css';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import React from 'react';
-
 import AuthService from './utils/auth';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -12,22 +11,13 @@ import Homepage from './components/Main/Homepage';
 import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
-import EvasionRoom1 from './components/Suggestions/EvasionRoom1';
-import EvasionRoom2 from './components/Suggestions/EvasionRoom2';
-import EvasionRoom3 from './components/Suggestions/EvasionRoom3';
-import EvasionRoom4 from './components/Suggestions/EvasionRoom4';
-
-//import PopUp from './components/Main/PopUp';
-
-
+import Video from  './components/Suggestions/Video';
 class App extends React.Component {
-
   state = {
     loggedInUser: null,
     userId: '',
     userName: ''
   }
-
   componentDidMount () {
     if (this.state.loggedInUser === null);
     const authService = new AuthService();
@@ -47,7 +37,6 @@ class App extends React.Component {
      }
    })
  }  
-
   setCurrentUser = (user) => {
     if (user === null) {
     this.setState({
@@ -63,15 +52,12 @@ class App extends React.Component {
     })
   }
   }
-
-
   render () {
       return (
         <div className="App">
         <ToastContainer />
-          <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
+        <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
-
             <Route exact path="/" component={Homepage} />
             <Route path='/signup' component={Signup} />
             <Route path='/login' render={
@@ -84,7 +70,6 @@ class App extends React.Component {
                 window.location.href = `${process.env.REACT_APP_PROJECT_API}/api/auth/google`
               }
             } />
-
             <Route exact path="/daily-mood" render={
               () => {
                 if (localStorage.getItem('loggedInUser')) {
@@ -94,21 +79,12 @@ class App extends React.Component {
               }
             }
             }/>
-            {/* POPUP */}
-            {/* <Route exact path="/popup" component={PopUp} /> */}
-
-            <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
-        
-            <Route exact path="/evasion-room/room-pachamama" component={EvasionRoom1} />
-            <Route exact path="/evasion-room/room-bohemian" component={EvasionRoom2} />
-            <Route exact path="/evasion-room/room-jungle" component={EvasionRoom3} />
-            <Route exact path="/evasion-room/room-sea" component={EvasionRoom4} />
-         
+             <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
+             <Route exact path="/video/:videoId" component={Video} />
           </Switch>
           <Footer />
         </div>
       );
       }
     }
-
 export default App;
