@@ -142,7 +142,7 @@ class Moodboard extends React.Component {
             <div>  
               <Link to={`/video/${this.state.yogaURL}`}>
                 <img className='yoga-pic' src={`/images/Yoga.png`} alt="Aloha"/>
-                <button className="start-video"> Enter Yoga room </button>
+                <button className="start-video-btn"> Enter Yoga room </button>
               </Link>
             </div>
             <div>
@@ -157,7 +157,7 @@ class Moodboard extends React.Component {
             <div > 
              <Link to={`/video/${this.state.meditationURL}`}>
                 <img className='meditation-pic' src={`/images/Meditation.png`} alt="Aloha"/>
-                <button className="start-video"> Enter Meditation room </button>
+                <button className="start-video-btn"> Enter Meditation room </button>
              </Link>
             </div>
             </section>
@@ -165,7 +165,7 @@ class Moodboard extends React.Component {
            <div> 
               <Link to={`/video/${this.state.inspirationURL}`}>
                 <img className='inspiration-pic' src={`/images/Inspiration.png`} alt="Aloha"/>
-                <button className="start-video"> Enter Inspiration room </button>
+                <button className="start-video-btn"> Enter Inspiration room </button>
              </Link>
             </div> 
             <div>
@@ -180,7 +180,7 @@ class Moodboard extends React.Component {
             <div > 
              <Link to={`/video/${this.state.coachingURL}`}>
                 <img className='coaching-pic' src={`/images/Coaching.png`} alt="Aloha"/>
-                <button className="start-video"> Enter Coaching room </button>
+                <button className="start-video-btn"> Enter Coaching room </button>
              </Link>
             </div>  
 

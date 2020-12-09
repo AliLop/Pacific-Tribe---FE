@@ -2,7 +2,7 @@ import React from 'react';
 import AuthService from '../../utils/auth';
 import { Link, withRouter} from 'react-router-dom';
 import { toast, Zoom } from 'react-toastify';
-
+import './Login.css';
 class Login extends React.Component {
     state = {
         username: '',
@@ -40,19 +40,37 @@ class Login extends React.Component {
     render() {
         return(
             <div>
+            <div className="container image-signup-container">
+            <div className="row">
+                <div className="col signup-col">
+                    <div> <img className="login-visual" src="images/Signup-v3.png" alt="signup visual" /></div>
+                </div>
+                <div class="col signup-col" id="signup-form-container">
+                <br/>
                 <button> <Link to="/login-google">Log in with Google</Link></button>
+                <br/>
+                <br/>
                 <p>Log in with your credentials</p> 
+                <br/>
             <form onSubmit={this.handleFormSubmit}>
-                <label>Username:</label>
-                <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-                <label>Password:</label>
-                <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
+                <input placeholder="Username" type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+                <br/>
+                <br/>
+                <input placeholder="Password" type="password" name="password" value={this.state.password} onChange={this.handleChange} />
+                <br/>
+                <br/>
                 <button>Login</button>
             </form>
+            <br/>
+                    <p>Together you will show the World your best version!</p> 
             <p>Don't have account? 
+            <br/> 
                 <Link to={"/signup"}> Signup</Link>
             </p>
         </div>   
+       </div>
+      </div> 
+     </div>  
         )
     }
 }

@@ -75,12 +75,21 @@
 .meditation-pic,
 .coaching-pic,
 .inspiration-pic {
-    width: 350px;
-    height: 344px;
+    width: 300px;
     border-radius: 3px;
     margin-top: 3%;
+    position: relative;
+    left: 150px;
 }
 
+.start-video-btn {
+    color: black;
+    background-color: transparent;
+    position: relative;
+    left: -100px;
+    top: 80px;
+
+}
 .toaster {
     color: #C5A388;
 }
