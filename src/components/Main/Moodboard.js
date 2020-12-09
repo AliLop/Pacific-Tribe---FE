@@ -8,6 +8,8 @@ import { toast, Zoom } from 'react-toastify';
 import AudioPlayer from 'react-h5-audio-player';
 import './Moodboard.css';
 import { Link } from 'react-router-dom';
+import Chaman from '../Suggestions/Chaman';
+
 class Moodboard extends React.Component {
 
   state = {
@@ -95,7 +97,7 @@ class Moodboard extends React.Component {
           {/* <p>{this.state.mood} </p>   */}
       </div>
         <container className="scroll-container">
-        <section className="section bg1"> 
+        <section className="section-scroll bg1"> 
           <div> 
             <img className='image-bg1' src={`/images/img-bg1.jpg`} alt="Aloha"/>
           </div>
@@ -109,7 +111,7 @@ class Moodboard extends React.Component {
           <div>
             <img className='image-hr-transition' src="/images/Aloha-orange.png" alt="Aloha"/>
           </div>
-        <section className="section  bg2 ">
+        <section className="section-scroll  bg2 ">
           <div className="evasion-section">
             <EvasionRoomEntry mood={this.state.mood} />
           </div> 
@@ -117,7 +119,7 @@ class Moodboard extends React.Component {
           <div>
             <img className='image-hr-transition' src="/images/Relax-orange.png" alt="Aloha"/>
           </div>
-            <section className="section bg3 chart"> 
+            <section className="section-scroll bg3 chart"> 
               <div className="chart-info">
                 <br/>
                 <h4>A little perspective...</h4>
@@ -136,9 +138,10 @@ class Moodboard extends React.Component {
               </div>
             </section>
             <div> 
+            <br/> 
             <h4> The tailored recipe... </h4> 
             </div> 
-          <section className="section bg4 videos"> 
+          <section className="section-scroll bg4 videos"> 
             <div>  
               <Link to={`/video/${this.state.yogaURL}`}>
                 <img className='yoga-pic' src={`/images/Yoga.png`} alt="Aloha"/>
@@ -146,11 +149,11 @@ class Moodboard extends React.Component {
               </Link>
             </div>
             <div>
-            <h5> Conquer inner peace </h5>
-            <p>Believe in the power of regularly <br/>
-             practising yoga and meditation <br/>
-             to calm your thoughts, find focus and improve <br/>
-             your overall wellbeing and health on your daily life.</p>
+              <h5> Conquer inner peace </h5>
+            <p>Believe in the power of regularly practising <br/>
+              yoga and meditation to calm your thoughts,<br/>
+              find focus and improve your overall <br/>
+             wellbeing and health on your daily life.</p>
              <br/>
              <h6>Breathe in, strecht your body, widen your mind.</h6>
             </div>
@@ -161,13 +164,14 @@ class Moodboard extends React.Component {
              </Link>
             </div>
             </section>
-            <section className="section bg4 videos">
+            <section className="section-scroll bg4 videos">
            <div> 
               <Link to={`/video/${this.state.inspirationURL}`}>
                 <img className='inspiration-pic' src={`/images/Inspiration.png`} alt="Aloha"/>
                 <button className="start-video-btn"> Enter Inspiration room </button>
              </Link>
             </div> 
+           <br/> 
             <div>
             <h5> Nourish your mind </h5>
             <p>Discover real and recognised <br/>
@@ -185,11 +189,23 @@ class Moodboard extends React.Component {
             </div>  
 
           </section>
+          <br/> 
+             <div> 
+            <h4> Your confidant </h4>
+            </div> 
+             <section> 
+              
+                <div>
+                <Chaman />
+                </div>
+   
+            </section>
+            <br/>
             <div> 
             <h4> ...for holistic wellbeing </h4> 
             </div> 
           </container> 
-        
+        <br/>
     </div>
   ) : null
 }

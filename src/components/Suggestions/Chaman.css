@@ -1,0 +1,36 @@
+textarea {
+    padding: 8px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.form-message {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    justify-items: center;
+}
+
+.vent-info {
+        height: 60%;
+        width: 260px;
+        background-color: #DCCBB7;
+        align-content: center;
+        text-align: center;
+        border-radius: 3px;
+        padding: 1.5%;
+        padding-top: 2%;
+        margin-top: 2%;
+        margin-left: 1%;
+}
+
+.chaman-pic {
+    width: 297px;
+}

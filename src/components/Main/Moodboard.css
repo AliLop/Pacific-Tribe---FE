@@ -4,17 +4,17 @@
     margin-left: 0;
   }
 
-.scroll-container {
+/* .scroll-container {
     scroll-snap-type: y mandatory;
     overflow: auto;
     outline: 1px dashed lightgray;
     flex: none;
     flex-flow: column nowrap;
     height: 100vh;
-}
+} */
 
-.section {
-    scroll-snap-align: start;
+.section-scroll {
+    /* scroll-snap-align: start; */
     display: flex;
     color: black;
 }
@@ -27,8 +27,18 @@
 .image-bg1 {
     width: 280px;
     height: 344px;
-    border-radius: 3px;
     margin-top: 3%;
+}
+
+.bg2 {
+    height: 70vh;
+    justify-content: space-between;
+}
+
+.evasion-section {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
 }
 
 .bg3 {
@@ -51,45 +61,37 @@
     align-content: center;
     text-align: center;
     border-radius: 3px;
-    padding: 1.5%;
-    padding-top: 2%
-}
-
-.bg2 {
-    height: 70vh;
-    justify-content: space-between;
-}
-
-.evasion-section {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .videos {
     justify-content: space-around;
-    margin: 50px auto 50px;
+    align-items: center;
 }
 
+
+/* TO be changed to responsive*/
 .yoga-pic,
 .meditation-pic,
 .coaching-pic,
 .inspiration-pic {
     width: 300px;
-    border-radius: 3px;
     margin-top: 3%;
     position: relative;
-    left: 150px;
+    left: 110px
 }
 
 .start-video-btn {
     color: black;
     background-color: transparent;
     position: relative;
-    left: -100px;
-    top: 80px;
-
+    left: -130px;
+    top: 90px;
 }
+
 .toaster {
     color: #C5A388;
 }
