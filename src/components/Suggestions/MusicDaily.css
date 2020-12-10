@@ -8,11 +8,12 @@
 }
 
 .audio-compo {
-    width: 300px;
+    width: 260px;
 }
 
 .track-bloc {
-    width: 300px;
+    width: 260px;
+    margin-left: -3px;
 }
 
 
@@ -61,4 +62,12 @@ color: #C5A388;
 
 .rhap_container {
     box-shadow: none;
+}
+
+.track-bloc {
+    width: 280px;
+}
+
+.div-music-fromMusic {
+    width: 280px;
 }

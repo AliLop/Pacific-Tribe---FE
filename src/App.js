@@ -15,6 +15,10 @@ import Video from  './components/Suggestions/Video';
 import EvasionRoom1 from './components/Suggestions/EvasionRoom1';
 import AboutUs from './components/Main/AboutUs';
 import ContactUsForm from './components/Main/ContactUsForm'
+import EvasionRoom1 from './components/Suggestions/EvasionRoom1'
+import EvasionRoom2 from './components/Suggestions/EvasionRoom2'
+import EvasionRoom3 from './components/Suggestions/EvasionRoom3'
+import EvasionRoom4 from './components/Suggestions/EvasionRoom4'
 
 class App extends React.Component {
   state = {
@@ -88,6 +92,9 @@ class App extends React.Component {
              <Route exact path="/evasion-room/room-pachamama" component={EvasionRoom1} />
             <Route exact path='/about-us' component={AboutUs} />
             <Route exact path='/contact-us' component={ContactUsForm} />
+             <Route exact path="/evasion-room/room-bohemian" component={EvasionRoom2} />
+             <Route exact path="/evasion-room/room-jungle" component={EvasionRoom3} />
+             <Route exact path="evasion-room/room-sea" component={EvasionRoom4} />
           </Switch>
           <Footer />
         </div>

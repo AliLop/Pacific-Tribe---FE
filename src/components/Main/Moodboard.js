@@ -32,7 +32,7 @@ class Moodboard extends React.Component {
         //console.log('Here is the last mood updated by one user:', mood)
         moodService.getTheMoodAttributes(mood.data)
           .then((response) => {
-            //console.log(`RESPONSE`, response.data)
+            // console.log(`RESPONSE`, response.data)
             const moodAttributes = response.data[0];
             this.setState ({
               mood: moodAttributes.name,
@@ -89,62 +89,72 @@ class Moodboard extends React.Component {
   render () {
   return this.state.mood ? (
     <div>
+    <div className="logo-moodboard"> <img className="logo-moodboard" src="/images/LogoV11.png" alt="moodboard-logo-visual" /></div>
 
-      <div>
-        <h3>Welcome to your Moodboard</h3>
-          <h6>Based on your mood, we thought you might like some Pacific inspiration...</h6>
-          {/* <p>{this.state.mood} </p>   */}
+      <div className="moodboard-wrapper">
+        <h3 className="moodboard-title">Welcome to your Moodboard</h3>
+          <h6 className="moodboard-subtitle">Based on your mood, we thought you might like some Pacific inspiration...</h6>
+          <p> </p>
       </div>
         <container className="scroll-container">
-        <section className="section-scroll bg1"> 
-          <div> 
-            <img className='image-bg1' src={`/images/img-bg1.jpg`} alt="Aloha"/>
-          </div>
-          <div className="music"> 
-            <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
-          </div>
-          <div> 
-            <Sentence mood={this.state.mood} sentences={this.state.sentences}/>
-          </div>
-        </section>
-          <div>
-            <img className='image-hr-transition' src="/images/Aloha-orange.png" alt="Aloha"/>
-          </div>
-        <section className="section-scroll  bg2 ">
-          <div className="evasion-section">
-            <EvasionRoomEntry mood={this.state.mood} />
-          </div> 
-        </section> 
-          <div>
-            <img className='image-hr-transition' src="/images/Relax-orange.png" alt="Aloha"/>
-          </div>
-            <section className="section-scroll bg3 chart"> 
-              <div className="chart-info">
-                <br/>
-                <h4>A little perspective...</h4>
-                <br/>
-                <p><small>Because seeing the big picture is important, we we have tailored a visual image 
-                for you to  see how you have been feeling lately</small>
-                <br/>
-                <br/>
-                <small><strong>Hoping it will help you <br/>with introspection!</strong></small></p>
-              </div>
-              <div className="chart">
-                <WeeklyChart mood={this.state.mood} />
-              </div>
-              <div> 
-                <img className='chart-pic' src={`/images/chart-pic.jpg`} alt="Aloha"/>
-              </div>
+            <section className="section-scroll row bg1"> 
+ 
+                <div className="music-daily-div container-fluid"> 
+                  <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
+                </div>
+                <div> 
+                  <img className='image-bg1' src={'/images/Welcome.png'} alt="woman"/>
+                </div>
+                <div> 
+                  <Sentence mood={this.state.mood} sentences={this.state.sentences}/>
+                </div>
+  
             </section>
+
+              <div>
+                <img className='image-hr-transition' src="/images/Aloha-camel-small.png" alt="Aloha"/>
+              </div>
+
+            <section className="section-scroll  bg2">
+              <div className="evasion-section">
+                <EvasionRoomEntry mood={this.state.mood} />
+              </div> 
+            </section> 
+
+
+              <div>
+                <img className='image-hr-transition' src="/images/relax-camel-small.png" alt="Aloha"/>
+              </div>
+                <section className="section-scroll bg3 chart"> 
+                  <div className="chart-info">
+                    <br/>
+                    <h4>A little perspective...</h4>
+                    <br/>
+                    <p><small>Because seeing the big picture is important, we we have tailored a visual image 
+                    for you to  see how you have been feeling lately</small>
+                    <br/>
+                    <br/>
+                    <small><strong>Hoping it will help you <br/>with introspection!</strong></small></p>
+                  </div>
+                  <div className="chart">
+                    <WeeklyChart mood={this.state.mood} />
+                  </div>
+                  <div> 
+                    <img className='chart-pic' src={`/images/chart-pic.jpg`} alt="Aloha"/>
+                  </div>
+            </section>
+
+
             <div> 
-            <br/> 
-            <h4> The tailored recipe... </h4> 
+              <br/> 
+              <h4> The tailored recipe... </h4> 
             </div> 
+
+
           <section className="section-scroll bg4 videos"> 
             <div>  
               <Link to={`/video/${this.state.yogaURL}`}>
                 <img className='yoga-pic' src={`/images/Yoga.png`} alt="Aloha"/>
-                <button className="start-video-btn"> Enter Yoga room </button>
               </Link>
             </div>
             <div>
@@ -159,15 +169,15 @@ class Moodboard extends React.Component {
             <div > 
              <Link to={`/video/${this.state.meditationURL}`}>
                 <img className='meditation-pic' src={`/images/Meditation.png`} alt="Aloha"/>
-                <button className="start-video-btn"> Enter Meditation room </button>
              </Link>
             </div>
             </section>
+
+
             <section className="section-scroll bg4 videos">
            <div> 
               <Link to={`/video/${this.state.inspirationURL}`}>
                 <img className='inspiration-pic' src={`/images/Inspiration.png`} alt="Aloha"/>
-                <button className="start-video-btn"> Enter Inspiration room </button>
              </Link>
             </div> 
            <br/> 
@@ -183,7 +193,6 @@ class Moodboard extends React.Component {
             <div > 
              <Link to={`/video/${this.state.coachingURL}`}>
                 <img className='coaching-pic' src={`/images/Coaching.png`} alt="Aloha"/>
-                <button className="start-video-btn"> Enter Coaching room </button>
              </Link>
             </div>  
 

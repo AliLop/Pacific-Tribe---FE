@@ -7,11 +7,15 @@
   height: 60px;
 }
 
+NavLink {
+  text-decoration: none;
+}
+
 .full-navbar-grey {
   width: 100vw;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: sticky;
   z-index: 5;
   background-color: #c5a388;
   height: 60px;

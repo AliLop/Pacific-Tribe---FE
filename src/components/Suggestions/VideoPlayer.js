@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import { PrismCode } from 'react-prism';
-import { Player, ControlBar } from 'video-react';
+import { Player, ControlBar, PlayToggle } from 'video-react';
 import { BigPlayButton } from 'video-react';
 
 export default class PlayerVideoReact extends Component {
@@ -9,7 +9,8 @@ export default class PlayerVideoReact extends Component {
 
     this.state = {
       source: this.props.videoSrc,
-      muted: false
+      muted: false,
+      loop: true,
     };
 
     this.play = this.play.bind(this);
@@ -33,8 +34,13 @@ export default class PlayerVideoReact extends Component {
     };
   }
 
-  handleStateChange(state) {
+  handleStateChange(state, prevState) {
+      if (state.currentTime > 0) {
+        this.props.trigger();
+      }
+     
     // copy player state to this component's state
+    
     this.setState({
       player: state
     });
@@ -42,6 +48,9 @@ export default class PlayerVideoReact extends Component {
 
   play() {
     this.player.play();
+  
+
+
   }
 
   pause() {
@@ -86,11 +95,15 @@ export default class PlayerVideoReact extends Component {
           ref={player => {
             this.player = player;
           }}
+          loop
           muted
         >
           <source src={this.state.source} />
           <ControlBar autoHide={false} />
-          <BigPlayButton position="center" />
+
+          <BigPlayButton onClick="alert()" position="center" />
+         
+          <PlayToggle />
         </Player>
    
       </div>
