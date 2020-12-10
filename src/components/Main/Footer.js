@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class Footer extends React.Component {
@@ -8,33 +9,34 @@ class Footer extends React.Component {
     return (
         <div>
             
-
+ 
 <footer className="page-footer font-small white">
   <div className="container">
     <div className="row text-center d-flex justify-content-center pt-5 mb-3">
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="http://localhost:3000/about-us" className="footer-link">About us</a>
+          {/* <a href="http://localhost:3000/about-us" className="footer-link">About us</a> */}
+          <Link to={"/about-us"} className="footer-link"> About us </Link>
         </p>
       </div>
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="http://localhost:3000/signup" className="footer-link">Sign Up</a>
+          <Link to={"/signup"} className="footer-link"> Sign Up </Link>
         </p>
       </div>
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="http://localhost:3000/evasion-room/room-pachamama" className="footer-link">Evasion Room</a>
+          <Link to={"/evasion-room/room-pachamama"} className="footer-link"> Evasion Room </Link>
         </p>
       </div>
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="http://localhost:3000/login" className="footer-link">Login</a>
+          <Link to={"/login"} className="footer-link"> Login</Link>
         </p>
       </div>
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="http://localhost:3000/contact-us" className="footer-link">Contact</a>
+          <Link to={"/contact-us"} className="footer-link"> Contact us </Link>
         </p>
       </div>
         </div>
@@ -77,4 +79,4 @@ class Footer extends React.Component {
 }
 }
 
-export default Footer; 
+export default withRouter(Footer);
