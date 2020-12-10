@@ -97,12 +97,14 @@ export default class PlayerVideoReact extends Component {
           }}
           loop
           muted
+          disableDefaultControls
+          aspectRatio="16:9"
         >
           <source src={this.state.source} />
           <ControlBar autoHide={false} />
 
           <BigPlayButton onClick="alert()" position="center" />
-         
+          
           <PlayToggle />
         </Player>
    

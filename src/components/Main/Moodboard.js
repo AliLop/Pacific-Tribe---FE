@@ -68,11 +68,6 @@ class Moodboard extends React.Component {
         <div className="toaster-column">
         <img src="/images/homepage-thumb6.jpg" className="portrait" alt='portrait'/>
         </div>
-       <AudioPlayer autoPlay className="notification-audio"
-                            src='/audio/NotificationAudio.mp3'
-                            onPlay={e => console.log("onPlay")}
-                            showSkipControls="true"
-                        />
       </div>
 
     )
@@ -83,7 +78,7 @@ class Moodboard extends React.Component {
           hideProgressBar: true,
           transition: Zoom,
       });
-    }, 40000);
+    }, 400000);
   } 
 
   render () {
