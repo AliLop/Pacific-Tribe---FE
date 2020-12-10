@@ -14,17 +14,17 @@ class Footer extends React.Component {
     <div className="row text-center d-flex justify-content-center pt-5 mb-3">
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="/about" className="footer-link">About us</a>
+          <a href="http://localhost:3000/about-us" className="footer-link">About us</a>
         </p>
       </div>
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="/services" className="footer-link">Services</a>
+          <a href="http://localhost:3000/signup" className="footer-link">Sign Up</a>
         </p>
       </div>
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="/h-map" className="footer-link">Evasion Room</a>
+          <a href="http://localhost:3000/evasion-room/room-pachamama" className="footer-link">Evasion Room</a>
         </p>
       </div>
       <div className="col-md-2 mb-3">
@@ -34,7 +34,7 @@ class Footer extends React.Component {
       </div>
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <a href="#" className="footer-link">Contact</a>
+          <a href="http://localhost:3000/contact-us" className="footer-link">Contact</a>
         </p>
       </div>
         </div>

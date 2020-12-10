@@ -37,7 +37,7 @@ class WeeklyChart extends React.Component {
          const userId = localStorage.getItem('loggedInUser'); 
         moodService.getMoodHistory(userId)
          .then((mood) => {
-           console.log('Here is the mood HISTORY of one user:', mood)
+           //console.log('Here is the mood HISTORY of one user:', mood)
               this.setState ({
                   moodHistory: mood.data,
               })

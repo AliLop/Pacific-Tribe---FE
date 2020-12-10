@@ -13,3 +13,11 @@
 .container {
     align-items: center;
 }
+
+.main-daily-container {
+    display: flex;
+    flex-direction: row;
+    margin:auto;
+    align-items: center;
+    justify-content: space-around;
+}

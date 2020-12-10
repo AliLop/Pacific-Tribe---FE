@@ -22,7 +22,7 @@ class MusicDaily extends React.Component {
       
         spotifyService.getDailyPlaylist(spotifyURI)
             .then((response) => {
-                console.log("The response from API call is: ", response.data);
+                //console.log("The response from API call is: ", response.data);
                 
                 let previews = response.data.tracks.items.map((item) => {
                     return {
@@ -31,7 +31,7 @@ class MusicDaily extends React.Component {
                         track: item.track.album.name,
                     };
                 });
-                console.log("this is the copy array", previews)
+                //console.log("this is the copy array", previews)
                 let resultMusic = [];
               
                 for (let i = 0; i < 3; i++) {

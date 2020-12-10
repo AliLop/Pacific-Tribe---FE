@@ -12,7 +12,9 @@ import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
 import Video from  './components/Suggestions/Video';
-import EvasionRoom1 from './components/Suggestions/EvasionRoom1'
+import EvasionRoom1 from './components/Suggestions/EvasionRoom1';
+import AboutUs from './components/Main/AboutUs';
+import ContactUsForm from './components/Main/ContactUsForm'
 
 class App extends React.Component {
   state = {
@@ -29,7 +31,7 @@ class App extends React.Component {
      if (response.data._id) {
        // there's a user session active then set the state
        // with the current user.
-       console.log("this is the value of response data id", response.data._id)
+       //console.log("this is the value of response data id", response.data._id)
        this.setCurrentUser(response.data);
        localStorage.setItem("loggedInUser", response.data._id);
        localStorage.setItem("loggedInUsername", response.data.username);
@@ -61,7 +63,7 @@ class App extends React.Component {
         <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
           <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route path='/signup' component={Signup} />
+            <Route exact path='/signup' component={Signup} />
             <Route path='/login' render={
               () => {
                 return <Login setCurrentUser={this.setCurrentUser}/>
@@ -84,6 +86,8 @@ class App extends React.Component {
              <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
              <Route exact path="/video/:videoId" component={Video} />
              <Route exact path="/evasion-room/room-pachamama" component={EvasionRoom1} />
+            <Route exact path='/about-us' component={AboutUs} />
+            <Route exact path='/contact-us' component={ContactUsForm} />
           </Switch>
           <Footer />
         </div>

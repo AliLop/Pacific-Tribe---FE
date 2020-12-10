@@ -36,7 +36,7 @@ class Moodboard extends React.Component {
             const moodAttributes = response.data[0];
             this.setState ({
               mood: moodAttributes.name,
-              //spotifyURI: moodAttributes.spotifyURI,
+              spotifyURI: moodAttributes.spotifyURI,
               sentences: moodAttributes.sentences,
               meditationURL: moodAttributes.meditationURL,
               yogaURL: moodAttributes.yogaURL,
@@ -82,9 +82,8 @@ class Moodboard extends React.Component {
           autoClose: 8000, 
           hideProgressBar: true,
           transition: Zoom,
-          // not working => limit: 1
       });
-    }, 8000000);
+    }, 40000);
   } 
 
   render () {
