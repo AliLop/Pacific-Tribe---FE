@@ -5,7 +5,7 @@ import WeeklyChart from './WeeklyChart';
 import EvasionRoomEntry from '../Suggestions/EvasionRoomEntry';
 import React from 'react';
 import { toast, Zoom } from 'react-toastify';
-import AudioPlayer from 'react-h5-audio-player';
+//import AudioPlayer from 'react-h5-audio-player';
 import './Moodboard.css';
 import { Link } from 'react-router-dom';
 import Chaman from '../Suggestions/Chaman';
@@ -59,6 +59,8 @@ class Moodboard extends React.Component {
     const Msg = ({ closeToast }) => (
       <div className="toaster inline"><br/> 
       <div className="toaster-column">
+
+      <br/>
         <h6>It is <small>☕</small> break time!</h6><br/>
         <h6>Drink something and <br/>
         get Pacific <br/>
@@ -68,11 +70,15 @@ class Moodboard extends React.Component {
         <div className="toaster-column">
         <img src="/images/homepage-thumb6.jpg" className="portrait" alt='portrait'/>
         </div>
-       <AudioPlayer autoPlay className="notification-audio"
+        <br/>
+        Hide
+        <br/>
+       {/* <AudioPlayer autoPlay className="notification-audio"
                             src='/audio/NotificationAudio.mp3'
                             onPlay={e => console.log("onPlay")}
                             showSkipControls="true"
-                        />
+                            
+                        /> */}
       </div>
 
     )
@@ -83,7 +89,7 @@ class Moodboard extends React.Component {
           hideProgressBar: true,
           transition: Zoom,
       });
-    }, 40000);
+    }, 200000);
   } 
 
   render () {
