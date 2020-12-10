@@ -25,9 +25,6 @@ class EvasionRoom1 extends React.Component {
             <div>
                 { this.state.showCircle && <div class="breathing-circle"></div> }
                 
-          
-           
-            
                 <div className="audio-player-evasion">
                 <AudioPlayer className="audio-compo"
                     src={"https://res.cloudinary.com/dtu8rcnmp/video/upload/v1607453494/project3/Room1_sxd3ww.mp3"}
@@ -38,7 +35,7 @@ class EvasionRoom1 extends React.Component {
                     showJumpControls={"false"}
                     showDownloadProgress={"false"}
                     // showFilledProgress={"false"}
-                    // showFilledVolume={"true"}
+                    showFilledVolume={"true"}
                      />
                 </div>
 
@@ -47,10 +44,8 @@ class EvasionRoom1 extends React.Component {
                 </div>
 
                 <div>
-                <PlayerVideoReact trigger={this.triggerCircle.bind(this)} videoSrc={`https://res.cloudinary.com/dtu8rcnmp/video/upload/v1607446126/project3/Room1_xdpwwh.mp4`} loop={"true"} />
+                <PlayerVideoReact trigger={this.triggerCircle.bind(this)} aspectRatio={"16:9"}  videoSrc={`https://res.cloudinary.com/dtu8rcnmp/video/upload/v1607446126/project3/Room1_xdpwwh.mp4`} loop={"true"} />
                 </div>
-
-                
 
             </div>
             

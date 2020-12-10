@@ -89,7 +89,7 @@ class Moodboard extends React.Component {
           hideProgressBar: true,
           transition: Zoom,
       });
-    }, 200000);
+    }, 400000);
   } 
 
   render () {
