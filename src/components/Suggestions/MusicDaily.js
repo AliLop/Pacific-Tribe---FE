@@ -1,6 +1,5 @@
 import React from 'react';
 import SpotifyService from '../../utils/sapi';
-
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import './MusicDaily.css';
@@ -24,6 +23,7 @@ class MusicDaily extends React.Component {
             .then((response) => {
                 console.log("The response from API call is: ", response.data);
                 
+        
                 let previews = response.data.tracks.items.map((item) => {
                     return {
                         preview_url: item.track.preview_url,
@@ -31,6 +31,7 @@ class MusicDaily extends React.Component {
                         track: item.track.album.name,
                     };
                 });
+           
                 console.log("this is the copy array", previews)
                 let resultMusic = [];
               
@@ -50,10 +51,9 @@ class MusicDaily extends React.Component {
 
         return(
             <div>
-                <p> MUSIC </p>
                 {this.state.dailyPlaylist.map((music, index) => {
                     return (
-                        <div> 
+                        <div className="div-music-fromMusic"> 
                         <div className='track-bloc' key={index}>
                         <h6 className="track-title">{music.track}</h6>
                         <AudioPlayer className="audio-compo"
@@ -64,9 +64,6 @@ class MusicDaily extends React.Component {
                             customAdditionalControls={[]}
 
                         />
-                     
-                        
-
                       </div> 
                       </div>
                     )

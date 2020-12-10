@@ -4,7 +4,7 @@
     font-family: 'Amatic SC', cursive;
     font-size: 25px;
     color: black;
-    height: 344px;
+    height: 340px;
     width: 280px;
     background-color: #C5A388;
     padding: 25% 10%;
@@ -13,6 +13,4 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    border-radius: 3px;
-    margin-top: 3%;
 }

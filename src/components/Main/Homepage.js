@@ -28,7 +28,7 @@ class Homepage extends React.Component {
         <section>
         <div className="row container wrapping-all-section baseline-container">
             <div className="col-md-6" >
-                <img className="left-picture-homepage" src="images/HomepageVisual3.png"/>
+                <img className="left-picture-homepage" src="images/HomepageVisual3.png" alt='left-pic1'/>
             </div>
             <div className="col-md-6">
                 <div className="tribal-pitch right-text-homepage">
@@ -52,7 +52,7 @@ class Homepage extends React.Component {
         <section>
         <div className="row container wrapping-all-section baseline-container">
             <div className="col-md-6" >
-                <img className="left-picture-homepage" src="images/HomepageVisual4.png"/>
+                <img className="left-picture-homepage" src="images/HomepageVisual4.png" alt='left-pic'/>
             </div>
             <div className="col-md-6">
                 <div className="tribal-pitch right-text-homepage">
@@ -70,7 +70,7 @@ class Homepage extends React.Component {
         <section>
         <div className="row container wrapping-all-section baseline-container">
             <div className="col-md-6" >
-                <img className="left-picture-homepage" src="images/HomepageVisual5.png"/>
+                <img className="left-picture-homepage" src="images/HomepageVisual5.png" alt='left-pic2'/>
             </div>
             <div className="col-md-6">
                 <div className="tribal-pitch right-text-homepage">

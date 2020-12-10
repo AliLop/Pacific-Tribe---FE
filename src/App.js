@@ -13,6 +13,9 @@ import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
 import Video from  './components/Suggestions/Video';
 import EvasionRoom1 from './components/Suggestions/EvasionRoom1'
+import EvasionRoom2 from './components/Suggestions/EvasionRoom2'
+import EvasionRoom3 from './components/Suggestions/EvasionRoom3'
+import EvasionRoom4 from './components/Suggestions/EvasionRoom4'
 
 class App extends React.Component {
   state = {
@@ -84,6 +87,9 @@ class App extends React.Component {
              <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
              <Route exact path="/video/:videoId" component={Video} />
              <Route exact path="/evasion-room/room-pachamama" component={EvasionRoom1} />
+             <Route exact path="/evasion-room/room-bohemian" component={EvasionRoom2} />
+             <Route exact path="/evasion-room/room-jungle" component={EvasionRoom3} />
+             <Route exact path="evasion-room/room-sea" component={EvasionRoom4} />
           </Switch>
           <Footer />
         </div>

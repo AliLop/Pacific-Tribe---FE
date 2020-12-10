@@ -69,7 +69,7 @@ class Navbar extends React.Component {
             if (this.props.loggedInUser) {
                 return (
                     <div>
-                        <Nav className={this.props.location.pathname === "/" ? "full-navbar container-fluid" : "full-navbar-grey container-fluid" } activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                        <Nav className="full-navbar-grey container-fluid" activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
                             <div className="container-full-nav">
                                 <div className="navbar-items-left">
                             <Nav.Item>
@@ -93,7 +93,7 @@ class Navbar extends React.Component {
                 )
             } else {
                 return (
-                    <Nav className="full-navbar-grey" activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+                    <Nav className="full-navbar-grey container-fluid" activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
                              <div className="container-full-nav">
                                 <div className="navbar-items-left">
                             <Nav.Item>

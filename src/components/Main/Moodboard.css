@@ -1,8 +1,31 @@
-.div-to-fix-navbar {
-    margin-top: 76px;
-    margin-left: 0;
-    margin-left: 0;
-  }
+.moodboard-wrapper{
+    margin-top: 30px;
+}
+
+.moodboard-title {
+    font-family: 'Pacifico', cursive;
+    color: #C5A388;
+    font-size: 34px;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+
+.moodboard-subtitle {
+    font-family: 'Pacifico', cursive;
+    color: #C5A388;
+    font-size: 16px;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.logo-moodboard {
+    width: 160px;
+    position: absolute;
+    left: 40%;
+    top: 3px;
+    z-index: 200;
+}
 
 /* .scroll-container {
     scroll-snap-type: y mandatory;
@@ -17,17 +40,41 @@
     /* scroll-snap-align: start; */
     display: flex;
     color: black;
+    height: 500px;
 }
 
-.bg1 {
-    justify-content: space-around;
-    margin-top: 3%;
+.section-scroll {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+
+.music-daily-div {
+    background-color:#E37362;
+    max-width: 280px !important;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.rhap_container.audio-compo {
+    background-color: transparent;
+}
+
 
 .image-bg1 {
-    width: 280px;
-    height: 344px;
-    margin-top: 3%;
+    width: 350px;
+    height: 350px;
+}
+
+.image-hr-transition {
+    width: 100vw;
 }
 
 .bg2 {
@@ -39,6 +86,14 @@
     display: flex;
     flex-direction: row;
     margin: auto;
+}
+
+.evasion-room-title {
+    font-family: 'Pacifico', cursive;
+    color: #C5A388;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .bg3 {
@@ -82,14 +137,6 @@
     margin-top: 3%;
     position: relative;
     left: 110px
-}
-
-.start-video-btn {
-    color: black;
-    background-color: transparent;
-    position: relative;
-    left: -130px;
-    top: 90px;
 }
 
 .toaster {
