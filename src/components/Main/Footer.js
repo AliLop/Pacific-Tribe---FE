@@ -15,7 +15,6 @@ class Footer extends React.Component {
     <div className="row text-center d-flex justify-content-center pt-5 mb-3">
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          {/* <a href="http://localhost:3000/about-us" className="footer-link">About us</a> */}
           <Link to={"/about-us"} className="footer-link"> About us </Link>
         </p>
       </div>
@@ -26,7 +25,7 @@ class Footer extends React.Component {
       </div>
       <div className="col-md-2 mb-3">
         <p className="text-uppercase">
-          <Link to={"/evasion-room/room-pachamama"} className="footer-link"> Evasion Room </Link>
+          <Link to={"/"} className="footer-link"> Home </Link>
         </p>
       </div>
       <div className="col-md-2 mb-3">

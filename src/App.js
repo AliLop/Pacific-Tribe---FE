@@ -65,6 +65,7 @@ class App extends React.Component {
         <ToastContainer />
         <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser} userId={this.state.userId}/>
           <Switch>
+            <Route exact path="/home" component={Homepage} />
             <Route exact path="/" component={Homepage} />
             <Route exact path='/signup' component={Signup} />
             <Route path='/login' render={
@@ -89,7 +90,7 @@ class App extends React.Component {
              <Route path={`/moodboard/${this.state.userId}`} render={
               () => {
                 if (localStorage.getItem('loggedInUser')) {
-                  return <Moodboard userId={this.state.userId} userName={this.state.userName}/>
+                  return <Moodboard {...this.props} userName={this.state.userName}/>
              } else {
                   return <Redirect to='/login' />
               }
@@ -97,6 +98,8 @@ class App extends React.Component {
             }/>
              
              <Route exact path="/video/:videoId" component={Video} />
+
+
             <Route exact path='/about-us' component={AboutUs} />
             <Route exact path='/contact-us' component={ContactUsForm} />
             

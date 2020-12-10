@@ -41,14 +41,14 @@ font-family: 'Nunito Sans', sans-serif;
     height: 100vh;
 } */
 
-.section-scroll {
-    /* scroll-snap-align: start; */
+/* .section-scroll {
+    /* scroll-snap-align: start; 
     display: flex;
     color: black;
-    height: 500px;
-}
+} */
 
 .section-scroll {
+    height: 500px;
     width: 95%;
     display: flex;
     flex-direction: row;
@@ -56,6 +56,10 @@ font-family: 'Nunito Sans', sans-serif;
     align-items: center;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.bg1 {
+    background-image: url('./Bar-top-moodboard.png');
 }
 
 .music-daily-div {

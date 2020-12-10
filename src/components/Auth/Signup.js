@@ -36,7 +36,7 @@ class Signup extends React.Component {
             <div> <img className="signup-visual" src="images/Signup-namaste.png" alt="signup visual" /></div>
         </div>
 
-        <div class="col signup-col" id="signup-form-container">
+        <div className="col signup-col" id="signup-form-container">
             <br/>
                     <p>New to Pacific Tribe?</p>
                     <p>Sign up with your credentials!</p> 

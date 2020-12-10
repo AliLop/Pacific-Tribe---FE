@@ -86,7 +86,7 @@ class WeeklyChart extends React.Component {
     
     render() {
         return(
-               <div style={{width: "700px"}}> 
+               <div style={{width: "800px"}}> 
                 <Radar data={this.state.data} options={this.state.options} />
                </div> 
             )

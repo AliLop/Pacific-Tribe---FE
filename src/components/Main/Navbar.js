@@ -24,18 +24,18 @@ class Navbar extends React.Component {
                         <div className="container-full-nav">
                             <div className="navbar-items-left">
                         <Nav.Item>
-                                <NavLink className="nav-bar-link"  eventkey="link-1" exact to="/">Home</NavLink>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}} eventkey="link-1" exact to="/">Home</NavLink>
                         </Nav.Item> 
                         <Nav.Item>
-                            <NavLink className="nav-bar-link"  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                            <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}}  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
                         </Nav.Item>   
                             </div>      
                             <div className="navbar-items-right">  
                         <Nav.Item>
-                            <NavLink className="nav-bar-link"  eventkey="link-4"  to={`/moodboard/${this.props.userId}`}> Moodboard</NavLink>
+                            <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}}  eventkey="link-4"  to={`/moodboard/${this.props.userId}`}> Moodboard</NavLink>
                         </Nav.Item>          
                         <Nav.Item>
-                            <NavLink to='/'> <button className="auth-button-navbar" onClick={this.logoutUser}> Logout </button></NavLink>
+                            <NavLink to='/' activeStyle={{color: "#FBDCD7"}} > <button className="auth-button-navbar" onClick={this.logoutUser}> Logout </button></NavLink>
                         </Nav.Item>
                             </div>   
                         </div>
@@ -48,18 +48,18 @@ class Navbar extends React.Component {
                          <div className="container-full-nav">
                             <div className="navbar-items-left">
                         <Nav.Item>
-                                <NavLink className="nav-bar-link"  eventkey="link-1" exact to="/">Home</NavLink>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}}  eventkey="link-1" exact to="/">Home</NavLink>
                         </Nav.Item>
                         <Nav.Item>
-                            <NavLink className="nav-bar-link"  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                            <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}}  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
                         </Nav.Item>
                             </div>
                             <div className="navbar-items-right">         
                         <Nav.Item>
-                                <NavLink className="auth-button-navbar" exact to="/login">Login</NavLink>
+                                <NavLink className="auth-button-navbar" activeStyle={{color: "#FBDCD7"}} exact to="/login">Login</NavLink>
                         </Nav.Item>
                         <Nav.Item>
-                                <NavLink className="auth-button-navbar"  exact to="/signup">Signup</NavLink>
+                                <NavLink className="auth-button-navbar" activeStyle={{color: "#FBDCD7"}}  exact to="/signup">Signup</NavLink>
                         </Nav.Item>
                         </div> 
                         </div> 
@@ -73,18 +73,18 @@ class Navbar extends React.Component {
                             <div className="container-full-nav">
                                 <div className="navbar-items-left">
                             <Nav.Item>
-                                    <NavLink className="nav-bar-link"  eventkey="link-1" exact to="/">Home</NavLink>
+                                    <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}}  eventkey="link-1" exact to="/">Home</NavLink>
                             </Nav.Item> 
                             <Nav.Item>
-                                <NavLink className="nav-bar-link"  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}}  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
                             </Nav.Item>   
                                 </div>      
                                 <div className="navbar-items-right">  
                             <Nav.Item>
-                                <NavLink className="nav-bar-link"  eventkey="link-4"  to={`/moodboard/${this.props.userId}`}> Moodboard</NavLink>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}}  eventkey="link-4"  to={`/moodboard/${this.props.userId}`}> Moodboard</NavLink>
                             </Nav.Item>          
                             <Nav.Item>
-                                <NavLink to='/'> <button className="auth-button-navbar" onClick={this.logoutUser}> Logout </button></NavLink>
+                                <NavLink to='/' activeStyle={{color: "#FBDCD7"}} > <button className="auth-button-navbar" onClick={this.logoutUser}> Logout </button></NavLink>
                             </Nav.Item>
                                 </div>   
                             </div>
@@ -97,18 +97,18 @@ class Navbar extends React.Component {
                              <div className="container-full-nav">
                                 <div className="navbar-items-left">
                             <Nav.Item>
-                                    <NavLink className="nav-bar-link"  eventkey="link-1" exact to="/">Home</NavLink>
+                                    <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}}  eventkey="link-1" exact to="/">Home</NavLink>
                             </Nav.Item>
                             <Nav.Item>
-                                <NavLink className="nav-bar-link"  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
+                                <NavLink className="nav-bar-link" activeStyle={{color: "#FBDCD7"}}  eventkey="link-2"  to='/daily-mood'> Daily Mood</NavLink>
                             </Nav.Item>
                                 </div>
                                 <div className="navbar-items-right">         
                             <Nav.Item>
-                                    <NavLink className="auth-button-navbar" exact to="/login">Login</NavLink>
+                                    <NavLink className="auth-button-navbar" activeStyle={{color: "#FBDCD7"}} exact to="/login">Login</NavLink>
                             </Nav.Item>
                             <Nav.Item>
-                                    <NavLink className="auth-button-navbar"  exact to="/signup">Signup</NavLink>
+                                    <NavLink className="auth-button-navbar"  activeStyle={{color: "#FBDCD7"}} exact to="/signup">Signup</NavLink>
                             </Nav.Item>
                             </div> 
                             </div> 
