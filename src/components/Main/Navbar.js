@@ -32,7 +32,7 @@ class Navbar extends React.Component {
                             </div>      
                             <div className="navbar-items-right">  
                         <Nav.Item>
-                            <NavLink className="nav-bar-link"  eventkey="link-4"  to='/moodboard'> Moodboard</NavLink>
+                            <NavLink className="nav-bar-link"  eventkey="link-4"  to={`/moodboard/${this.props.userId}`}> Moodboard</NavLink>
                         </Nav.Item>          
                         <Nav.Item>
                             <NavLink to='/'> <button className="auth-button-navbar" onClick={this.logoutUser}> Logout </button></NavLink>
@@ -81,7 +81,7 @@ class Navbar extends React.Component {
                                 </div>      
                                 <div className="navbar-items-right">  
                             <Nav.Item>
-                                <NavLink className="nav-bar-link"  eventkey="link-4"  to='/moodboard'> Moodboard</NavLink>
+                                <NavLink className="nav-bar-link"  eventkey="link-4"  to={`/moodboard/${this.props.userId}`}> Moodboard</NavLink>
                             </Nav.Item>          
                             <Nav.Item>
                                 <NavLink to='/'> <button className="auth-button-navbar" onClick={this.logoutUser}> Logout </button></NavLink>

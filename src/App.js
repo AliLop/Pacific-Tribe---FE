@@ -14,7 +14,6 @@ import Footer from './components/Main/Footer';
 import Video from  './components/Suggestions/Video';
 import AboutUs from './components/Main/AboutUs';
 import ContactUsForm from './components/Main/ContactUsForm'
-import EvasionRoom1 from './components/Suggestions/EvasionRoom1'
 import EvasionRoom2 from './components/Suggestions/EvasionRoom2'
 import EvasionRoom3 from './components/Suggestions/EvasionRoom3'
 import EvasionRoom4 from './components/Suggestions/EvasionRoom4'
@@ -63,7 +62,7 @@ class App extends React.Component {
       return (
         <div className="App">
         <ToastContainer />
-        <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser}/>
+        <Navbar loggedInUser={this.state.loggedInUser} setCurrentUser={this.setCurrentUser} userId={this.state.userId}/>
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route exact path='/signup' component={Signup} />
@@ -86,16 +85,26 @@ class App extends React.Component {
               }
             }
             }/>
-             <Route  path={`/moodboard/${this.state.userId}`} component={Moodboard} userId={this.state.userId} userName={this.state.userName}/>
+             <Route path={`/moodboard/${this.state.userId}`} render={
+              () => {
+                if (localStorage.getItem('loggedInUser')) {
+                  return <Moodboard userId={this.state.userId} userName={this.state.userName}/>
+             } else {
+                  return <Redirect to='/login' />
+              }
+            }
+            }/>
+             
              <Route exact path="/video/:videoId" component={Video} />
-             <Route exact path="/evasion-room/room-pachamama" component={EvasionRoom1} />
             <Route exact path='/about-us' component={AboutUs} />
             <Route exact path='/contact-us' component={ContactUsForm} />
+            
+             <Route exact path="/evasion-room/room-pachamama" component={EvasionRoom1} />
              <Route exact path="/evasion-room/room-bohemian" component={EvasionRoom2} />
              <Route exact path="/evasion-room/room-jungle" component={EvasionRoom3} />
              <Route exact path="/evasion-room/room-sea" component={EvasionRoom4} />
           </Switch>
-          <Footer />
+          <Footer userId={this.state.userId}/>
         </div>
       );
       }
