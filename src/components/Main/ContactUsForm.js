@@ -61,7 +61,7 @@ class ContactUsForm extends React.Component {
                 <div className="col signup-col">
                     <div> <img className="login-visual" src="images/Signup-v3.png" alt="signup visual" /></div>
                 </div>
-                <div class="col signup-col" id="signup-form-container">
+                <div className="col signup-col" id="signup-form-container">
                 <br/>
                 <br/>
                 <br/>

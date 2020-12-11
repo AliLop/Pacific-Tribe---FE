@@ -26,6 +26,7 @@ export default class PlayerVideoReact extends Component {
   componentDidMount() {
     // subscribe state change
     this.player.subscribeToStateChange(this.handleStateChange.bind(this));
+    window.scrollTo(0, 0);
   }
 
   setMuted(muted) {

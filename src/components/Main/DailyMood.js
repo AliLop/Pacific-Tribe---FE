@@ -5,8 +5,7 @@ import { toast, Zoom } from 'react-toastify';
 import './DailyMood.css';
 class DailyMood extends React.Component {
   state = {
-     moodOfTheDay: "",
-     userId: this.props.userId
+     moodOfTheDay: ""
   }
 
     handleChange = (event) => {
@@ -27,14 +26,13 @@ class DailyMood extends React.Component {
             });
     event.preventDefault();
     const moodService = new MoodService();
-    const userId = this.state.userId;
+    const userId = localStorage.getItem("loggedInUser");
 
     let moodOfTheDay = this.state.moodOfTheDay
     moodService.updateMood(userId, {moodOfTheDay}).then(() => {
       setTimeout(() => {
             this.props.history.push(`/moodboard/${userId}`)
-            }, 1500);
-      
+            }, 1000);
     });
   }
   
@@ -44,7 +42,6 @@ class DailyMood extends React.Component {
           <div> 
             <img className='image-bg1' src={`/images/Evasion4.png`} alt="Aloha"/>
           </div>
-          
           <div>
           <form onSubmit={this.handleFormSubmit}>
             <h4 className='title-mood-daily'>What's your mood today?</h4>

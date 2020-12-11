@@ -7,9 +7,6 @@ class AboutUs extends React.Component {
     render () {
     return (
         <div>
-        <br/> 
-        <br/> 
-
          <section>
             <div className="row container wrapping-all-section baseline-container">
                 <div className="col-md-6" >

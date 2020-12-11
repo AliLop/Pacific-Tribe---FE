@@ -20,10 +20,14 @@ class EvasionRoom1 extends React.Component {
           });
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     render () {
         return(
             <div>
-                { this.state.showCircle && <div class="breathing-circle"></div> }
+                { this.state.showCircle && <div className="breathing-circle"></div> }
                 
                 <div className="audio-player-evasion">
                 <AudioPlayer className="audio-compo"

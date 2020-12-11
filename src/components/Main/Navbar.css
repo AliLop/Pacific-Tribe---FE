@@ -29,6 +29,10 @@ a {
   color: white;
   font-size: 14px;
 }
+.nav-bar-link:hover {
+  text-decoration: none;
+  color: white;
+}
 
 .auth-button-navbar {
   padding: 4px 10px;
@@ -41,6 +45,11 @@ a {
   margin-left: 10px;
   margin-right: 30px;
   background-color: transparent;
+}
+
+.auth-button-navbar:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .container-full-nav {

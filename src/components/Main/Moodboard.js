@@ -9,6 +9,7 @@ import { toast, Zoom } from 'react-toastify';
 import './Moodboard.css';
 import { Link } from 'react-router-dom';
 import Chaman from '../Suggestions/Chaman';
+import { withRouter} from 'react-router-dom'
 
 class Moodboard extends React.Component {
 
@@ -19,12 +20,19 @@ class Moodboard extends React.Component {
         meditationURL: [],
         yogaURL:[],
         coachingURL: [],
-        inspirationURL: []
+        inspirationURL: [],
+        nudgeInterval: ''
         //userName: this.props.userName
   }
 
+    componentWillUnmount() {
+      debugger;
+      clearInterval(this.state.nudgeInterval);
+    }
+
   componentDidMount () {
     //Function to retrieve the mood of the day (the last one from the array)
+    
     const moodService = new MoodService();
     const userId = localStorage.getItem('loggedInUser'); 
     moodService.getTheMoodOfTheDay(userId)
@@ -32,7 +40,7 @@ class Moodboard extends React.Component {
         //console.log('Here is the last mood updated by one user:', mood)
         moodService.getTheMoodAttributes(mood.data)
           .then((response) => {
-            // console.log(`RESPONSE`, response.data)
+             console.log(`RESPONSE`, response.data)
             const moodAttributes = response.data[0];
             this.setState ({
               mood: moodAttributes.name,
@@ -75,16 +83,44 @@ class Moodboard extends React.Component {
         <br/>
       </div>
 
-    )
-    setInterval(() => {      
-      toast(Msg, { 
-          position: "bottom-right", 
-          autoClose: 8000, 
-          hideProgressBar: true,
-          transition: Zoom,
-      });
-    }, 400000);
-  } 
+        const Msg = ({ closeToast }) => (
+          <div className="toaster inline"><br/> 
+          <div className="toaster-column">
+
+          <br/>
+            <h6>It is <small>☕</small> break time!</h6><br/>
+            <h6>Drink something and <br/>
+            get Pacific <br/>
+            <br/>  🤎🧘‍♀️🤎  </h6>
+            <br/> 
+            </div>
+            <div className="toaster-column">
+            <img src="/images/homepage-thumb6.jpg" className="portrait" alt='portrait'/>
+            </div>
+            <br/>
+            Hide
+            <br/>
+          {/* <AudioPlayer autoPlay className="notification-audio"
+                                src='/audio/NotificationAudio.mp3'
+                                onPlay={e => console.log("onPlay")}
+                                showSkipControls="true"
+                                
+                            /> */}
+          </div>
+
+        )
+      let nudgeInterval = setInterval(() => {      
+          toast(Msg, { 
+              position: "bottom-right", 
+              autoClose: 8000,
+              hideProgressBar: true,
+              transition: Zoom,
+          });
+        }, 200000);
+        this.setState({
+          nudgeInterval: nudgeInterval
+        })
+    }
 
   render () {
   return this.state.mood ? (
@@ -135,7 +171,7 @@ class Moodboard extends React.Component {
 
 
               <div>
-                <img className='image-hr-transition' src="/images/relax-camel-small.png" alt="Aloha"/>
+                <img className='image-hr-transition' src="/images/Relax-camel-small.png" alt="Aloha"/>
               </div>
 
               
@@ -247,4 +283,4 @@ class Moodboard extends React.Component {
   ) : null
 }
 }
-export default Moodboard;
+export default withRouter(Moodboard);
