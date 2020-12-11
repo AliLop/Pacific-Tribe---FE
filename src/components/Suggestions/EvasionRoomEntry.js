@@ -22,10 +22,8 @@ class EvasionRoom extends React.Component {
 
         return(
             <div>
-            <h5 className="evasion-room-title">Time for evasion: A journey into unknown land</h5>
-            <br/>
             <div className="evasion-section">
-           <section className="roww evasion-rooms">
+           <section className="row evasion-rooms-bloc">
            <div className="evasion-room-title-pictures">
                 <h6> Pachamama Celebration</h6>
                 <NavLink to={`/evasion-room/room-pachamama`}> 

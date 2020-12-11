@@ -9,8 +9,9 @@
     justify-content: space-around;
     align-items: center;
 }
-.roww {
+.evasion-rooms-bloc {
     display: flex;
+
 }
 
 .breathing-circle {
@@ -48,6 +49,10 @@
         z-index: 4;
         display: flex;
         justify-content: center;
+    }
+
+    .evasion-section {
+        margin-top: 40px;
     }
 
 

@@ -41,4 +41,109 @@
   .signup-form-container {
     margin: 0;
     padding: 0;
+   margin-left: 40px;
   }
+
+  .signup-title {
+    margin-top: 10px;
+    display: -inline-block;
+    font-family: 'Nunito Sans', sans-serif;
+    color:#C5A388;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 800; 
+    text-transform: uppercase; 
+    z-index: 4;
+  }
+
+  
+.input-signup.input {
+  display: inline-block;
+  padding: 8px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border-color:1px solid #C5A388;
+  text-align: center;
+  color: #C5A388;
+  background-color: transparent;
+}
+
+
+.link-signup {
+  text-decoration: none;
+  padding: 6px 15px;
+  display: inline-block;
+  color: #C5A388;
+  border: 1px solid #C5A388;
+  border-radius: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  background-color: transparent;
+  text-decoration: none;
+  width: 200px;
+  margin-top: 30px;
+}
+
+.link-signup a {
+  text-decoration: none;
+}
+
+
+.signup-button-official {
+  text-decoration: none;
+  padding: 6px 15px;
+  display: inline-block;
+  color: white;
+  border: 1px solid #C5A388;
+  border-radius: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  background-color: #C5A388;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+a :hover {
+  text-decoration: none;
+}
+
+.other-buttons {
+  margin-top: 50px;
+}
+
+.form-signup select {
+  font-size: 12px;
+  border-radius: 30px;
+  width: 250px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+  color: #C5A388;
+  background-color: transparent;
+}
+
+
+.form-signup  input {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  border: 1px solid #C5A388;
+  margin: 15px 30px 0 20px;
+  background-color: transparent;
+  border-radius: 30px;
+  width: 250px;
+}
+
+.form-signup  placeholder {
+ text-align: center;
+ background-color: transparent;
+}
+
+
+.container-signup-google {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.link-google {
+  margin-left: 30px;
+}

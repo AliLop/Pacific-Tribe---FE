@@ -45,33 +45,33 @@ class Login extends React.Component {
         return(
             <div>
             <div className="container image-signup-container">
-            <div className="div-to-fix-navbar"> </div>
+            
             <div className="row">
+
                 <div className="col signup-col">
-                    <div> <img className="login-visual" src="images/Signup-v3.png" alt="signup visual" /></div>
+                    <div> <img className="login-visual" src="images/HomepageVisual3.png" alt="signup-visual2" /></div>
                 </div>
-                <div className="col signup-col" id="signup-form-container">
-                <br/>
-                <button> <Link to="/login-google">Log in with Google</Link></button>
-                <br/>
-                <br/>
-                <p>Log in with your credentials</p> 
-                <br/>
-            <form onSubmit={this.handleFormSubmit}>
-                <input placeholder="Username" type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-                <br/>
-                <br/>
-                <input placeholder="Password" type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-                <br/>
-                <br/>
-                <button>Login</button>
-            </form>
-            <br/>
-                    <p>Together you will show the World your best version!</p> 
-            <p>Don't have account? 
-            <br/> 
-                <Link to={"/signup"}> Signup</Link>
-            </p>
+        
+                <div class="col signup-col" id="signup-form-container">
+                <div class="div-login-align">
+                    <h4 className='title-login-daily'>Log in with your credentials</h4>
+                    <form onSubmit={this.handleFormSubmit} className="form-login-container">
+                        <input className="input-login" placeholder="Username" type="text" name="username" value={this.state.username} onChange={this.handleChange}/> <br/>
+                        <input className="input-login" placeholder="Password" type="password" name="password" value={this.state.password} onChange={this.handleChange} />  <br/>
+                        <button className='login-button-official'>Login <i class="fas fa-heart"></i></button>
+                    </form>
+                </div>
+
+                <div className="row other-buttons">
+                <div className="col-sm-6">
+                    <p className="login-mention"> Log in with Google </p>
+                    <button  className="link-login"><Link to={"/login-google"}> Google Login </Link> </button>
+                </div>
+                <div className="col-sm-6">
+                    <p className="login-mention">Don't have account? </p>
+                    <Link to={"/signup"} className="link-login"> Signup</Link>
+                </div>
+                </div>
         </div>   
        </div>
       </div> 

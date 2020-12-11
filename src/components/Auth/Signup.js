@@ -36,39 +36,37 @@ class Signup extends React.Component {
 
 <div className="container image-signup-container">
   <div className="row">
-        <div className="col signup-col">
+        <div className="col-6 signup-col">
             <div> <img className="signup-visual" src="images/Signup-namaste.png" alt="signup visual" /></div>
         </div>
 
         <div className="col signup-col" id="signup-form-container">
             <br/>
-                    <p>New to Pacific Tribe?</p>
+                    <h4 className="signup-title">New to Pacific Tribe?</h4>
                     <p>Sign up with your credentials!</p> 
                 
-                    <form onSubmit={this.handleFormSubmit}>
-                            <input placeholder="Username" type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+                    <form onSubmit={this.handleFormSubmit} className='form-signup'>
+                            <input className='input-signup' placeholder="Username" type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
                             <br/>
                             <br/>
-                            <input placeholder="Email"  type='email' name="email" value={this.state.email} onChange={this.handleChange} />
+                            <input className='input-signup' placeholder="Email"  type='email' name="email" value={this.state.email} onChange={this.handleChange} />
                             <br/>
                             <br/>
-                            <input placeholder="Password" type='password' name="password" value={this.state.password} onChange={this.handleChange} />
+                            <input className='input-signup'  placeholder="Password" type='password' name="password" value={this.state.password} onChange={this.handleChange} />
                             <br/>
                             <br/>
-                            <button>Signup </button>
+                            <button className="signup-button-official">Signup <i class="fas fa-heart"></i></button>
                     </form>
 
-                    <br/>
-                    <br/>
-                    <button> <Link to="/login-google">Log in with Google</Link></button>
-                    <br/>
-                    <br/>
-                    <p>Together you will show the World your best version!</p> 
-                    
-                    <p>Already have account? 
-                    <br/>
-                            <Link to={"/login"}> Login</Link>
-                    </p>
+
+                    <div className="container-signup-google row container">
+                    <div className="col-sm-6">
+                    <button className='link-signup link-google'> <Link to="/login-google">Signup with Google</Link></button> 
+                    </div>
+                    <div className="col-sm-6">
+                    <Link className='link-signup' to={"/login"}> Login</Link>
+                    </div>
+                    </div>
         </div>
     </div>
   
