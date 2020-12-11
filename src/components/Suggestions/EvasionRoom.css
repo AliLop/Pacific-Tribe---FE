@@ -1,58 +1,80 @@
 .evasion-room-pictures {
-    width: 250px;
-    margin: 10px;
+  width: 250px;
+  margin: 10px;
 }
 
 .evasion-room-title-pictures {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .evasion-rooms-bloc {
-    display: flex;
+  display: flex;
+}
 
+.evasion-mini-title {
+  color: #c5a388;
+  font-size: 16px;
+  font-family: "Special Elite", cursive;
 }
 
 .breathing-circle {
-        position: absolute;
-		width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        margin: 20px;
-        top: 300px;
-        left: 40%;
-        z-index: 100;
-		/*background-image: linear-gradient(to left,lightgrey,gold);*/
-		background-color: transparent;
-		border: 2px solid white;
-		text-align: center;
-		line-height: 50px;
-		font-size: 18px;
-		text-transform: capitalize;
-		animation:brath 12s  linear infinite;
-	}
-	@keyframes brath{
-        0%{transform: scale(0.3);}
-        16%{transform: scale(.5);}
-        32%{transform: scale(.8);}
-		50%{transform: scale(1);}
-		75%{transform: scale(.5);}
-		100%{transform: scale(0.3);}
-	}
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px;
+  top: 300px;
+  left: 40%;
+  z-index: 100;
+  /*background-image: linear-gradient(to left,lightgrey,gold);*/
+  background-color: transparent;
+  border: 2px solid white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  text-transform: capitalize;
+  animation: brath 12s linear infinite;
+}
+@keyframes brath {
+  0% {
+    transform: scale(0.3);
+  }
+  16% {
+    transform: scale(0.5);
+  }
+  32% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0.3);
+  }
+}
 
+.audio-player-evasion {
+  position: absolute;
+  top: 650px;
+  left: 40%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+}
 
-    .audio-player-evasion{
-        position: absolute;
-        top: 650px;
-        left: 40%;
-        z-index: 4;
-        display: flex;
-        justify-content: center;
-    }
+.evasion-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
-    .evasion-section {
-        margin-top: 40px;
-    }
-
-
+.evasion-rooms-bloc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

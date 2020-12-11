@@ -12,7 +12,6 @@ import DailyMood from './components/Main/DailyMood';
 import Moodboard from './components/Main/Moodboard';
 import Footer from './components/Main/Footer';
 import Video from  './components/Suggestions/Video';
-import EvasionRoom1 from './components/Suggestions/EvasionRoom1';
 import AboutUs from './components/Main/AboutUs';
 import ContactUsForm from './components/Main/ContactUsForm'
 import EvasionRoom1 from './components/Suggestions/EvasionRoom1'

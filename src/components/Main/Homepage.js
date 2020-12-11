@@ -24,13 +24,13 @@ class Homepage extends React.Component {
             </div>
        </div>
 
-
+{/*
         <section>
         <div className="row container wrapping-all-section baseline-container">
-            <div className="col-md-6" >
+            <div className="col-md-5" >
                 <img className="left-picture-homepage" src="images/HomepageVisual3.png" alt='left-pic1'/>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-4">
                 <div className="tribal-pitch right-text-homepage">
                     <h1 className="title-homepage"> A tribe called Pacific... </h1>
                     <h5 className="homepage-subtitles">Restoring ancestral widsom in modern daily lives</h5>
@@ -45,16 +45,45 @@ class Homepage extends React.Component {
                         <i className="fas fa-heart"></i><i className="fas fa-heart"></i><i className="fas fa-heart"></i>
                         </p>
                 </div>
+                <div className="col-md-3">
+                    <img className="right-picture-homepage" src="images/option-D.png" alt='right-pic'/>
+                </div>
             </div>
+        </div>
+        </section>
+*/}
+        <section>
+        <div className="row container wrapping-all-section baseline-container">
+            <div className="col-md-5" >
+                <img className="left-picture-homepage" src="images/HomepageVisual3.png" alt='left-pic'/>
+            </div>
+            <div className="col-md-4">
+            <div className="tribal-pitch right-text-homepage">
+                    <h1 className="title-homepage"> A Pacific tribe... </h1>
+                    <h5 className="homepage-subtitles">Restoring ancestral widsom in modern daily lives</h5>
+                        <p className="concept-pitch">
+                        <br/>
+                        This safe space is your daily go-to resource for inspiration, respiration & meditation. In our fast-paced environment, these ancestral practises can help to quiet your mind, protect your body and strenghen your inner peace.  <br/>
+                        This tribe is their tribe. A digital hub where they can connect & disconnect. <br/>
+                        Made by Women, for Women.    <br/>
+                        Love & Light    <br/>
+                        <i className="fas fa-heart"></i><i className="fas fa-heart"></i><i className="fas fa-heart"></i>
+                        </p>
+                </div>
+            </div>
+            <div className="col-md-3">
+            <img className="right-picture-homepage" src="images/option-D.png" alt='right-pic'/>
+            </div>
+  
         </div>
         </section>
 
         <section>
         <div className="row container wrapping-all-section baseline-container">
-            <div className="col-md-6" >
+            <div className="col-md-5" >
                 <img className="left-picture-homepage" src="images/HomepageVisual4.png" alt='left-pic'/>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-4">
                 <div className="tribal-pitch right-text-homepage">
                     <h1 className="title-homepage"> MEDITATION </h1>
                     <h5 className="homepage-subtitles">Inner Peace recipes, day after day</h5>
@@ -64,16 +93,20 @@ class Homepage extends React.Component {
                         </p>
                 </div>
             </div>
+            <div className="col-md-3">
+            <img className="right-picture-homepage" src="images/option-G.png" alt='right-pic'/>
+            </div>
+  
         </div>
         </section>
 
-        <section>
+        <section className="last-section">
         <div className="row container wrapping-all-section baseline-container">
-            <div className="col-md-6" >
-                <img className="left-picture-homepage" src="images/HomepageVisual5.png" alt='left-pic2'/>
+            <div className="col-md-5" >
+                <img className="left-picture-homepage" src="images/HomepageVisual5.png" alt='left-pic'/>
             </div>
-            <div className="col-md-6">
-                <div className="tribal-pitch right-text-homepage">
+            <div className="col-md-4">
+            <div className="tribal-pitch right-text-homepage">
                     <h1 className="title-homepage"> INSPIRATION </h1>
                     <h5 className="homepage-subtitles">Your daily dose of inspiration ideas</h5>
                         <p className="concept-pitch">
@@ -82,11 +115,16 @@ class Homepage extends React.Component {
                         </p>
                 </div>
             </div>
+            <div className="col-md-3">
+            <img className="right-picture-homepage" src="images/option-K.png" alt='right-pic'/>
+            </div>
+  
         </div>
         </section>
 
+
         <section>
-        <h3 className="h3-homepage"> Inhale the Future.Exhale the Past.</h3>
+        <h3 className="h3-homepage"> Inhale the Future. Exhale the Past.</h3>
             <div className="row">
                     <div className="col-sm-2">
                             <img src="images/homepage-thumb1.jpg" className="portrait" alt='portrait' />
