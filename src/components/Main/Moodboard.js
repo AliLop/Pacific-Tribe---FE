@@ -54,14 +54,7 @@ class Moodboard extends React.Component {
          })
       }).catch((err) => console.log("An error occured while trying to retrieve the mood of the day", err))
     
-      // const src='';
-      // if(this.state.mood === 'anxious') {
-      //   src= 'img-bg1.jpg';
-      //  } else if (this.state.mood === 'positive') {
-      //   src= 'singup-namaste.png';
-      //  } else {
-      //    src= 'singup-namaste.png';
-      //  }
+
 
     const Msg = ({ closeToast }) => (
       <div className="toaster inline"><br/> 
@@ -81,31 +74,6 @@ class Moodboard extends React.Component {
         Hide
         <br/>
       </div>
-
-        const Msg = ({ closeToast }) => (
-          <div className="toaster inline"><br/> 
-          <div className="toaster-column">
-
-          <br/>
-            <h6>It is <small>☕</small> break time!</h6><br/>
-            <h6>Drink something and <br/>
-            get Pacific <br/>
-            <br/>  <i className="fas fa-heart"></i>🧘‍♀️<i className="fas fa-heart"></i>  </h6>
-            <br/> 
-            </div>
-            <div className="toaster-column">
-            <img src="/images/homepage-thumb6.jpg" className="portrait" alt='portrait'/>
-            </div>
-            <br/>
-            Hide
-            <br/>
-          {/* <AudioPlayer autoPlay className="notification-audio"
-                                src='/audio/NotificationAudio.mp3'
-                                onPlay={e => console.log("onPlay")}
-                                showSkipControls="true"
-                                
-                            /> */}
-          </div>
 
         )
       let nudgeInterval = setInterval(() => {      
@@ -148,7 +116,7 @@ class Moodboard extends React.Component {
             </section>
 
               <div>
-                <img className='image-hr-transition' src="/images/Aloha-camel-small.png" alt="Aloha"/>
+                <img className='image-hr-transition aloha-transition' src="/images/Aloha-camel-small.png" alt="Aloha"/>
               </div>
 
             <section className="section-scroll  bg2">
