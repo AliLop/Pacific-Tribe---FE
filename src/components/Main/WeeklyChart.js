@@ -2,6 +2,7 @@ import { message } from 'antd';
 import React from 'react';
 import { Radar } from 'react-chartjs-2';
 import MoodService from '../../utils/mapi';
+import './WeeklyChart.css'
 
 class WeeklyChart extends React.Component {
     state = {
@@ -12,8 +13,8 @@ class WeeklyChart extends React.Component {
                     labels: ['Overwhelmed', 'Anxious', 'Calm', 'Positive', 'Enthusiastic'],
                     datasets: [{
                         data: [0, 0, 0, 0, 0],
-                        backgroundColor: ['rgba(197,148,136, 0.6)'],
-                        borderColor: ['rgba(197,148,136, 0.7)'],
+                        backgroundColor: ['#944E2F'],
+                        borderColor: ['#944E2F'],
                         borderWidth: 1
                     }]
                 },
@@ -76,8 +77,8 @@ class WeeklyChart extends React.Component {
                 labels: ['Overwhelmed', 'Anxious', 'Calm', 'Positive', 'Enthusiastic'],
                 datasets: [{
                     data: [overwhelmed, anxious, calm, positive, enthusiastic],
-                    backgroundColor: ['rgb(197,148,136)'],
-                    borderColor: ['rgba(197,148,136, 0.7)'],
+                    backgroundColor: ['#944E2F'],
+                    borderColor: ['#944E2F'],
                     borderWidth: 1
                 }]
             }

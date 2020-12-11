@@ -12,7 +12,7 @@ class Login extends React.Component {
     componentDidMount() {
         window.scrollTo(0, 0);
     }
-    
+
     handleChange = (event) => {  
         const {name, value} = event.target;
         this.setState({[name]: value});
@@ -52,24 +52,24 @@ class Login extends React.Component {
                     <div> <img className="login-visual" src="images/HomepageVisual3.png" alt="signup-visual2" /></div>
                 </div>
         
-                <div class="col signup-col" id="signup-form-container">
-                <div class="div-login-align">
+                <div className="col signup-col" id="signup-form-container">
+                <div className="div-login-align">
                     <h4 className='title-login-daily'>Log in with your credentials</h4>
                     <form onSubmit={this.handleFormSubmit} className="form-login-container">
                         <input className="input-login" placeholder="Username" type="text" name="username" value={this.state.username} onChange={this.handleChange}/> <br/>
                         <input className="input-login" placeholder="Password" type="password" name="password" value={this.state.password} onChange={this.handleChange} />  <br/>
-                        <button className='login-button-official'>Login <i class="fas fa-heart"></i></button>
+                        <button className='login-button-official'>Login <i className="fas fa-heart"></i></button>
                     </form>
                 </div>
 
                 <div className="row other-buttons">
                 <div className="col-sm-6">
                     <p className="login-mention"> Log in with Google </p>
-                    <button  className="link-login"><Link to={"/login-google"}> Google Login </Link> </button>
+                    <button  className="link-login"><Link to={"/login-google"} className="link-effect"> Google Login </Link> </button>
                 </div>
                 <div className="col-sm-6">
                     <p className="login-mention">Don't have account? </p>
-                    <Link to={"/signup"} className="link-login"> Signup</Link>
+                    <Link to={"/signup"} className="link-login link-effect"> Signup</Link>
                 </div>
                 </div>
         </div>   

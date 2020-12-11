@@ -88,6 +88,14 @@
   text-decoration: none;
 }
 
+.link-effect {
+  color: #C5A388;
+}
+
+.link-effect:hover {
+  text-decoration: none;
+  color: #C5A388;
+}
 
 .signup-button-official {
   text-decoration: none;
