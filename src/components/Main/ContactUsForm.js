@@ -3,7 +3,7 @@ import { toast, Zoom } from 'react-toastify';
 //import './Login.css';
 //import axios from 'axios';
 import ContactForm from '../../utils/capi';
-
+import './ContactForm.css'
 class ContactUsForm extends React.Component {
    state = {
         name: "",
@@ -11,6 +11,10 @@ class ContactUsForm extends React.Component {
         message: "",
         status: "Send"
 
+    }
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
     }
     handleChange(event) {
         const field = event.target.id;
@@ -56,22 +60,21 @@ class ContactUsForm extends React.Component {
         let buttonText = this.state.status;
         return(
             <div>
-            <div className="container image-signup-container">
+            <div className="container image-contact-container">
             <div className="row">
-                <div className="col signup-col">
-                    <div> <img className="login-visual" src="images/Signup-v3.png" alt="signup visual" /></div>
+                <div className="col contact-col">
+                    <div> <img className="contact-visual" src="images/Signup-v3.png" alt="signup visual" /></div>
                 </div>
-                <div className="col signup-col" id="signup-form-container">
+                <div className="col contact-col" id="signup-form-container">
                 <br/>
-                <br/>
-                <br/>
-                <br/>
-                <p>Get in touch with Pacific Tribe!</p> 
-                
-                <form onSubmit={this.handleSubmit.bind(this)} method="POST">
+
+
+                <p className="contact-title">Get in touch</p> 
+                <form onSubmit={this.handleSubmit.bind(this)} method="POST" className="form-contact">
                     <div>
                     {/* <label htmlFor="name">Name:</label> */}
                     <input
+                    className="input-contact"
                         placeholder="Name"
                         type="text"
                         id="name"
@@ -80,7 +83,6 @@ class ContactUsForm extends React.Component {
                         required
                     />
                     </div>
-                    <br/>
                     <div>
                     {/* <label htmlFor="email">Email:</label> */}
                     <input
@@ -104,10 +106,9 @@ class ContactUsForm extends React.Component {
                         required
                     />
                     </div>
-                    <button type="submit">{buttonText}</button>
+                    <button type="submit" className="contact-button-official">{buttonText}</button>
                 </form>
                 <br/>
-                <p>Together you will show the World your best version!</p> 
           
         </div>   
        </div>

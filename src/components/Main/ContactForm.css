@@ -1,0 +1,125 @@
+.contact-visual {
+     width: auto;
+    width: 70vh;
+    margin-left: 0;
+    margin-top: 30px;
+}
+
+.image-contact-container {
+     margin-left: 0;
+     margin-right: 0;
+}
+
+input {
+    padding: 8px;
+    padding-left: 10px;
+    border-radius: 10px;
+    /* border-color: black; */
+    text-align: center;
+    /* color: black; */
+} 
+
+button {
+    padding: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.contact-col{
+padding: 0;
+margin-right: 0;
+margin-left: 0;
+}
+
+.contact-title {
+    margin-top: 10px;
+    display: -inline-block;
+    font-family: 'Nunito Sans',
+    sans-serif;
+    color:#C5A388;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    z-index: 4;
+}
+
+.input-contact {
+    display: inline-block;
+    padding: 8px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border-color: 1px solid #C5A388;
+    text-align: center;
+    color: #C5A388;
+    background-color: transparent;
+}
+
+
+.alignment-items {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.input-signup.input {
+    display: inline-block;
+    padding: 8px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border-color: 1px solid #C5A388;
+    text-align: center;
+    color: #C5A388;
+    background-color: transparent;
+}
+
+
+.contact-button-official {
+    text-decoration: none;
+    padding: 6px 15px;
+    display: inline-block;
+    color: white;
+    border: 1px solid #C5A388;
+    border-radius: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    background-color: #C5A388;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+a :hover {
+    text-decoration: none;
+}
+
+.form-contact select {
+    font-size: 12px;
+    border-radius: 30px;
+    width: 250px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+    color: #C5A388;
+    background-color: transparent;
+}
+
+
+.form-contact input {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    border: 1px solid #C5A388;
+    margin: 15px 30px 0 20px;
+    background-color: transparent;
+    border-radius: 30px;
+    width: 250px;
+}
+
+.form-contact placeholder {
+    text-align: center;
+    background-color: transparent;
+}
+
+
+textarea {
+    width: 300px;
+    height: 300px;
+}

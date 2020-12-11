@@ -26,7 +26,6 @@ class Moodboard extends React.Component {
   }
 
     componentWillUnmount() {
-      debugger;
       clearInterval(this.state.nudgeInterval);
     }
 
@@ -84,7 +83,7 @@ class Moodboard extends React.Component {
               hideProgressBar: true,
               transition: Zoom,
           });
-        }, 200000);
+        }, 250000);
         this.setState({
           nudgeInterval: nudgeInterval
         })

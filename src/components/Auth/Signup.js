@@ -11,6 +11,10 @@ class Signup extends React.Component {
         password: ''
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+    
     handleChange = (event) => {  
         const {name, value} = event.target;
         this.setState({[name]: value});
@@ -51,16 +55,16 @@ class Signup extends React.Component {
                             <input className='input-signup'  placeholder="Password" type='password' name="password" value={this.state.password} onChange={this.handleChange} />
                             <br/>
                             <br/>
-                            <button className="signup-button-official">Signup <i class="fas fa-heart"></i></button>
+                            <button className="signup-button-official link-effect">Signup <i className="fas fa-heart"></i></button>
                     </form>
 
 
                     <div className="container-signup-google row container">
                     <div className="col-sm-6">
-                    <button className='link-signup link-google'> <Link to="/login-google">Signup with Google</Link></button> 
+                    <button className='link-signup link-google'> <Link to="/login-google" className='link-effect'>Signup with Google</Link></button> 
                     </div>
                     <div className="col-sm-6">
-                    <Link className='link-signup' to={"/login"}> Login</Link>
+                    <Link className='link-signup link-effect' to={"/login"}> Login</Link>
                     </div>
                     </div>
         </div>
