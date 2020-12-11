@@ -42,14 +42,12 @@ class DailyMood extends React.Component {
       return(
         <div className="main-daily-container">
           <div> 
-            <img className='image-bg1' src={`/images/Evasion1.png`} alt="Aloha"/>
+            <img className='image-bg1' src={`/images/Evasion4.png`} alt="Aloha"/>
           </div>
           
           <div>
-   
           <form onSubmit={this.handleFormSubmit}>
-      
-            <h4>What's your mood today?</h4>
+            <h4 className='title-mood-daily'>What's your mood today?</h4>
               <br/> 
             <div className="daily-mood-form container">
               <div className="inline">
@@ -94,14 +92,18 @@ class DailyMood extends React.Component {
               </div>
                 <br/>
             </div>
-            <button> Enter your Bubble of Peace </button>
+            <button className="daily-mood-button"> Enter your Bubble of Peace </button>
           </form>
           </div>
+
+
           <div>
-          <div> 
-            <img className='image-bg1' src={`/images/Evasion3.png`} alt="Aloha"/>
+            <div> 
+              <img className='image-bg1' src={`/images/Evasion1.png`} alt="Aloha"/>
+            </div>
           </div>
-          </div>
+
+
          </div> 
       ) 
   }

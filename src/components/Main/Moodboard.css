@@ -8,19 +8,20 @@ font-family: 'Nunito Sans', sans-serif;
 }
 
 .moodboard-title {
-    font-family: 'Pacifico', cursive;
-    color: #C5A388;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #944E2F;
     font-size: 34px;
-    margin-top: 90px;
-    margin-bottom: 30px;
+    margin-top: 110px;
+    margin-bottom: 15px;
+    font-weight: 800;
 }
 
 
 .moodboard-subtitle {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Nunito Sans', sans-serif;
     color: #C5A388;
     font-size: 16px;
-    margin-top: 70px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -58,14 +59,17 @@ font-family: 'Nunito Sans', sans-serif;
     margin-right: 20px;
 }
 
-.music-daily-div {
-    background-color:#E37362;
+
+.music-daily-div.container-fluid {
+    background-color:#944E2F;
     max-width: 280px !important;
     height: 340px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    margin-left: 60px;
+    margin-right: 0;
 }
 
 .rhap_container.audio-compo {
@@ -74,18 +78,18 @@ font-family: 'Nunito Sans', sans-serif;
 
 
 .image-bg1 {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
 }
 
 .image-hr-transition {
     width: 100vw;
 }
 
-.bg2 {
-    height: 70vh;
-    justify-content: space-between;
-}
+
+
+/* EVASION */ 
+
 
 .evasion-section {
     display: flex;
@@ -93,38 +97,110 @@ font-family: 'Nunito Sans', sans-serif;
     margin: auto;
 }
 
+.evasion-room {
+    display: flex;
+    align-items: center;
+}
+
 .evasion-room-title {
-    font-family: 'Pacifico', cursive;
-    color: #C5A388;
-    font-size: 30px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #944d2e;
+    font-size: 38px;
+    margin-bottom: 30px;
+    font-weight: 800; 
+    text-transform: uppercase; 
+    z-index: 4; 
+    position: relative;
+    left: -30px;
+}
+.title-evasion-bloc {
+    margin-top: 60px;
+    margin-left: 0;
+}
+
+.empty-div-evasion-room {
+    background-color: #C5A388;
+    width: 550px;
+    height: 90px;
+    margin-left: 0;
+}
+
+.evasion-section {
+    margin-top: 40px;
+}
+
+/* CHART */ 
+.chart-info {
+    justify-content: space-between;
+    margin-bottom: 3%;
+    margin-bottom: 40px;
+    align-content: center;
+    text-align: center;
 }
 
 .bg3 {
-    justify-content: space-around;
-    margin-bottom: 3%;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+
+.chart-final-graph {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 900px;
+position: relative;
+left: 10%;
 }
 
 .chart-pic {
-    position: relative;
-    left: -90px;
-    width: 280px;
+    z-index: -1;
 }
 
-.chart-info {
+.perspective-title {
+    margin-top: 30px;
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #C5A388;
+    font-size: 38px;
+    margin-bottom: 30px;
+    font-weight: 800; 
     position: relative;
-    left: 90px;
-    height: 344px;
-    width: 260px;
-    background-color: #DCCBB7;
-    align-content: center;
-    text-align: center;
-    border-radius: 3px;
-    padding-right: 1.5%;
-    padding-left: 1.5%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    text-transform: uppercase; 
+    z-index: 4; 
+}
+
+.perspective-text {
+    background-color: white;
+    position: relative;
+    left: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #C5A388;
+    font-size: 14px;
+    z-index: 4; 
+    width: 280px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.chart-renderer{
+    width: 900px;
+}
+
+.button-update-daily {
+    padding: 4px 10px;
+    display: block;
+    color: #C5A388;
+    border: 1px solid #C5A388;
+    border-radius: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    background-color: transparent;
+    margin-top: 30px;
+    width: 200px;
+    text-decoration: none;
 }
 
 .videos {
@@ -133,19 +209,172 @@ font-family: 'Nunito Sans', sans-serif;
 }
 
 
-/* TO be changed to responsive*/
-.yoga-pic,
-.meditation-pic,
-.coaching-pic,
-.inspiration-pic {
-    width: 300px;
-    margin-top: 3%;
+/* SECTION SUGGESTIONS*/
+
+.tailored-title {
+    margin-top: 30px;
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #944d2e;
+    font-size: 38px;
+    margin-bottom: 30px;
+    font-weight: 800; 
+    text-transform: uppercase; 
+    z-index: 4; 
     position: relative;
-    left: 110px
+    left: -30px;
 }
+
+.tailored-recipe {
+    display: flex;
+    align-items: center;
+}
+
+.empty-div-background {
+    background-color: #C5A388;
+    width: 550px;
+    height: 90px;
+}
+.title-suggestion-bloc {
+    margin-top: 50px;
+}
+
+.section-suggestions {
+    height: 900px;
+    margin-top: 80px;
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.section-suggestions.bg4.videos {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-md-4 {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+.yoga-div {
+margin-left: -30px;
+padding-left: 0;
+}
+
+.inspiration-div {
+    margin-left: -30px;
+    padding-left: 0;
+}
+
+.meditation-div {
+    margin-left: -30px;
+    padding-left: 0;
+}
+
+.coaching-div {
+    margin-left: -30px;
+    padding-left: 0;
+}
+
+.suggestions-text-bloc {
+    background-color: white;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #944d2e;
+    font-size: 14px;
+    z-index: 4; 
+    width: 350px;
+    height: 180px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.suggestion-baseline {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/*
+.circle-middle {
+    margin: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #944d2e;
+    position: absolute;
+    z-index: 5;
+    left: 40%;
+    top: 60%;
+
+}*/
+
+.yoga-pic,
+.inspiration-pic
+{
+    width: 450px;
+    position: relative;
+    left: 30px;
+}
+
+.coaching-pic,
+.meditation-pic  {
+    width: 450px;
+    position: relative;
+    right: 30px;
+}
+
+.row.yoga-meditation {
+    margin-bottom: 90px;
+    margin-top:40px;
+}
+
+.row.inspiration-coaching {
+    margin-top: 110px;
+}
+
+/* SECTION ALMA*/
+
+
+.empty-div-last-segment {
+    width: 280px;
+}
+.empty-div-last-segment2 {
+    background-color: #C5A388;
+    width: 550px;
+    height: 90px;
+    margin-left: 0;
+}
+
+.tell-wind {
+    margin-top: 30px;
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #944d2e;
+    font-size: 38px;
+    margin-bottom: 30px;
+    font-weight: 800; 
+    text-transform: uppercase; 
+    z-index: 4; 
+    position: relative;
+    left: 45px;
+}
+
+.title-chaman-bloc {
+    margin-bottom: 50px;
+}
+
+/* TOASTER*/
 
 .toaster {
     color: #C5A388;
+}
+
+.toaster-title {
+    font-size: 10px;
 }
 
 .inline {

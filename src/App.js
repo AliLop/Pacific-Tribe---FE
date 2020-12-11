@@ -14,6 +14,7 @@ import Footer from './components/Main/Footer';
 import Video from  './components/Suggestions/Video';
 import AboutUs from './components/Main/AboutUs';
 import ContactUsForm from './components/Main/ContactUsForm'
+import EvasionRoom1 from './components/Suggestions/EvasionRoom1'
 import EvasionRoom2 from './components/Suggestions/EvasionRoom2'
 import EvasionRoom3 from './components/Suggestions/EvasionRoom3'
 import EvasionRoom4 from './components/Suggestions/EvasionRoom4'

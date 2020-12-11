@@ -61,8 +61,8 @@ class Moodboard extends React.Component {
       <div className="toaster-column">
 
       <br/>
-        <h6>It is <small>☕</small> break time!</h6><br/>
-        <h6>Drink something and <br/>
+        <h6 className="toaster-title">It is <small>☕</small> break time!</h6><br/>
+        <h6 className="toaster-title">Drink something and <br/>
         get Pacific <br/>
         <br/>  🤎🧘‍♀️🤎  </h6>
         <br/> 
@@ -73,12 +73,6 @@ class Moodboard extends React.Component {
         <br/>
         Hide
         <br/>
-       {/* <AudioPlayer autoPlay className="notification-audio"
-                            src='/audio/NotificationAudio.mp3'
-                            onPlay={e => console.log("onPlay")}
-                            showSkipControls="true"
-                            
-                        /> */}
       </div>
 
     )
@@ -99,20 +93,21 @@ class Moodboard extends React.Component {
 
       <div className="moodboard-wrapper">
         <h3 className="moodboard-title">Welcome to your Moodboard</h3>
-          <h6 className="moodboard-subtitle">Based on your mood, we thought you might like some Pacific inspiration...</h6>
+          
           <p> </p>
       </div>
         <container className="scroll-container">
-            <section className="section-scroll row bg1"> 
- 
+            <section className="section-scroll row bg1" style={{ backgroundImage: "url('/images/Bar-top-moodboard.png')"}}> 
                 <div className="music-daily-div container-fluid"> 
                   <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
                 </div>
                 <div> 
+                
                   <img className='image-bg1' src={'/images/Welcome.png'} alt="woman"/>
+                  <h6 className="moodboard-subtitle">Based on your mood, <br/> we thought you might like <br/> some Pacific inspiration...</h6>
                 </div>
                 <div> 
-                  <Sentence mood={this.state.mood} sentences={this.state.sentences}/>
+                  <Sentence  mood={this.state.mood} sentences={this.state.sentences}/>
                 </div>
   
             </section>
@@ -122,103 +117,131 @@ class Moodboard extends React.Component {
               </div>
 
             <section className="section-scroll  bg2">
+            <div>
+              <div className="row title-evasion-bloc">
+                  <div className="empty-div-evasion-room"></div>
+                    <div> 
+                      <div className="evasion-room container">
+                      <h4 className="evasion-room-title" > Time for Evasion... </h4> 
+                      </div> 
+                    </div> 
+                  <div className="empty-div-background2"></div>
+              </div>
               <div className="evasion-section">
                 <EvasionRoomEntry mood={this.state.mood} />
               </div> 
+              </div>
             </section> 
 
 
               <div>
                 <img className='image-hr-transition' src="/images/relax-camel-small.png" alt="Aloha"/>
               </div>
-                <section className="section-scroll bg3 chart"> 
-                  <div className="chart-info">
-                    <br/>
-                    <h4>A little perspective...</h4>
-                    <br/>
-                    <p><small>Because seeing the big picture is important, we we have tailored a visual image 
-                    for you to  see how you have been feeling lately</small>
-                    <br/>
-                    <br/>
-                    <small><strong>Hoping it will help you <br/>with introspection!</strong></small></p>
-                  </div>
-                  <div className="chart">
+
+              
+                <section className="section-scroll bg3 chart container"> 
+                  <div className="chart-info row">
+                      <div className="perspective-brief col-sm-2">
+                          <div> <h4 className="perspective-title">A little <br/> perspective...</h4> </div>
+                          <div className="perspective-text"> <p>Because seeing the big picture is important, we we have tailored a visual image 
+                          for you to  see how you have been feeling lately. Hoping it will help you with introspection!</p>
+                          <Link className="button-update-daily"  eventkey="link-2"  to='/daily-mood'> Update your Daily Mood</Link>
+                          </div>
+                      </div>
+                     
+                    <div className="perspective-picture col-sm-4"> 
+                    <img className='chart-pic' src={`/images/chart-pic.png`} alt="chart"/>
+                    </div>
+      
+                    <div className="chart-final-graph col-sm-6">
                     <WeeklyChart mood={this.state.mood} />
-                  </div>
-                  <div> 
-                    <img className='chart-pic' src={`/images/chart-pic.jpg`} alt="Aloha"/>
-                  </div>
+                    </div>
+                </div>
+                
+                  
             </section>
 
-
+          <div className="row title-suggestion-bloc">
+          <div className="empty-div-background"></div>
             <div> 
-              <br/> 
-              <h4> The tailored recipe... </h4> 
+              <br/>
+              <div className="tailored-recipe container">
+              <h4 className="tailored-title" > The tailored recipe... </h4> 
+              </div> 
             </div> 
+            <div className="empty-div-background2"></div>
+          </div>
 
 
-          <section className="section-scroll bg4 videos"> 
-            <div>  
-              <Link to={`/video/${this.state.yogaURL}`}>
-                <img className='yoga-pic' src={`/images/Yoga.png`} alt="Aloha"/>
-              </Link>
+          <section className="section-suggestions bg4 videos"  style={{ backgroundImage: "url('/images/background-suggestion.png')" }}> 
+      <div className="suggestions container">
+      <div className="row yoga-meditation">
+            <div className="col-md-4 yoga-div">  
+                <Link to={`/video/${this.state.yogaURL}`}>
+                  <img className='yoga-pic' src={`/images/Yoga.png`} alt="Aloha"/>
+                </Link>
             </div>
-            <div>
-              <h5> Conquer inner peace </h5>
-            <p>Believe in the power of regularly practising <br/>
-              yoga and meditation to calm your thoughts,<br/>
-              find focus and improve your overall <br/>
-             wellbeing and health on your daily life.</p>
-             <br/>
-             <h6>Breathe in, strecht your body, widen your mind.</h6>
+            <div class="col-md-4 background-suggestions suggestions-text-bloc">
+              <div>
+                  <h5  className="suggestion-baseline"> Conquer inner peace </h5>
+                  <p>Believe in the power of regularly practising <br/>
+                  yoga and meditation to calm your thoughts,<br/>
+                  find focus and improve your overall <br/>
+                wellbeing and health on your daily life.</p>
+              </div>
             </div>
-            <div > 
+            <div className="col-md-4 meditation-div"> 
              <Link to={`/video/${this.state.meditationURL}`}>
                 <img className='meditation-pic' src={`/images/Meditation.png`} alt="Aloha"/>
              </Link>
             </div>
-            </section>
+        </div> 
 
+        <div className='circle-middle'></div>
 
-            <section className="section-scroll bg4 videos">
-           <div> 
-              <Link to={`/video/${this.state.inspirationURL}`}>
-                <img className='inspiration-pic' src={`/images/Inspiration.png`} alt="Aloha"/>
-             </Link>
-            </div> 
-           <br/> 
-            <div>
-            <h5> Nourish your mind </h5>
-            <p>Discover real and recognised <br/>
-             life coaches and inspirational humans <br/>
-             to empower your Self-consciousness<br/>
-             and help you persue your dreams.</p>
-             <br/>
-             <h6>Elevate the soul and achive your better self.</h6>
-            </div>
-            <div > 
-             <Link to={`/video/${this.state.coachingURL}`}>
-                <img className='coaching-pic' src={`/images/Coaching.png`} alt="Aloha"/>
-             </Link>
-            </div>  
-
-          </section>
-          <br/> 
-             <div> 
-            <h4> Your confidant </h4>
-            </div> 
-             <section> 
-              
+        <div className="row inspiration-coaching">
+            <div className="col-md-4 inspiration-div"> 
+                  <Link to={`/video/${this.state.inspirationURL}`}>
+                    <img className='inspiration-pic' src={`/images/Inspiration.png`} alt="Aloha"/>
+                </Link>
+              </div>
+              <div class="col-md-4 background-suggestions suggestions-text-bloc">
                 <div>
-                <Chaman />
+                    <h5 className="suggestion-baseline"> Nourish your mind </h5>
+                    <p>Discover real and recognised <br/>
+                    life coaches and inspirational humans <br/>
+                    to empower your Self-consciousness<br/>
+                    and help you persue your dreams.</p>               
                 </div>
+              </div>
+              <div className="col-md-4 coaching-div"> 
+                  <Link to={`/video/${this.state.coachingURL}`}>
+                      <img className='coaching-pic' src={`/images/Coaching.png`} alt="Aloha"/>
+                  </Link>
+              </div>  
+        </div>
+      </div>
+          </section>
+    
+        <section> 
+
+          <div className="row title-chaman-bloc">
+            <div className="empty-div-last-segment"></div>
+              <div> 
+                <div className="digital-chaman container">
+                <h4 className="tell-wind" > Tell it to the wind... </h4> 
+                </div> 
+              </div> 
+              <div className="empty-div-last-segment2"></div>
+          </div>
+
+              
+          <div>
+          <Chaman />
+          </div>
    
             </section>
-            <br/>
-            <div> 
-            <h4> ...for holistic wellbeing </h4> 
-            </div> 
-          </container> 
+      </container> 
         <br/>
     </div>
   ) : null

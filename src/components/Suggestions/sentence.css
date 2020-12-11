@@ -3,7 +3,7 @@
 .sentence {
     font-family: 'Amatic SC', cursive;
     font-size: 25px;
-    color: black;
+    color: white;
     height: 340px;
     width: 280px;
     background-color: #C5A388;
@@ -13,4 +13,5 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    font-weight: 700;
 }
