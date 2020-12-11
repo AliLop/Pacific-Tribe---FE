@@ -11,6 +11,10 @@ class Signup extends React.Component {
         password: ''
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+    
     handleChange = (event) => {  
         const {name, value} = event.target;
         this.setState({[name]: value});

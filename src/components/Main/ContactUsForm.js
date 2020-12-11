@@ -12,6 +12,10 @@ class ContactUsForm extends React.Component {
         status: "Send"
 
     }
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
     handleChange(event) {
         const field = event.target.id;
         if (field === "name") {

@@ -4,6 +4,9 @@ import './Homepage.css';
 
 class Homepage extends React.Component {
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
     render () {
     return (
     <div>
@@ -37,11 +40,11 @@ class Homepage extends React.Component {
                         <p className="concept-pitch">
                         <br/>
                         This safe space is your daily go-to resource for inspiration, respiration & meditation. <br/>
-                        In our fast-paced environment, these ancestral practises can help to quiet your mind, protect your body and strenghen your inner peace.  <br/>
+                        In our fast-paced environment, these ancestral practises can help to quiet your mind, protect your body and strengthen your inner peace.  <br/>
                         Women, everywhere on Earth, are always the first to suffer from stress, anxiety, heavy mental load. <br/>
-                        This tribe is their tribe. A digital hub where they can connect & disconnect. <br/>
-                        Made by Women, for Women.    <br/>
-                        Love & Light    <br/>
+                        This tribe is theirs. A digital hub to connect with yourself & disconnect. <br/>
+                        Made by Women, for Women. <br/>
+                        Love & Light <br/>
                         <i className="fas fa-heart"></i><i className="fas fa-heart"></i><i className="fas fa-heart"></i>
                         </p>
                 </div>
@@ -56,11 +59,11 @@ class Homepage extends React.Component {
             </div>
             <div className="col-md-6">
                 <div className="tribal-pitch right-text-homepage">
-                    <h1 className="title-homepage"> MEDITATION </h1>
-                    <h5 className="homepage-subtitles">Inner Peace recipes, day after day</h5>
+                    <h1 className="title-homepage"> YOGA & MEDITATION </h1>
+                    <h5 className="homepage-subtitles">Tailored inner peace recipes</h5>
                         <p className="concept-pitch">
                         <br/>
-                        We truly believe in the power of yoga  & meditation, to improve your wellbeing, <br/> your health and your daily life. Natural beauty, minimalism, purity, <br/> simplicity…the values of these ancestral arts are also the ones shared by our community. Discover daily sources of inspiration to practise day after day and reach this wonderful status of inner peace.
+                        We truly believe in the power of yoga and meditation, to improve your wellbeing, <br/> your health and your daily life. Natural beauty, minimalism, purity, <br/> simplicity…the values of these ancestral arts are also the ones shared by our community. Discover daily sources of inspiration to practise day after day and reach this wonderful status of inner peace.
                         </p>
                 </div>
             </div>
@@ -75,7 +78,7 @@ class Homepage extends React.Component {
             <div className="col-md-6">
                 <div className="tribal-pitch right-text-homepage">
                     <h1 className="title-homepage"> INSPIRATION </h1>
-                    <h5 className="homepage-subtitles">Your daily dose of inspiration ideas</h5>
+                    <h5 className="homepage-subtitles">Your daily dose of inspirational ideas</h5>
                         <p className="concept-pitch">
                         <br/>
                         Our tribe is not only focused on well-being, our members can elevate their soul <br/>  by discovering new food for mind every day. Thanks to an experienced & recognised life coach, <br/>  or through nice educational videos, you can enhance your Self-consciousness, improve your relationships, or simply find comfort in listening inspirational Humans.

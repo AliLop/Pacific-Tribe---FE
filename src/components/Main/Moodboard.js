@@ -26,7 +26,6 @@ class Moodboard extends React.Component {
   }
 
     componentWillUnmount() {
-      debugger;
       clearInterval(this.state.nudgeInterval);
     }
 
@@ -64,7 +63,7 @@ class Moodboard extends React.Component {
             <h6>It is <small>☕</small> break time!</h6><br/>
             <h6>Drink something and <br/>
             get Pacific <br/>
-            <br/>  🤎🧘‍♀️🤎  </h6>
+            <br/>  <i className="fas fa-heart"></i>🧘‍♀️<i className="fas fa-heart"></i>  </h6>
             <br/> 
             </div>
             <div className="toaster-column">
@@ -89,7 +88,7 @@ class Moodboard extends React.Component {
               hideProgressBar: true,
               transition: Zoom,
           });
-        }, 200000);
+        }, 250000);
         this.setState({
           nudgeInterval: nudgeInterval
         })
@@ -106,7 +105,7 @@ class Moodboard extends React.Component {
           <p> </p>
       </div>
         <div className="scroll-container">
-            <section className="section-scroll row bg1"> 
+            <section className="section-scroll sections row bg1"> 
  
                 <div className="music-daily-div container-fluid"> 
                   <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
@@ -124,7 +123,7 @@ class Moodboard extends React.Component {
                 <img className='image-hr-transition' src="/images/Aloha-camel-small.png" alt="Aloha"/>
               </div>
 
-            <section className="section-scroll  bg2">
+            <section className="section-scroll sections bg2">
               <div className="evasion-section">
                 <EvasionRoomEntry mood={this.state.mood} />
               </div> 
@@ -134,7 +133,7 @@ class Moodboard extends React.Component {
               <div>
                 <img className='image-hr-transition' src="/images/Relax-camel-small.png" alt="Aloha"/>
               </div>
-                <section className="section-scroll bg3 chart"> 
+                <section className="section-scroll sections bg3 chart"> 
                   <div className="chart-info">
                     <br/>
                     <h4>A little perspective...</h4>
@@ -160,7 +159,7 @@ class Moodboard extends React.Component {
             </div> 
 
 
-          <section className="section-scroll bg4 videos"> 
+          <section className="section-scroll sections bg4 videos"> 
             <div>  
               <Link to={`/video/${this.state.yogaURL}`}>
                 <img className='yoga-pic' src={`/images/Yoga.png`} alt="Aloha"/>
@@ -183,7 +182,7 @@ class Moodboard extends React.Component {
             </section>
 
 
-            <section className="section-scroll bg4 videos">
+            <section className="section-scroll sections bg4 videos">
            <div> 
               <Link to={`/video/${this.state.inspirationURL}`}>
                 <img className='inspiration-pic' src={`/images/Inspiration.png`} alt="Aloha"/>
@@ -199,7 +198,7 @@ class Moodboard extends React.Component {
              <br/>
              <h6>Elevate the soul and achieve your better self.</h6>
             </div>
-            <div > 
+            <div> 
              <Link to={`/video/${this.state.coachingURL}`}>
                 <img className='coaching-pic' src={`/images/Coaching.png`} alt="Aloha"/>
              </Link>
@@ -210,7 +209,7 @@ class Moodboard extends React.Component {
              <div> 
             <h4> Your confidant </h4>
             </div> 
-             <section> 
+             <section className="section-scroll"> 
               
                 <div>
                 <Chaman />
