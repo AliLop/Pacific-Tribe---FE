@@ -25,7 +25,7 @@ class Signup extends React.Component {
         const authService = new AuthService();
         authService.signup(this.state.username, this.state.password)
         .then(() => {
-            this.props.history.push('/dailymood')
+            this.props.history.push('/daily-mood')
         }) // We could add a catch here.
     }
 

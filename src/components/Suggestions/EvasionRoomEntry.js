@@ -27,7 +27,7 @@ class EvasionRoom extends React.Component {
            <div className="evasion-room-title-pictures">
                 <h6 className="evasion-mini-title"> Pachamama Celebration</h6>
                 <NavLink to={`/evasion-room/room-pachamama`}> 
-               <img className="evasion-room-pictures" src="/images/option-A.png" alt="jungle-evasion" />
+               <img className="evasion-room-pictures" src="/images/Option-A.png" alt="jungle-evasion" />
                </NavLink> 
            </div>
            <div className="evasion-room-title-pictures">
