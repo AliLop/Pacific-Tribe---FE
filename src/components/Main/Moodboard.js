@@ -82,6 +82,7 @@ class Moodboard extends React.Component {
               autoClose: 8000,
               hideProgressBar: true,
               transition: Zoom,
+              limit: 1
           });
         }, 250000);
         this.setState({
@@ -100,7 +101,7 @@ class Moodboard extends React.Component {
           <p> </p>
       </div>
         <container className="scroll-container">
-            <section className="section-scroll row bg1" style={{ backgroundImage: "url('/images/Bar-top-moodboard.png')"}}> 
+            <section className="section-scroll row bg1" style={{ backgroundImage: "url('/images/final-bar-top-moodboard.png')"}}> 
                 <div className="music-daily-div container-fluid"> 
                   <MusicDaily  mood={this.state.mood} spotifyURI={this.state.spotifyURI} userId={this.state.userId}/> 
                 </div>
@@ -148,7 +149,7 @@ class Moodboard extends React.Component {
                           <div> <h4 className="perspective-title">A little <br/> perspective...</h4> </div>
                           <div className="perspective-text"> <p>Because seeing the big picture is important, we we have tailored a visual image 
                           for you to  see how you have been feeling lately. Hoping it will help you with introspection!</p>
-                          <Link className="button-update-daily"  eventkey="link-2"  to='/daily-mood'> Update your Daily Mood</Link>
+                          <Link className="button-update-daily link-remove"  eventkey="link-2"  to='/daily-mood'> Update your Daily Mood</Link>
                           </div>
                       </div>
                      

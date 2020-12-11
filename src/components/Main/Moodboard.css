@@ -390,3 +390,8 @@ font-family: 'Nunito Sans', sans-serif;
 .notification-audio {
   display: none;
 }
+
+.link-remove:hover {
+  text-decoration: none;
+  color: #c5a388;
+}
