@@ -1,7 +1,7 @@
 
 6 day project - Daily go-to Full-Stack single page App for inspiration & meditation <br/>
 Check it out on => https://pacific-tribe.herokuapp.com/ <br/>
-STACK: MERN: React, NodeJS, MongoDB, ExpressJS; Mongoose; HTML; CSS; Bootstrap; JavaScript; <br/>
+STACK: MERN: React, NodeJS, MongoDB, ExpressJS; Mongoose; HTML; CSS; Bootstrap; JavaScript; APIs <br/>
 Nourish and keep track of your emotional and mental state! <br/>
 
 <br/>
